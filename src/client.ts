@@ -23,17 +23,18 @@ export default class Client extends EventEmitter {
 
         this.socket.on("open", () => {
             this.identify();
-            console.log("socket open")
         })
 
         this.socket.on("message", async (message) => {
             const payload = JSON.parse(message.toString());
-            console.log(payload);
             const { t, s, op, d } = payload; 
             if (payload.op === 10) {
                 const { heartbeat_interval } = d;
                 this.heartbeat(heartbeat_interval);
-                console.log(op)
+            } else if (payload.op === 11) {
+                console.log(chalk.red("Recieved a heartbeat"))
+            } else if (payload.op === 0) {
+                this.emit(payload.t, payload.d);
             }
         })
 
@@ -75,5 +76,6 @@ export default class Client extends EventEmitter {
                 }
             },
         }))
+        console.log("Indentified")
     }
 }
