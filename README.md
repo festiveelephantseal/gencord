@@ -1,5 +1,9 @@
-# gencord
-A new discord library!
+<p align="center">
+  <img src="assets/gencordnew.jpg" />
+</p>
+
+## About
+Gencord is a new and exciting discord library!
 
 Heres a quick example
 ```ts

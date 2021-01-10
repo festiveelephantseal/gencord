@@ -4,6 +4,7 @@
 
 ## Table of contents
 
-### Classes
+### Modules
 
-- [default](classes/default.md)
+- [client](modules/client.md)
+- [test/test](modules/test_test.md)
