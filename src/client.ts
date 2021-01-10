@@ -1,6 +1,7 @@
 import { EventEmitter } from "events";
 import ws from "ws";
 import chalk from "chalk";
+import { RestHandler } from "./APIHandler";
 
 interface ClientOptions {
     token: string,
@@ -9,12 +10,27 @@ interface ClientOptions {
 }
 
 export default class Client extends EventEmitter {
+
     private socket: ws;
+
+    /**
+     * @param {ClientOptions} options passed into the client
+     */
+
     public options: ClientOptions;
+
+    /**
+     * @param {string} the bots token
+     */
+
+    public token: string;
+
+    public handler: RestHandler = new RestHandler(this);
 
     public constructor(options: ClientOptions) {
         super()
         this.options = options;
+        this.token = options.token;
     }
 
     async login(): Promise<void> {
@@ -58,6 +74,7 @@ export default class Client extends EventEmitter {
     destroy(reason?: string) {
         this.socket.close();
         console.log(`The socket was closed, ${reason || "No reason provided"}`)
+        process.exit();
     }
 
     identify() {

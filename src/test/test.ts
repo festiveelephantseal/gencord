@@ -1,13 +1,15 @@
 import Client from "../client";
+import { Message } from "../structures/Message";
 import { token } from "../../token.json";
+import chalk from "chalk";
 
 const client: Client = new Client({token: token, intents: 513, status: "dnd"})
 
 client.on("READY", () => {
-    console.log("ready")
+    console.log(chalk.red("Ready"))
 })
 
-client.on("MESSAGE_CREATE", (msg) => {
+client.on("MESSAGE_CREATE", (msg: Message) => {
     console.log(msg.content);
 })
 

@@ -20,6 +20,7 @@
 
 - [options](client.default.md#options)
 - [socket](client.default.md#socket)
+- [token](client.default.md#token)
 - [defaultMaxListeners](client.default.md#defaultmaxlisteners)
 - [errorMonitor](client.default.md#errormonitor)
 
@@ -60,7 +61,7 @@ Name | Type |
 
 **Returns:** [*default*](client.default.md)
 
-Defined in: [src/client.ts:13](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L13)
+Defined in: [src/client.ts:25](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L25)
 
 ## Properties
 
@@ -68,7 +69,9 @@ Defined in: [src/client.ts:13](https://github.com/nerdthatnoonelikes/gencord/blo
 
 • **options**: ClientOptions
 
-Defined in: [src/client.ts:13](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L13)
+**`param`** passed into the client
+
+Defined in: [src/client.ts:19](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L19)
 
 ___
 
@@ -76,7 +79,17 @@ ___
 
 • `Private` **socket**: *WebSocket*
 
-Defined in: [src/client.ts:12](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L12)
+Defined in: [src/client.ts:13](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L13)
+
+___
+
+### token
+
+• **token**: *string*
+
+**`param`** bots token
+
+Defined in: [src/client.ts:25](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L25)
 
 ___
 
@@ -133,7 +146,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/client.ts:58](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L58)
+Defined in: [src/client.ts:71](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L71)
 
 ___
 
@@ -186,7 +199,7 @@ Name | Type |
 
 **Returns:** *void*
 
-Defined in: [src/client.ts:52](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L52)
+Defined in: [src/client.ts:65](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L65)
 
 ___
 
@@ -196,7 +209,7 @@ ___
 
 **Returns:** *void*
 
-Defined in: [src/client.ts:63](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L63)
+Defined in: [src/client.ts:77](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L77)
 
 ___
 
@@ -238,7 +251,7 @@ ___
 
 **Returns:** *Promise*<*void*\>
 
-Defined in: [src/client.ts:20](https://github.com/nerdthatnoonelikes/gencord/blob/18dd268/src/client.ts#L20)
+Defined in: [src/client.ts:33](https://github.com/nerdthatnoonelikes/gencord/blob/ea45359/src/client.ts#L33)
 
 ___
 
