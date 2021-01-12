@@ -10,7 +10,9 @@ client.on("READY", () => {
 })
 
 client.on("MESSAGE_CREATE", (msg: Message) => {
-    console.log(msg.content);
+    if (msg.content === "!hello") {
+        client.createMessage(msg.channel_id, "hello");
+    }
 })
 
 client.login()

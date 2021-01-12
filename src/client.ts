@@ -65,6 +65,20 @@ export default class Client extends EventEmitter {
         })
     }
 
+    async createMessage(channelID: string, content: string) {
+
+        const data = {
+            "content": content,
+            "tts": false
+        };
+
+        return await this.handler.fetch({
+            endpoint: `channels/${channelID}/messages`,
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+    }
+
     heartbeat(ms: number) {
         setInterval(() => {
             this.socket.send(JSON.stringify({op: 1, d: null}))
