@@ -4,7 +4,8 @@
   "description": "Yet another Discord API wrapper",
   "main": "index.js",
   "scripts": {
-    "docs": "typedoc --out docs src"
+    "docs": "typedoc --out docs src",
+    "test": "tsc && node dist/src/test/test"
   },
   "repository": {
     "type": "git",
