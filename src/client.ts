@@ -2,6 +2,7 @@ import { EventEmitter } from "events";
 import ws from "ws";
 import chalk from "chalk";
 import { RestHandler } from "./APIHandler";
+import { Manager } from "./Manager";
 
 interface ClientOptions {
   token: string;
@@ -25,6 +26,8 @@ export default class Client extends EventEmitter {
   public token: string;
 
   public handler: RestHandler = new RestHandler(this);
+
+  public manager: Manager = new Manager(this);
 
   public constructor(options: ClientOptions) {
     super();

@@ -1,13 +1,14 @@
 import { User } from "./User";
 import { GuildMember } from "./GuildMember";
 import Client from "../client";
+import { throws } from "assert";
 
 export class Message {
   public id: string;
   public channel_id: string;
   public guild_id?: string;
-  public author: User;
-  public member?: GuildMember;
+  public author;
+  public member?;
   public content: string;
   public timestamp: number;
   public edited_timestamp?: number;
@@ -29,14 +30,25 @@ export class Message {
     this.tts = data.tts;
     this.mention_everyone = data.mention_everyone;
     this.mention_roles = data.mention_roles ?? false;
-    this.member = data.member;
+  }
+
+  async _set() {
+    this.member = await this.client.manager.getMember(
+      this.guild_id,
+      this.author.id
+    );
+
+    this.author = await this.client.manager.getUser(this.author.id);
   }
 
   public async reply(channelID: string, content: string): Promise<void> {
     const data = await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
-      body: JSON.stringify({ content: content, tts: false }),
+      body: JSON.stringify({
+        content: `<@${this.author.id}> ${content}`,
+        tts: false,
+      }),
     });
   }
 }

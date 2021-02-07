@@ -16,7 +16,7 @@ client.on("READY", () => {
 client.on("MESSAGE_CREATE", (data: Message) => {
   if (data.content === "!hello") {
     const message = new Message(data, client);
-    message.reply(data.channel_id, "hello world");
+    message.reply(data.channel_id, "hello!");
   }
 });
 
