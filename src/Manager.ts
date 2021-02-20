@@ -1,4 +1,4 @@
-import Client from "./Client";
+import Client from "./client";
 
 export class Manager {
   public constructor(private client: Client) {}

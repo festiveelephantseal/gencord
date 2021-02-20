@@ -1,7 +1,5 @@
 import { User } from "./User";
-import { GuildMember } from "./GuildMember";
-import Client from "../Client";
-import { throws } from "assert";
+import Client from "../client";
 
 export class Message {
   public id: string;
@@ -16,7 +14,7 @@ export class Message {
   public mention_everyone: boolean;
   public mentions: User[];
   public mention_roles: Array<string>;
-  public client: Client;
+  private client: Client;
 
   public constructor(data, client) {
     this.client = client;
@@ -47,6 +45,17 @@ export class Message {
       method: "POST",
       body: JSON.stringify({
         content: `<@${this.author.id}> ${content}`,
+        tts: false,
+      }),
+    });
+  }
+
+  public async send(channelID: string, content: any): Promise<void> {
+    const data = await this.client.handler.fetch({
+      endpoint: `channels/${channelID}/messages`,
+      method: "POST",
+      body: JSON.stringify({
+        content: `${content}`,
         tts: false,
       }),
     });
