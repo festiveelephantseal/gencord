@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "docs": "typedoc --out docs src",
-    "test": "tsc && node dist/src/test/test"
+    "test": "tsc && node dist/src/test/test",
+    "lint": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "@types/node": "^14.14.20",
     "@types/node-fetch": "^2.5.7",
     "@types/ws": "^7.4.0",
+    "prettier": "^2.2.1",
     "typedoc": "^0.20.13",
     "typedoc-plugin-markdown": "^3.4.0",
     "typescript": "^4.1.3"
