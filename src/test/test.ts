@@ -1,11 +1,11 @@
 import Client from "../client";
 import { Message } from "../structures/Message";
 import { MessageEmbed } from "../structures/MessageEmbed";
-import { token } from "../../token.json";
+//import { token } from "../../token.json";
 import chalk from "chalk";
 
 const client: Client = new Client({
-  token: token,
+  token: "ODEyMDIxMTQ0OTExNDc4ODQ1.YC6rnw.IwEPrZ5hwVnoYzCNDkpSxz_8CnY",
   intents: 513,
   status: "dnd",
 });
