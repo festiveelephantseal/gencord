@@ -46,6 +46,7 @@ export default class Client extends EventEmitter {
     this.socket.on("message", async (message) => {
       const payload = JSON.parse(message.toString());
       const { t, s, op, d } = payload;
+
       if (payload.op === 10) {
         const { heartbeat_interval } = d;
         this.heartbeat(heartbeat_interval);
@@ -67,19 +68,19 @@ export default class Client extends EventEmitter {
     });
   }
 
-  heartbeat(ms: number) {
+  private heartbeat(ms: number) {
     setInterval(() => {
       this.socket.send(JSON.stringify({ op: 1, d: null }));
     }, ms);
   }
 
-  destroy(reason?: string) {
+  public destroy(reason?: string) {
     this.socket.close();
     console.log(`The socket was closed, ${reason || "No reason provided"}`);
     process.exit();
   }
 
-  identify() {
+  private identify() {
     this.socket.send(
       JSON.stringify({
         op: 2,
@@ -97,6 +98,6 @@ export default class Client extends EventEmitter {
         },
       })
     );
-    console.log("Indentified");
+    console.log("Identified");
   }
 }
