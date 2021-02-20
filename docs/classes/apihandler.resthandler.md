@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-* **RestHandler**
+- **RestHandler**
 
 ## Table of contents
 
@@ -26,15 +26,15 @@
 
 ### constructor
 
-\+ **new RestHandler**(`client`: [*default*](client.default.md)): [*RestHandler*](apihandler.resthandler.md)
+\+ **new RestHandler**(`client`: [_default_](client.default.md)): [_RestHandler_](apihandler.resthandler.md)
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`client` | [*default*](client.default.md) |
+| Name     | Type                           |
+| -------- | ------------------------------ |
+| `client` | [_default_](client.default.md) |
 
-**Returns:** [*RestHandler*](apihandler.resthandler.md)
+**Returns:** [_RestHandler_](apihandler.resthandler.md)
 
 Defined in: src/APIHandler.ts:10
 
@@ -42,20 +42,20 @@ Defined in: src/APIHandler.ts:10
 
 ### client
 
-• **client**: [*default*](client.default.md)
+• **client**: [_default_](client.default.md)
 
 ## Methods
 
 ### fetch
 
-▸ **fetch**(`options`: APIOptions): *Promise*<*void*\>
+▸ **fetch**(`options`: APIOptions): _Promise_<_void_\>
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`options` | APIOptions |
+| Name      | Type       |
+| --------- | ---------- |
+| `options` | APIOptions |
 
-**Returns:** *Promise*<*void*\>
+**Returns:** _Promise_<_void_\>
 
 Defined in: src/APIHandler.ts:13

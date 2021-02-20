@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-* **GuildMember**
+- **GuildMember**
 
 ## Table of contents
 
@@ -17,11 +17,11 @@
 ### Properties
 
 - [deaf](guildmember.guildmember.md#deaf)
-- [joined\_at](guildmember.guildmember.md#joined_at)
+- [joined_at](guildmember.guildmember.md#joined_at)
 - [mute](guildmember.guildmember.md#mute)
 - [nick](guildmember.guildmember.md#nick)
 - [pending](guildmember.guildmember.md#pending)
-- [premium\_since](guildmember.guildmember.md#premium_since)
+- [premium_since](guildmember.guildmember.md#premium_since)
 - [roles](guildmember.guildmember.md#roles)
 - [user](guildmember.guildmember.md#user)
 
@@ -33,15 +33,15 @@
 
 ### constructor
 
-\+ **new GuildMember**(`data`: *any*): [*GuildMember*](guildmember.guildmember.md)
+\+ **new GuildMember**(`data`: _any_): [_GuildMember_](guildmember.guildmember.md)
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`data` | *any* |
+| Name   | Type  |
+| ------ | ----- |
+| `data` | _any_ |
 
-**Returns:** [*GuildMember*](guildmember.guildmember.md)
+**Returns:** [_GuildMember_](guildmember.guildmember.md)
 
 Defined in: src/structures/GuildMember.ts:11
 
@@ -49,63 +49,63 @@ Defined in: src/structures/GuildMember.ts:11
 
 ### deaf
 
-• **deaf**: *boolean*
+• **deaf**: _boolean_
 
 Defined in: src/structures/GuildMember.ts:9
 
-___
+---
 
-### joined\_at
+### joined_at
 
-• **joined\_at**: *number*
+• **joined_at**: _number_
 
 Defined in: src/structures/GuildMember.ts:7
 
-___
+---
 
 ### mute
 
-• **mute**: *boolean*
+• **mute**: _boolean_
 
 Defined in: src/structures/GuildMember.ts:10
 
-___
+---
 
 ### nick
 
-• `Optional` **nick**: *string*
+• `Optional` **nick**: _string_
 
 Defined in: src/structures/GuildMember.ts:5
 
-___
+---
 
 ### pending
 
-• `Optional` **pending**: *boolean*
+• `Optional` **pending**: _boolean_
 
 Defined in: src/structures/GuildMember.ts:11
 
-___
+---
 
-### premium\_since
+### premium_since
 
-• `Optional` **premium\_since**: *number*
+• `Optional` **premium_since**: _number_
 
 Defined in: src/structures/GuildMember.ts:8
 
-___
+---
 
 ### roles
 
-• **roles**: *string*[]
+• **roles**: _string_[]
 
 Defined in: src/structures/GuildMember.ts:6
 
-___
+---
 
 ### user
 
-• `Optional` **user**: [*User*](user.user.md)
+• `Optional` **user**: [_User_](user.user.md)
 
 Defined in: src/structures/GuildMember.ts:4
 
@@ -113,14 +113,14 @@ Defined in: src/structures/GuildMember.ts:4
 
 ### \_set
 
-▸ **_set**(`data`: *any*): *void*
+▸ **\_set**(`data`: _any_): _void_
 
 #### Parameters:
 
-Name | Type |
------- | ------ |
-`data` | *any* |
+| Name   | Type  |
+| ------ | ----- |
+| `data` | _any_ |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: src/structures/GuildMember.ts:17
