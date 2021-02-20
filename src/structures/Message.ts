@@ -1,7 +1,9 @@
 import { User } from "./User";
 import Client from "../client";
+import { ChannelManager } from "./ChannelManager";
 
 export class Message {
+  private client: Client;
   public id: string;
   public channel_id: string;
   public guild_id?: string;
@@ -14,7 +16,6 @@ export class Message {
   public mention_everyone: boolean;
   public mentions: User[];
   public mention_roles: Array<string>;
-  private client: Client;
 
   public constructor(data, client) {
     this.client = client;

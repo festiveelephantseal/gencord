@@ -22,6 +22,6 @@ export class GuildMember {
     this.premium_since = data.premium_since;
     this.deaf = data.deaf;
     this.mute = data.mute;
-    this.pending = data.pendiing ?? false;
+    this.pending = data.pending ?? false;
   }
 }
