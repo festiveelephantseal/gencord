@@ -33,9 +33,10 @@ export default class Client extends EventEmitter {
     super();
     this.options = options;
     this.token = options.token;
+    this.login();
   }
 
-  async login(): Promise<void> {
+  private async login(): Promise<void> {
     this.socket = await new ws("wss://gateway.discord.gg/?v=8&encoding=json");
 
     this.socket.on("open", () => {

@@ -1,5 +1,5 @@
 import fetch, { Headers } from "node-fetch";
-import Client from "./client";
+import Client from "./Client";
 
 interface APIOptions {
   endpoint: string;
