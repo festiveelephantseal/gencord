@@ -1,11 +1,10 @@
 import Client from "../client";
-import { Message } from "../structures/Message";
-import { MessageEmbed } from "../structures/MessageEmbed";
-import { token } from "../../token.json";
+import { Message, MessageEmbed } from "../index";
+//import { token } from "../../token.json";
 import chalk from "chalk";
 
 const client: Client = new Client({
-  token: token,
+  token: "ODEyMDIxMTQ0OTExNDc4ODQ1.YC6rnw.0WD6pbcf8rfmvrS5r8LSrCyyaj0",
   intents: 513,
   status: "dnd",
 });
@@ -13,13 +12,6 @@ const client: Client = new Client({
 client.on("READY", () => {
   console.log(chalk.red("Ready"));
 });
-
-/*
-else if (data.content = "!hi") {
-    const message = new Message(data, client);
-    message.send(data.channel_id, "hello");
-  }
-  */
 
 client.on("MESSAGE_CREATE", (data: Message) => {
   const message = new Message(data, client);
