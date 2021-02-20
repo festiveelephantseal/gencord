@@ -3,7 +3,7 @@ import Client from "./client";
 
 interface APIOptions {
   endpoint: string;
-  method: "GET" | "POST" | "DELETE" | "PUT";
+  method: "GET" | "POST" | "DELETE" | "PUT" | "PATCH";
   body?: any;
 }
 
@@ -25,7 +25,7 @@ export class RestHandler {
     if (fetched.status === 429) {
       const json = await fetched.json();
       throw new Error(
-        `You have been ratelimited, Reason: ${json.body}, Request will be retried after ${json.retry_after}`
+        `You have been ratelimited, Request will be retried after ${json.retry_after}`
       );
     }
   }

@@ -1,5 +1,5 @@
 import Client from "../client";
-import { Message, MessageEmbed } from "../index";
+import { Message, MessageEmbed, colors } from "../index";
 import { token } from "../../token.json";
 import chalk from "chalk";
 
@@ -24,6 +24,10 @@ client.on("MESSAGE_CREATE", (data: Message) => {
     message.send(data.channel_id, "hi!");
   }
 
+  if (data.content === "!delete") {
+    message.deleteChannel(data.channel_id);
+  }
+
   if (data.content === "!embed") {
     const embed = new MessageEmbed(client);
 
@@ -33,6 +37,7 @@ client.on("MESSAGE_CREATE", (data: Message) => {
       footer: {
         text: "this is the footer",
       },
+      color: colors.DARK_GREEN,
       url: "https://google.com",
       image: {
         url:
