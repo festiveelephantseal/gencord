@@ -2,7 +2,7 @@
   "name": "gencord",
   "version": "1.0.0",
   "description": "Yet another Discord API wrapper",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "docs": "typedoc --out docs src",
     "test": "tsc && node dist/src/test/test",

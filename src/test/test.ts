@@ -1,6 +1,5 @@
 import Client from "../client";
-import { Message } from "../structures/Message";
-import { MessageEmbed } from "../structures/MessageEmbed";
+import { Message, MessageEmbed } from "../index";
 import { token } from "../../token.json";
 import chalk from "chalk";
 
@@ -13,13 +12,6 @@ const client: Client = new Client({
 client.on("READY", () => {
   console.log(chalk.red("Ready"));
 });
-
-/*
-else if (data.content = "!hi") {
-    const message = new Message(data, client);
-    message.send(data.channel_id, "hello");
-  }
-  */
 
 client.on("MESSAGE_CREATE", (data: Message) => {
   const message = new Message(data, client);

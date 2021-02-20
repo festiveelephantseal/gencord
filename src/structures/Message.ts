@@ -60,4 +60,11 @@ export class Message {
       }),
     });
   }
+
+  public async deleteChannel(channelID: string): Promise<void> {
+    const data = await this.client.handler.fetch({
+      endpoint: `channels/${channelID}`,
+      method: "DELETE",
+    });
+  }
 }
