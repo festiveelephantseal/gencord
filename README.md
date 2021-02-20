@@ -9,8 +9,8 @@
 Heres a quick example
 
 ```ts
-import Client from "../client";
-import { Message } from "../structures/Message";
+import Client from "../index";
+import { Message } from "../index";
 
 const client: Client = new Client({
   token: "mysupersecrettoken",
