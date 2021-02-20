@@ -6,6 +6,8 @@
   "scripts": {
     "docs": "typedoc --out docs src",
     "test": "tsc && node dist/src/test/test",
+    "test-dev": "ts-node src/test/test.ts",
+    "test-respawn": "ts-node-dev --respawn --transpile-only src/test/test.ts",
     "lint": "prettier --write ."
   },
   "repository": {
@@ -23,6 +25,8 @@
     "@types/node-fetch": "^2.5.7",
     "@types/ws": "^7.4.0",
     "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
     "typedoc": "^0.20.13",
     "typedoc-plugin-markdown": "^3.4.0",
     "typescript": "^4.1.3"
