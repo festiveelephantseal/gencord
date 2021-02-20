@@ -1,4 +1,4 @@
-import Client from "../client";
+import Client from "../Client";
 import { Message } from "../structures/Message";
 import { token } from "../../token.json";
 import chalk from "chalk";
@@ -19,5 +19,3 @@ client.on("MESSAGE_CREATE", (data: Message) => {
     message.reply(data.channel_id, "hello!");
   }
 });
-
-client.login();

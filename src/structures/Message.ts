@@ -1,6 +1,6 @@
 import { User } from "./User";
 import { GuildMember } from "./GuildMember";
-import Client from "../client";
+import Client from "../Client";
 import { throws } from "assert";
 
 export class Message {
