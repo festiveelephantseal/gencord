@@ -1,6 +1,6 @@
 {
   "name": "gencord",
-  "version": "1.0.0",
+  "version": "0.0.9",
   "description": "Yet another Discord API wrapper",
   "main": "src/index.js",
   "scripts": {
