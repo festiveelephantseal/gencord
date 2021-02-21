@@ -1,7 +1,6 @@
-import Client from "../client";
+import { Client } from "../index";
 import { Message, MessageEmbed, colors } from "../index";
 import { token } from "../../token.json";
-import chalk from "chalk";
 
 const client: Client = new Client({
   token: token,
@@ -10,7 +9,7 @@ const client: Client = new Client({
 });
 
 client.on("READY", () => {
-  console.log(chalk.red("Ready"));
+  console.log("Ready");
 });
 
 client.on("MESSAGE_CREATE", (data: Message) => {
