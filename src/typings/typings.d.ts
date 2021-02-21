@@ -87,4 +87,6 @@ declare module "gencord" {
 
     public send(channelID: string, embed: MessageEmbedOptions): Promise<void>;
   }
+
+  export class SlashCommands {}
 }
