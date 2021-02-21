@@ -1,3 +1,4 @@
+import { Client } from "../index";
 import { Message, MessageEmbed, Client, colors } from "../index";
 import { token } from "../../token.json";
 import chalk from "chalk";
