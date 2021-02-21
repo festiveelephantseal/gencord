@@ -1,4 +1,4 @@
-import Client from "../client";
+import { Client } from "../index";
 import { Message, MessageEmbed, colors } from "../index";
 import { token } from "../../token.json";
 import chalk from "chalk";
