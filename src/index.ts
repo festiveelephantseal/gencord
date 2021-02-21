@@ -8,4 +8,7 @@ export { Client } from "./client";
 
 //Option Interfaces
 export { MessageEmbedOptions } from "./structures/MessageEmbed";
-export { SlashCommandOptions } from "./structures/SlashCommands";
+export {
+  ApplicationCommandOption,
+  ApplicationCommandOptionType,
+} from "./structures/SlashCommands";

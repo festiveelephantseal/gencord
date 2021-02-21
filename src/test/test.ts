@@ -1,5 +1,11 @@
-import { Client } from "../index";
-import { Message, MessageEmbed, Client, colors } from "../index";
+import {
+  Message,
+  MessageEmbed,
+  Client,
+  colors,
+  ApplicationCommandOptionType,
+  SlashCommand,
+} from "../index";
 import { token } from "../../token.json";
 import chalk from "chalk";
 
@@ -43,6 +49,16 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
         url:
           "https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697",
       },
+    });
+  }
+
+  if (message.content === "!slash") {
+    const cmd = new SlashCommand(client);
+
+    cmd.registerCommand("707676569270747197", {
+      name: "hello",
+      description: "just a hello command!",
+      type: ApplicationCommandOptionType.SUB_COMMAND,
     });
   }
 });

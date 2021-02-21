@@ -1,15 +1,66 @@
+import { Client } from "../client";
+
 interface GetCommandOptions {
   commandID: string;
   guildID: string;
 }
 
-export interface SlashCommandOptions {
-  getCommands: GetCommandOptions;
+export enum ApplicationCommandOptionType {
+  SUB_COMMAND = 1,
+  SUB_COMMAND_GROUP = 2,
+  STRING = 3,
+  INTEGER = 4,
+  BOOLEAN = 5,
+  USER = 6,
+  CHANNEL = 7,
+  ROLE = 8,
 }
 
+export interface ApplicationCommandOption {
+  type: ApplicationCommandOptionType;
+  name: string;
+  description: string;
+  required?: boolean;
+  choices?: Array<Object>;
+  options?: ApplicationCommandOptionType;
+}
+
+/* export interface SlashCommandOptions {
+  getCommands: GetCommandOptions;
+}
+*/
+
 export class SlashCommand {
-  public async getCommands(options?: SlashCommandOptions): Promise<void> {}
-  public async registerCommand(options?: SlashCommandOptions): Promise<void> {}
-  public async editCommand(options?: SlashCommandOptions): Promise<void> {}
-  public async deleteCommand(options?: SlashCommandOptions): Promise<void> {}
+  private client: Client;
+
+  public constructor(client: Client) {
+    this.client = client;
+  }
+
+  public async getCommands(applicationID: string): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `applications/${applicationID}/commands`,
+      method: "GET",
+    });
+  }
+  public async registerCommand(
+    applicationID,
+    options: ApplicationCommandOption
+  ): Promise<void> {
+    const body = {
+      name: options.name,
+      description: options.description,
+      options: options.options,
+    };
+
+    return await this.client.handler.fetch({
+      endpoint: `applications/${applicationID}/commands`,
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+  }
+  public async editCommand(options?: ApplicationCommandOption): Promise<void> {}
+  public async deleteCommand(
+    options?: ApplicationCommandOption
+  ): Promise<void> {}
 }
