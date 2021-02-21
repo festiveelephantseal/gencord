@@ -1,6 +1,6 @@
 {
   "name": "gencord",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "Yet another Discord API wrapper",
   "main": "dist/index.js",
   "types": "./typings/typings.d.ts",
