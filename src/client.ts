@@ -4,7 +4,7 @@ import chalk from "chalk";
 import { RestHandler } from "./APIHandler";
 import { Manager } from "./Manager";
 
-interface ClientOptions {
+export interface ClientOptions {
   token: string;
   intents?: number;
   status?: "online" | "idle" | "dnd" | "invisible";

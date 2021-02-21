@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "Yet another Discord API wrapper",
   "main": "dist/index.js",
+  "types": "./typings/typings.d.ts",
   "scripts": {
     "docs": "typedoc --out docs src",
     "test": "tsc && node dist/src/test/test",

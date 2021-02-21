@@ -1,20 +1,20 @@
 import { Client } from "../client";
 import { colors } from "../constants/colors";
 
-interface ImageOptions {
+export interface ImageOptions {
   url?: string;
   proxy_url?: string;
   height?: string;
   width?: string;
 }
 
-interface FooterOptions {
+export interface FooterOptions {
   text: string;
   icon_url?: string;
   proxy_icon_url?: string;
 }
 
-interface MessageEmbedOptions {
+export interface MessageEmbedOptions {
   title: string;
   description?: string;
   url?: string;
