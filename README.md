@@ -84,3 +84,31 @@ client.on("MESSAGE_CREATE", (messageData) => {
   }
 });
 ```
+
+## New features
+
+### Slash Commands
+
+Here is an example on how to use slash commands in Gencord.
+
+```ts
+const { SlashCommand } = require("gencord");
+
+client.on("MESSAGE_CREATE", (messageData) => {
+  const message = new Message(messageData, client);
+
+  if (message.content === "!slash") {
+    const slashCommands = new SlashCommand(client);
+
+    slashCommands.register("BOT_ID", {
+      name: "hello",
+      description: "just a hello command!",
+      type: ApplicationCommandOptionType.SUB_COMMAND,
+    });
+  }
+});
+```
+
+### Inline Replies
+
+Here is an example on how to use inline replies in Gencord.
