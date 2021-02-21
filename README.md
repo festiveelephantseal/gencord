@@ -4,9 +4,11 @@
 
 ## About
 
+**A beginner friendly Discord API wrapper.**
+
 **Gencord** is a simple, and easy to use library for interacting with the Discord API, with minimal syntax.
 
-Heres a quick example
+Here's a quick example
 
 ## Installation
 
