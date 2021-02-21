@@ -53,9 +53,9 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
   }
 
   if (message.content === "!slash") {
-    const cmd = new SlashCommand(client);
+    const slashCommands = new SlashCommand(client);
 
-    cmd.registerCommand("707676569270747197", {
+    slashCommands.register("707676569270747197", {
       name: "hello",
       description: "just a hello command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
