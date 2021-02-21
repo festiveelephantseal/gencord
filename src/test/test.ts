@@ -1,10 +1,9 @@
-import Client from "../client";
-import { Message, MessageEmbed, colors } from "../index";
-import { token } from "../../token.json";
+import { Message, MessageEmbed, Client, colors } from "../index";
+//import { token } from "../../token.json";
 import chalk from "chalk";
 
 const client: Client = new Client({
-  token: token,
+  token: "ODEyODIxNDAwMzU5OTI3ODQ4.YDGU6w.8smRY24zWL6ehJzOi-s67W9oal8",
   intents: 513,
   status: "dnd",
 });
