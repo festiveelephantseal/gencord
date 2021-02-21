@@ -10,7 +10,7 @@ interface ClientOptions {
   status?: "online" | "idle" | "dnd" | "invisible";
 }
 
-export default class Client extends EventEmitter {
+export class Client extends EventEmitter {
   private socket: ws;
 
   /**

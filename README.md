@@ -9,13 +9,12 @@
 Heres a quick example
 
 ```ts
-import Client from "../index";
-import { Message } from "../index";
+const { Message, Client } = require("gencord");
 
-const client: Client = new Client({
+const client = new Client({
   token: "mysupersecrettoken",
   intents: 513,
-  status: "dnd",
+  status: "online",
 });
 
 client.on("READY", () => {
@@ -36,7 +35,9 @@ client.on("MESSAGE_CREATE", (data: Message) => {
 In Gencord, MessageEmbeds are easy to create, and send.
 
 ```ts
-client.on("MESSAGE_CREATE", (data: Message) => {
+const { MessageEmbed, colors } = require("gencord");
+
+client.on("MESSAGE_CREATE", (data) => {
   const message = new Message(data, client);
 
   if (data.content === "!embed") {
@@ -48,6 +49,7 @@ client.on("MESSAGE_CREATE", (data: Message) => {
       footer: {
         text: "this is the footer",
       },
+      color: colors.BLUE,
       url: "https://google.com",
       image: {
         url:

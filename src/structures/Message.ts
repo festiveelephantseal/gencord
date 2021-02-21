@@ -1,6 +1,5 @@
 import { User } from "./User";
-import Client from "../client";
-import { ChannelManager } from "./ChannelManager";
+import { Client } from "../client";
 
 export class Message {
   private client: Client;

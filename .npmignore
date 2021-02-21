@@ -1,0 +1,5 @@
+src/
+node_modules/
+docs/
+assets/
+dist/test/

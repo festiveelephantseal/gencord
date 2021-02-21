@@ -1,4 +1,4 @@
-import Client from "../client";
+import { Client } from "../client";
 import { colors } from "../constants/colors";
 
 interface ImageOptions {
