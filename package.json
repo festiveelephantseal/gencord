@@ -1,7 +1,7 @@
 {
   "name": "gencord",
   "version": "0.0.1",
-  "description": "Yet another Discord API wrapper",
+  "description": "A simple, beginner friendly, and easy to use library for interacting with the Discord API, with minimal syntax",
   "main": "dist/index.js",
   "types": "./typings/typings.d.ts",
   "scripts": {
