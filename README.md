@@ -46,7 +46,7 @@ client.on("READY", () => {
   console.log("Ready");
 });
 
-client.on("MESSAGE_CREATE", (data: Message) => {
+client.on("MESSAGE_CREATE", (messageData) => {
   const message = new Message(data, client);
 
   if (data.content === "!hello") {
