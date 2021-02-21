@@ -10,7 +10,7 @@
 
 Why **Gencord?**
 
-- Extremely fast (1 dependency)
+- Extremely fast, and efficient (2 dependencies)
 - Beginner friendly
 - JavaScript + TypeScript Support
 
