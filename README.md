@@ -8,6 +8,20 @@
 
 Heres a quick example
 
+## Installation
+
+With npm
+
+```bash
+$ npm i gencord
+```
+
+With yarn
+
+```bash
+$ yarn add gencord
+```
+
 ```ts
 const { Message, Client } = require("gencord");
 
