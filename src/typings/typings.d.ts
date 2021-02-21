@@ -1,10 +1,6 @@
 import { User } from "../structures/User";
 import { Message } from "../structures/Message";
-import {
-  ImageOptions,
-  FooterOptions,
-  MessageEmbedOptions,
-} from "../structures/MessageEmbed";
+import { MessageEmbedOptions } from "../structures/MessageEmbed";
 import { Manager } from "../Manager";
 import { RestHandler } from "../APIHandler";
 import { Client, ClientOptions } from "../client";
@@ -85,10 +81,12 @@ declare module "gencord" {
   }
 
   //MessageEmbed
-  export class MessageEbed {
+  export class MessageEmbed {
     private client: Client;
     public constructor(client: Client);
 
     public send(channelID: string, embed: MessageEmbedOptions): Promise<void>;
   }
+
+  export class SlashCommands {}
 }
