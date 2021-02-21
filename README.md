@@ -12,6 +12,7 @@ Why **Gencord?**
 
 - Extremely fast, and efficient (2 dependencies)
 - Beginner friendly
+- Slash Commands + Inline Replies support
 - JavaScript + TypeScript Support
 
 For the full documentation, visit our website at [gencord.org](https://gencord.org)
