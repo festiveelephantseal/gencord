@@ -1,10 +1,5 @@
 import { Client } from "../client";
 
-interface GetCommandOptions {
-  commandID: string;
-  guildID: string;
-}
-
 export enum ApplicationCommandOptionType {
   SUB_COMMAND = 1,
   SUB_COMMAND_GROUP = 2,
@@ -24,12 +19,6 @@ export interface ApplicationCommandOption {
   choices?: Array<Object>;
   options?: ApplicationCommandOptionType;
 }
-
-/* export interface SlashCommandOptions {
-  getCommands: GetCommandOptions;
-}
-*/
-
 export class SlashCommand {
   private client: Client;
 
