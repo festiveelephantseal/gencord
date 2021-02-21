@@ -8,7 +8,13 @@
 
 **Gencord** is a simple, and easy to use library for interacting with the Discord API, with minimal syntax.
 
-Here's a quick example
+Why **Gencord?**
+
+- Extremely fast (1 dependency)
+- Beginner friendly
+- JavaScript + TypeScript Support
+
+For the full documentation, visit our website at [gencord.org](https://gencord.org)
 
 ## Installation
 
@@ -23,6 +29,8 @@ With yarn
 ```bash
 $ yarn add gencord
 ```
+
+Here's a quick example
 
 ```ts
 const { Message, Client } = require("gencord");
