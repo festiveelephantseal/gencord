@@ -1,4 +1,4 @@
-interface SlashCommandOptions {
+export interface SlashCommandOptions {
   name: string;
   description: string;
 }
