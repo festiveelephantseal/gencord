@@ -61,13 +61,13 @@ In Gencord, MessageEmbeds are easy to create, and send.
 ```ts
 const { MessageEmbed, colors } = require("gencord");
 
-client.on("MESSAGE_CREATE", (data) => {
-  const message = new Message(data, client);
+client.on("MESSAGE_CREATE", (messageData) => {
+  const message = new Message(messageData, client);
 
-  if (data.content === "!embed") {
+  if (message.content === "!embed") {
     const embed = new MessageEmbed(client);
 
-    embed.send(data.channel_id, {
+    embed.send(message.channel_id, {
       title: "Title",
       description: "My description",
       footer: {
