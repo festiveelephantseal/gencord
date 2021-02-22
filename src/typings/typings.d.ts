@@ -4,6 +4,7 @@ import { MessageEmbedOptions } from "../structures/MessageEmbed";
 import { Manager } from "../Manager";
 import { RestHandler } from "../APIHandler";
 import { Client, ClientOptions } from "../client";
+import { ApplicationCommandOption } from "../structures/SlashCommands";
 
 declare module "gencord" {
   //Client
@@ -88,5 +89,16 @@ declare module "gencord" {
     public send(channelID: string, embed: MessageEmbedOptions): Promise<void>;
   }
 
-  export class SlashCommands {}
+  export class SlashCommands {
+    private client: Client;
+    public constructor(client: Client);
+
+    public get(applicationID: string): Promise<void>;
+    public register(
+      applicationID,
+      options: ApplicationCommandOption
+    ): Promise<void>;
+    public edit(options?: ApplicationCommandOption): Promise<void>;
+    public delete(options?: ApplicationCommandOption): Promise<void>;
+  }
 }
