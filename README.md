@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/gencordevensmaller.jpeg" />
+  <img src="assets/gencordevensmaller.png" />
 </p>
 
 ## About
