@@ -31,7 +31,7 @@ export class MessageEmbed {
   }
 
   public async send(channelID: string, embed: MessageEmbedOptions) {
-    const data = await this.client.handler.fetch({
+    return await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
       body: JSON.stringify({

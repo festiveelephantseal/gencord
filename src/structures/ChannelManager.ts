@@ -38,7 +38,7 @@ export class ChannelManager {
   }
 
   public async send(channelID: string, content: any): Promise<void> {
-    const data = await this.client.handler.fetch({
+    return await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
       body: JSON.stringify({
