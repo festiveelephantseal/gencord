@@ -1,10 +1,5 @@
 import { Client } from "../client";
 
-interface GetCommandOptions {
-  commandID: string;
-  guildID: string;
-}
-
 export enum ApplicationCommandOptionType {
   SUB_COMMAND = 1,
   SUB_COMMAND_GROUP = 2,
@@ -24,12 +19,6 @@ export interface ApplicationCommandOption {
   choices?: Array<Object>;
   options?: ApplicationCommandOptionType;
 }
-
-/* export interface SlashCommandOptions {
-  getCommands: GetCommandOptions;
-}
-*/
-
 export class SlashCommand {
   private client: Client;
 
@@ -37,13 +26,13 @@ export class SlashCommand {
     this.client = client;
   }
 
-  public async getCommands(applicationID: string): Promise<void> {
+  public async get(applicationID: string): Promise<void> {
     return await this.client.handler.fetch({
       endpoint: `applications/${applicationID}/commands`,
       method: "GET",
     });
   }
-  public async registerCommand(
+  public async register(
     applicationID,
     options: ApplicationCommandOption
   ): Promise<void> {
@@ -59,8 +48,6 @@ export class SlashCommand {
       body: JSON.stringify(body),
     });
   }
-  public async editCommand(options?: ApplicationCommandOption): Promise<void> {}
-  public async deleteCommand(
-    options?: ApplicationCommandOption
-  ): Promise<void> {}
+  public async edit(options?: ApplicationCommandOption): Promise<void> {}
+  public async delete(options?: ApplicationCommandOption): Promise<void> {}
 }

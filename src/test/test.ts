@@ -55,7 +55,7 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
   if (command === "slash") {
     const cmd = new SlashCommand(client);
 
-    cmd.registerCommand("707676569270747197", {
+    cmd.register("707676569270747197", {
       name: "test",
       description: "just a test command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
