@@ -4,7 +4,7 @@ import { MessageEmbedOptions } from "../structures/MessageEmbed";
 import { Manager } from "../Manager";
 import { RestHandler } from "../APIHandler";
 import { Client, ClientOptions } from "../client";
-import { ApplicationCommandOption } from "../structures/SlashCommands";
+import { ApplicationCommandOption } from "../structures/SlashCommandsManager";
 
 declare module "gencord" {
   //Client
