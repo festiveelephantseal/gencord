@@ -32,6 +32,7 @@ export class SlashCommand {
       method: "GET",
     });
   }
+
   public async register(
     applicationID,
     options: ApplicationCommandOption
