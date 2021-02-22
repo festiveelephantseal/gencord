@@ -85,30 +85,10 @@ client.on("MESSAGE_CREATE", (messageData) => {
 });
 ```
 
-## New features
+### Gencord at the current state
 
-### Slash Commands
+Gencord is at the pre-alpha state right now, which means there is no NPM package currently published. If you would like to test out the library, please use the following instructions.
 
-Here is an example on how to use slash commands in Gencord.
-
-```ts
-const { SlashCommand } = require("gencord");
-
-client.on("MESSAGE_CREATE", (messageData) => {
-  const message = new Message(messageData, client);
-
-  if (message.content === "!slash") {
-    const slashCommands = new SlashCommand(client);
-
-    slashCommands.register("BOT_ID", {
-      name: "hello",
-      description: "just a hello command!",
-      type: ApplicationCommandOptionType.SUB_COMMAND,
-    });
-  }
-});
-```
-
-### Inline Replies
-
-Here is an example on how to use inline replies in Gencord.
+1. Download the code by running the command `git clone https://github.com/Gencord/gencord`, in your desired directory.
+2. Run the command `npm install`, or `yarn install`, to install all of the dependencies of Gencord locally. The library only has 2 dependencies, so it should take no time.
+3. All testing changes should be made in the test directory, as this is where the testing of the project is done. Next, create a `token.json` file in the root dir, with 1 key called token, and paste your bot's token there. To start the current example, run the command `npm run test-dev`, in the terminal. Your bot should start, and to look at the example's commands, check out `src/test/test.ts`.
