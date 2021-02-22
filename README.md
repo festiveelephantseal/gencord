@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/gencord.jpeg" />
+  <img src="assets/gencordsmall.jpeg" />
 </p>
 
 ## About
