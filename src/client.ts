@@ -80,6 +80,17 @@ export class Client extends EventEmitter {
     process.exit();
   }
 
+  public ping() {
+    try {
+      this.socket.ping();
+      return setTimeout(() => {
+        this.ping();
+      }, 60000);
+    } catch (err) {
+      this.emit("error", err);
+    }
+  }
+
   private identify() {
     this.socket.send(
       JSON.stringify({

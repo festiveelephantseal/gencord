@@ -11,7 +11,7 @@ import chalk from "chalk";
 import fs from "fs";
 import { join } from "path";
 
-const client: Client = new Client({
+export const client: Client = new Client({
   token: token,
   intents: 513,
   status: "dnd",

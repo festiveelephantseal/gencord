@@ -1,9 +1,9 @@
 {
   "name": "gencord",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple, beginner friendly, and easy to use library for interacting with the Discord API, with minimal syntax",
   "main": "dist/index.js",
-  "types": "./typings/typings.d.ts",
+  "types": "dist/typings/typings.d.ts",
   "scripts": {
     "docs": "typedoc --out docs src",
     "test": "tsc && node dist/src/test/test",
