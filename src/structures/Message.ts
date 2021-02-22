@@ -45,7 +45,7 @@ export class Message {
   }
 
   public async reply(channelID: string, content: string): Promise<void> {
-    await this.client.handler.fetch({
+    return await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
       body: JSON.stringify({
