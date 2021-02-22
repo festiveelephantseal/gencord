@@ -1,8 +1,8 @@
 import { EventEmitter } from "events";
 import ws from "ws";
-import chalk from "chalk";
 import { RestHandler } from "./APIHandler";
 import { Manager } from "./Manager";
+import { SlashCommandsManager } from "./structures/SlashCommandsManager";
 
 export interface ClientOptions {
   token: string;
@@ -29,6 +29,8 @@ export class Client extends EventEmitter {
 
   public manager: Manager = new Manager(this);
 
+  public slashCommands: SlashCommandsManager = new SlashCommandsManager(this);
+
   public constructor(options: ClientOptions) {
     super();
     this.options = options;
@@ -50,19 +52,17 @@ export class Client extends EventEmitter {
       if (payload.op === 10) {
         const { heartbeat_interval } = d;
         this.heartbeat(heartbeat_interval);
-      } else if (payload.op === 11) {
-        console.log(chalk.red("Recieved a heartbeat"));
       } else if (payload.op === 0) {
         this.emit(payload.t, payload.d);
       }
     });
 
     this.socket.on("error", (error: string) => {
-      console.log(`${chalk.red("Error")}, ${chalk.red(error)}`);
+      console.log("Error", error);
     });
 
     this.socket.on("close", (error: any) => {
-      if (error === 4004) throw new Error(`${chalk.red("Invalid token")}`);
+      if (error === 4004) throw new Error("Invalid token");
 
       this.login();
     });
