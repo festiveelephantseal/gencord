@@ -1,11 +1,15 @@
 import { User } from "./User";
 import { Client } from "../client";
+import { GuildManager } from "./GuildManager";
+import { ChannelManager } from "./ChannelManager";
 
 export class Message {
   private client: Client;
   public id: string;
   public channel_id: string;
   public guild_id?: string;
+  public guild: GuildManager = new GuildManager();
+  public channel: ChannelManager;
   public author;
   public member?;
   public content: string;
@@ -28,6 +32,7 @@ export class Message {
     this.tts = data.tts;
     this.mention_everyone = data.mention_everyone;
     this.mention_roles = data.mention_roles ?? false;
+    this.channel = new ChannelManager(this.client);
   }
 
   async _set() {
@@ -40,7 +45,7 @@ export class Message {
   }
 
   public async reply(channelID: string, content: string): Promise<void> {
-    const data = await this.client.handler.fetch({
+    await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
       body: JSON.stringify({
@@ -50,20 +55,9 @@ export class Message {
     });
   }
 
-  public async send(channelID: string, content: any): Promise<void> {
-    const data = await this.client.handler.fetch({
-      endpoint: `channels/${channelID}/messages`,
-      method: "POST",
-      body: JSON.stringify({
-        content: `${content}`,
-        tts: false,
-      }),
-    });
-  }
-
-  public async deleteChannel(channelID: string): Promise<void> {
-    const data = await this.client.handler.fetch({
-      endpoint: `channels/${channelID}`,
+  public async delete(channelID: string, messageID: string): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `channels/${channelID}/messages/${messageID}`,
       method: "DELETE",
     });
   }

@@ -1,6 +1,7 @@
 import { Client } from "../client";
 
 export class ChannelManager {
+  private client: Client;
   public id: string;
   public name: string;
   public type: number;
@@ -10,30 +11,40 @@ export class ChannelManager {
   public rate_limit_per_user: number;
   public bitrate: number;
   public user_limit: number;
-  private client: Client;
 
   public constructor(client: Client) {
     this.client = client;
   }
 
-  public async getChannel() {
+  public async get() {
     return await this.client.handler.fetch({
       endpoint: `channels/${this.id}`,
       method: "GET",
     });
   }
 
-  public async updateChannel() {
+  public async update() {
     return await this.client.handler.fetch({
       endpoint: `channels/${this.id}`,
       method: "PATCH",
     });
   }
 
-  public async deleteChannel() {
+  public async delete(channelID: string) {
     return await this.client.handler.fetch({
-      endpoint: `/channels/${this.id}`,
+      endpoint: `channels/${channelID}`,
       method: "DELETE",
+    });
+  }
+
+  public async send(channelID: string, content: any): Promise<void> {
+    const data = await this.client.handler.fetch({
+      endpoint: `channels/${channelID}/messages`,
+      method: "POST",
+      body: JSON.stringify({
+        content: `${content}`,
+        tts: false,
+      }),
     });
   }
 }

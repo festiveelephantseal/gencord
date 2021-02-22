@@ -19,22 +19,22 @@ client.on("READY", () => {
   console.log(chalk.red("Ready"));
 });
 
+client.on("INTERACTION_CREATE", () => {});
+
 client.on("MESSAGE_CREATE", (messageData: Message) => {
   const message = new Message(messageData, client);
+  const args = message.content.slice("!".length).split(/ +/);
+  const command = args.shift().toLowerCase();
 
-  if (message.content === "!hello") {
-    message.reply(message.channel_id, "hello!");
+  if (command === "hello") {
+    message.reply(message.channel_id, `${args[0]}`);
   }
 
-  if (message.content === "!hi") {
-    message.send(message.channel_id, "hi!");
+  if (command === "hi") {
+    message.channel.send(message.channel_id, "hi!");
   }
 
-  if (message.content === "!delete") {
-    message.deleteChannel(message.channel_id);
-  }
-
-  if (message.content === "!embed") {
+  if (command === "embed") {
     const embed = new MessageEmbed(client);
 
     embed.send(message.channel_id, {
@@ -52,12 +52,12 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
     });
   }
 
-  if (message.content === "!slash") {
+  if (command === "slash") {
     const cmd = new SlashCommand(client);
 
     cmd.registerCommand("707676569270747197", {
-      name: "hello",
-      description: "just a hello command!",
+      name: "test",
+      description: "just a test command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
     });
   }
