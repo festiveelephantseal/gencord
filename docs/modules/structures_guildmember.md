@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [GuildMember](../classes/structures/guildmember.guildmember.md)
+- [GuildMember](../classes/structures_guildmember.guildmember.md)

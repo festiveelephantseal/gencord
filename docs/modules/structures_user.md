@@ -6,4 +6,4 @@
 
 ### Classes
 
-- [User](../classes/structures/user.user.md)
+- [User](../classes/structures_user.user.md)

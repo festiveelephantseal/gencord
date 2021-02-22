@@ -6,4 +6,8 @@
 
 ### Classes
 
-- [default](../classes/client.default.md)
+- [Client](../classes/client.client-1.md)
+
+### Interfaces
+
+- [ClientOptions](../interfaces/client.clientoptions.md)

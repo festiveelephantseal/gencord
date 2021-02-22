@@ -3,3 +3,7 @@
 # Module: structures/Message
 
 ## Table of contents
+
+### Classes
+
+- [Message](../classes/structures_message.message.md)
