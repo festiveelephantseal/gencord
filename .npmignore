@@ -6,4 +6,3 @@ dist/test/
 tsconfig.json
 token.json
 dist/token.json
-typings/

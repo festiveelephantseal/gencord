@@ -19,7 +19,7 @@ export interface ApplicationCommandOption {
   choices?: Array<Object>;
   options?: ApplicationCommandOptionType;
 }
-export class SlashCommandsManager {
+export class SlashCommand {
   private client: Client;
 
   public constructor(client: Client) {

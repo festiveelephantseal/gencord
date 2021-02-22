@@ -4,8 +4,10 @@ import {
   Client,
   colors,
   ApplicationCommandOptionType,
+  SlashCommand,
 } from "../index";
 import { token } from "../../token.json";
+import chalk from "chalk";
 import fs from "fs";
 import { join } from "path";
 
@@ -32,9 +34,11 @@ const loadCommands = async () => {
 };
 
 client.on("READY", () => {
-  console.log("Ready");
+  console.log(chalk.red("Ready"));
   loadCommands();
 });
+
+client.on("INTERACTION_CREATE", () => {});
 
 client.on("MESSAGE_CREATE", (messageData: Message) => {
   const message = new Message(messageData, client);
@@ -74,7 +78,9 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
   }
 
   if (command === "slash") {
-    client.slashCommands.register("707676569270747197", {
+    const cmd = new SlashCommand(client);
+
+    cmd.register("707676569270747197", {
       name: "test",
       description: "just a test command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
