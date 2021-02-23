@@ -1,6 +1,7 @@
 import { EventEmitter } from "events";
 import ws from "ws";
 import { RestHandler } from "./APIHandler";
+import { ActivityTypes } from "./constants/ActivityTypes";
 import { Manager } from "./Manager";
 import { SlashCommandsManager } from "./structures/SlashCommandsManager";
 
@@ -8,6 +9,8 @@ export interface ClientOptions {
   token: string;
   intents?: number;
   status?: "online" | "idle" | "dnd" | "invisible";
+  activityName?: string;
+  activityType: ActivityTypes;
 }
 
 export class Client extends EventEmitter {
@@ -105,10 +108,15 @@ export class Client extends EventEmitter {
           },
           presence: {
             status: this.options.status,
+            activities: [
+              {
+                name: this.options.activityName,
+                type: this.options.activityType,
+              },
+            ],
           },
         },
       })
     );
-    console.log("Identified");
   }
 }

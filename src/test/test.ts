@@ -4,6 +4,7 @@ import {
   Client,
   colors,
   ApplicationCommandOptionType,
+  ActivityTypes,
 } from "../index";
 import { token } from "../../token.json";
 import fs from "fs";
@@ -13,6 +14,8 @@ export const client: Client = new Client({
   token: token,
   intents: 513,
   status: "dnd",
+  activityName: "gencord!",
+  activityType: ActivityTypes.Playing,
 });
 
 interface Command {
