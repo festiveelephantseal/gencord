@@ -1,4 +1,8 @@
 import { Client } from "../client";
+import { RoleManager } from "./RoleManager";
+import { BanOptions } from "../interfaces/BanOptions";
+import { ChannelCreateOptions } from "../interfaces/ChannelCreateOptions";
+import { ChannelManager } from "./ChannelManager";
 
 export class GuildManager {
   private client: Client;
@@ -12,6 +16,8 @@ export class GuildManager {
   public owner_id: string;
   public permissions: string;
   public region: string;
+  public channels: ChannelManager;
+  public roles: RoleManager;
 
   public constructor(client: Client) {
     this.client = client;
@@ -37,4 +43,52 @@ export class GuildManager {
       method: "GET",
     });
   }
+
+  public async delete(guildID: string): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}`,
+      method: "DELETE",
+    });
+  }
+
+  public async getBans(guildID: string): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/bans`,
+      method: "GET",
+    });
+  }
+
+  public async create(
+    guildID: string,
+    options: ChannelCreateOptions
+  ): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/channels`,
+      method: "POST",
+    });
+  }
+
+  public async ban(guildID: string, userID: string) {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/bans/${userID}`,
+      method: "PUT",
+    });
+  }
+
+  public async getBan(guildID: string, userID: string) {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/bans/${userID}`,
+      method: "GET",
+    });
+  }
+
+  public async removeBan(guildID: string, userID: string) {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/bans/${userID}`,
+      method: "DELETE",
+    });
+  }
+
+  //message.guild.createRole()
+  //message.guild.roles.create();
 }

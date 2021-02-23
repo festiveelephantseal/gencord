@@ -31,6 +31,8 @@ const loadCommands = async () => {
   for (const file of fs.readdirSync(filePath)) {
     const command: Command = await import(`${filePath}/${file}`);
     commands.set(command.name, command);
+
+    console.log(`Command ${command.name} loaded!`);
   }
 };
 
@@ -45,6 +47,8 @@ client.on("MESSAGE_CREATE", async (messageData: Message) => {
   const message = new Message(messageData, client);
   const args = message.content.slice("!".length).split(/ +/);
   const command = args.shift().toLowerCase();
+
+  if (!commands.has(command)) return;
 
   try {
     commands.get(command).execute(client, message, args);
@@ -61,7 +65,6 @@ client.on("MESSAGE_CREATE", async (messageData: Message) => {
   }
 
   if (command === "channelid") {
-    // its logging undefined? wtf?
     message.reply(message.channel_id, `${message.channel.id}`);
   }
 
