@@ -41,7 +41,7 @@ client.on("READY", () => {
 
 client.on("INTERACTION_CREATE", () => {});
 
-client.on("MESSAGE_CREATE", (messageData: Message) => {
+client.on("MESSAGE_CREATE", async (messageData: Message) => {
   const message = new Message(messageData, client);
   const args = message.content.slice("!".length).split(/ +/);
   const command = args.shift().toLowerCase();
@@ -58,6 +58,11 @@ client.on("MESSAGE_CREATE", (messageData: Message) => {
 
   if (command === "hi") {
     message.channel.send(message.channel_id, "hi!");
+  }
+
+  if (command === "channelid") {
+    // its logging undefined? wtf?
+    message.reply(message.channel_id, `${message.channel.id}`);
   }
 
   if (command === "embed") {

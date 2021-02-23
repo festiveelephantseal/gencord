@@ -8,7 +8,7 @@ export class Message {
   public id: string;
   public channel_id: string;
   public guild_id?: string;
-  public guild: GuildManager = new GuildManager();
+  public guild: GuildManager;
   public channel: ChannelManager;
   public author;
   public member?;
@@ -33,6 +33,7 @@ export class Message {
     this.mention_everyone = data.mention_everyone;
     this.mention_roles = data.mention_roles ?? false;
     this.channel = new ChannelManager(this.client);
+    this.guild = new GuildManager(this.client);
   }
 
   async _set() {
