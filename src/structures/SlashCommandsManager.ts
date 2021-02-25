@@ -33,7 +33,7 @@ export class SlashCommandsManager {
     });
   }
 
-  public async registerGlobalCommand(
+  public async registerGlobal(
     applicationID: string,
     options: ApplicationCommandOption
   ): Promise<void> {
@@ -50,7 +50,7 @@ export class SlashCommandsManager {
     });
   }
 
-  public async deleteGlobalCommand(
+  public async deleteGlobal(
     applicationID: string,
     commandID: string
   ): Promise<void> {
@@ -60,7 +60,7 @@ export class SlashCommandsManager {
     });
   }
 
-  public async registerGuildCommand(
+  public async registerGuild(
     applicationID: string,
     guildID: string,
     options: ApplicationCommandOption
@@ -78,7 +78,7 @@ export class SlashCommandsManager {
     });
   }
 
-  public async deleteGuildCommand(
+  public async deleteGuild(
     applicationID: string,
     guildID: string,
     commandID: string
