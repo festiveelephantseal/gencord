@@ -1,9 +1,9 @@
 import { User } from "../structures/User";
 import { Message } from "../structures/Message";
 import { MessageEmbedOptions } from "../structures/MessageEmbed";
-import { Manager } from "../Manager";
-import { RestHandler } from "../APIHandler";
-import { Client, ClientOptions } from "../client";
+import { Manager } from "../utils/Manager";
+import { RestHandler } from "../utils/APIHandler";
+import { Client, ClientOptions } from "../client/Client";
 import { ApplicationCommandOption } from "../structures/SlashCommandsManager";
 
 declare module "gencord" {

@@ -1,5 +1,5 @@
 import { User } from "./User";
-import { Client } from "../client";
+import { Client } from "../client/Client";
 import { GuildManager } from "./GuildManager";
 import { ChannelManager } from "./ChannelManager";
 

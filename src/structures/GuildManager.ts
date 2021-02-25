@@ -1,4 +1,4 @@
-import { Client } from "../client";
+import { Client } from "../client/Client";
 import { RoleManager } from "./RoleManager";
 import { BanOptions } from "../interfaces/BanOptions";
 import { ChannelCreateOptions } from "../interfaces/ChannelCreateOptions";
