@@ -33,8 +33,8 @@ export class SlashCommandsManager {
     });
   }
 
-  public async register(
-    applicationID,
+  public async registerGlobalCommand(
+    applicationID: string,
     options: ApplicationCommandOption
   ): Promise<void> {
     const body = {
@@ -49,6 +49,43 @@ export class SlashCommandsManager {
       body: JSON.stringify(body),
     });
   }
-  public async edit(options?: ApplicationCommandOption): Promise<void> {}
-  public async delete(options?: ApplicationCommandOption): Promise<void> {}
+
+  public async deleteGlobalCommand(
+    applicationID: string,
+    commandID: string
+  ): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `applications/${applicationID}/commands/${commandID}`,
+      method: "DELETE",
+    });
+  }
+
+  public async registerGuildCommand(
+    applicationID: string,
+    guildID: string,
+    options: ApplicationCommandOption
+  ): Promise<void> {
+    const body = {
+      name: options.name,
+      description: options.description,
+      options: options.options,
+    };
+
+    return await this.client.handler.fetch({
+      endpoint: `applications/${applicationID}/guilds/${guildID}/commands`,
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+  }
+
+  public async deleteGuildCommand(
+    applicationID: string,
+    guildID: string,
+    commandID: string
+  ): Promise<void> {
+    return await this.client.handler.fetch({
+      endpoint: `applications/${applicationID}/guids/${guildID}/commands/${commandID}`,
+      method: "DELETE",
+    });
+  }
 }
