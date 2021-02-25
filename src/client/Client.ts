@@ -1,9 +1,9 @@
 import { EventEmitter } from "events";
 import ws from "ws";
-import { RestHandler } from "./APIHandler";
-import { ActivityTypes } from "./constants/ActivityTypes";
-import { Manager } from "./Manager";
-import { SlashCommandsManager } from "./structures/SlashCommandsManager";
+import { RestHandler } from "../utils/APIHandler";
+import { ActivityTypes } from "../constants/ActivityTypes";
+import { Manager } from "../utils/Manager";
+import { SlashCommandsManager } from "../structures/SlashCommandsManager";
 
 export interface ClientOptions {
   token: string;

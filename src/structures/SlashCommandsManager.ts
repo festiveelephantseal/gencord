@@ -1,4 +1,4 @@
-import { Client } from "../client";
+import { Client } from "../client/Client";
 
 export enum ApplicationCommandOptionType {
   SUB_COMMAND = 1,

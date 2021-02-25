@@ -1,5 +1,5 @@
 export const name: string = "ping";
-import { Client } from "../../client";
+import { Client } from "../../client/Client";
 import { Message } from "../../structures/Message";
 
 export const execute = (client: Client, message: Message, args: string[]) => {

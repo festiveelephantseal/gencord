@@ -1,4 +1,4 @@
-import { Client } from "./client";
+import { Client } from "../client/Client";
 import axios from "axios";
 
 interface APIOptions {

@@ -1,4 +1,4 @@
-import { Client } from "../client";
+import { Client } from "../client/Client";
 import { RoleOptions } from "../interfaces/RoleOptions";
 
 export class RoleManager {

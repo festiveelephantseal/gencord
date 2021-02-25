@@ -1,4 +1,4 @@
-import { Client } from "../client";
+import { Client } from "../client/Client";
 
 export class ChannelManager {
   private client: Client;
