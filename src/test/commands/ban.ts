@@ -11,7 +11,10 @@ export const execute = (client: Client, message: Message, args: string[]) => {
       "You need to provide a user ID!"
     );
 
-  message.guild.ban(message.guild_id, userID);
+  message.guild.ban(message.guild_id, userID, {
+    delete_message_days: 5,
+    reason: "test",
+  });
 
   message.channel.send(message.channel_id, `Banned ${userID}`);
 };

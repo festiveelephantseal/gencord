@@ -68,10 +68,15 @@ export class GuildManager {
     });
   }
 
-  public async ban(guildID: string, userID: string) {
+  public async ban(guildID: string, userID: string, options: BanOptions) {
+    const body = {
+      delete_message_days: options.delete_message_days,
+      reason: options.reason,
+    };
     return await this.client.handler.fetch({
       endpoint: `guilds/${guildID}/bans/${userID}`,
       method: "PUT",
+      body: JSON.stringify(body),
     });
   }
 

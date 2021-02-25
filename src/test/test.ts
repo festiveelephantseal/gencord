@@ -41,6 +41,10 @@ client.on("READY", () => {
   loadCommands();
 });
 
+client.on("GUILD_BAN_ADD", () => {
+  console.log("banned :o");
+});
+
 client.on("INTERACTION_CREATE", () => {});
 
 client.on("MESSAGE_CREATE", async (messageData: Message) => {
@@ -87,7 +91,7 @@ client.on("MESSAGE_CREATE", async (messageData: Message) => {
   }
 
   if (command === "slash") {
-    client.slashCommands.register("707676569270747197", {
+    client.slashCommands.registerGlobalCommand("707676569270747197", {
       name: "test",
       description: "just a test command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
