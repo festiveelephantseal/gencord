@@ -50,7 +50,7 @@ client.on("MESSAGE_CREATE", (messageData) => {
   const message = new Message(messageData, client);
 
   if (data.content === "!hello") {
-    message.reply(data.channel_id, "hello there!");
+    message.reply(messageData.channel_id, "hello there!");
   }
 });
 ```
