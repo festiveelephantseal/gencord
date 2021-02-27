@@ -47,7 +47,20 @@ client.on("GUILD_BAN_ADD", () => {
 
 client.on("INTERACTION_CREATE", () => {});
 
-client.on("MESSAGE_CREATE", async (messageData: Message) => {
+client.on("message", (message: Message) => {
+  const args = message.content.slice("!".length).split(/ +/);
+  const command = args.shift().toLowerCase();
+
+  if (!commands.has(command)) return;
+
+  try {
+    commands.get(command).execute(client, message, args);
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+/*client.on("MESSAGE_CREATE", async (messageData: Message) => {
   const message = new Message(messageData, client);
   const args = message.content.slice("!".length).split(/ +/);
   const command = args.shift().toLowerCase();
@@ -91,10 +104,10 @@ client.on("MESSAGE_CREATE", async (messageData: Message) => {
   }
 
   if (command === "slash") {
-    client.slashCommands.registerGlobalCommand("707676569270747197", {
+    client.slashCommands.registerGlobal("707676569270747197", {
       name: "test",
       description: "just a test command!",
       type: ApplicationCommandOptionType.SUB_COMMAND,
     });
   }
-});
+});*/

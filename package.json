@@ -33,7 +33,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1",
     "ws": "^7.4.2"
   }
 }

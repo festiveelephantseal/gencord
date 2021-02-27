@@ -12,8 +12,13 @@ export class ChannelManager {
   public bitrate: number;
   public user_limit: number;
 
-  public constructor(client: Client) {
+  public constructor(data, client: Client) {
     this.client = client;
+    this._set(data);
+  }
+
+  private _set(data) {
+    this.id = data;
   }
 
   public async get() {
@@ -37,9 +42,9 @@ export class ChannelManager {
     });
   }
 
-  public async send(channelID: string, content: any): Promise<void> {
+  public async send(content: string): Promise<void> {
     return await this.client.handler.fetch({
-      endpoint: `channels/${channelID}/messages`,
+      endpoint: `channels/${this.id}/messages`,
       method: "POST",
       body: JSON.stringify({
         content: `${content}`,

@@ -4,6 +4,7 @@ import { RestHandler } from "../utils/APIHandler";
 import { ActivityTypes } from "../constants/ActivityTypes";
 import { Manager } from "../utils/Manager";
 import { SlashCommandsManager } from "../structures/SlashCommandsManager";
+import { Message } from "../structures/Message";
 
 export interface ClientOptions {
   token: string;
@@ -57,6 +58,10 @@ export class Client extends EventEmitter {
         this.heartbeat(heartbeat_interval);
       } else if (payload.op === 0) {
         this.emit(payload.t, payload.d);
+      }
+
+      if (payload.t === "MESSAGE_CREATE") {
+        this.emit("message", new Message(payload.d, this));
       }
     });
 

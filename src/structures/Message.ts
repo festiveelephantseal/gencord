@@ -32,7 +32,7 @@ export class Message {
     this.tts = data.tts;
     this.mention_everyone = data.mention_everyone;
     this.mention_roles = data.mention_roles ?? false;
-    this.channel = new ChannelManager(this.client);
+    this.channel = new ChannelManager(this.channel_id, this.client);
     this.guild = new GuildManager(this.client);
   }
 
