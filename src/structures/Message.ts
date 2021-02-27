@@ -45,9 +45,9 @@ export class Message {
     this.author = await this.client.manager.getUser(this.author.id);
   }
 
-  public async reply(channelID: string, content: string): Promise<void> {
+  public async reply(content: string): Promise<void> {
     return await this.client.handler.fetch({
-      endpoint: `channels/${channelID}/messages`,
+      endpoint: `channels/${this.channel_id}/messages`,
       method: "POST",
       body: JSON.stringify({
         content: `<@${this.author.id}> ${content}`,
@@ -56,9 +56,9 @@ export class Message {
     });
   }
 
-  public async delete(channelID: string, messageID: string): Promise<void> {
+  public async delete(): Promise<void> {
     return await this.client.handler.fetch({
-      endpoint: `channels/${channelID}/messages/${messageID}`,
+      endpoint: `channels/${this.channel_id}/messages/${this.id}`,
       method: "DELETE",
     });
   }
