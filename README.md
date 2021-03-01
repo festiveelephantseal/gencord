@@ -15,7 +15,7 @@ Why **Gencord?**
 - Slash Commands + Inline Replies support
 - JavaScript + TypeScript Support
 
-For the full documentation, visit our website at [gencord.org](https://gencord.org)
+For the full documentation, visit our website at [gencord.js.org](https://gencord.js.org)
 
 ## Installation
 
