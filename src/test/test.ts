@@ -3,7 +3,7 @@ import {
   MessageEmbed,
   Client,
   colors,
-  ApplicationCommandOptionType,
+  Intents,
   ActivityTypes,
 } from "../index";
 import { token } from "../../token.json";
@@ -12,7 +12,7 @@ import { join } from "path";
 
 export const client: Client = new Client({
   token: token,
-  intents: 513,
+  intents: [Intents.GUILDS, Intents.GUILD_MESSAGES],
   status: "dnd",
   activityName: "gencord!",
   activityType: ActivityTypes.Playing,

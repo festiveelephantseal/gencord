@@ -19,8 +19,13 @@ export class GuildManager {
   public channels: ChannelManager;
   public roles: RoleManager;
 
-  public constructor(client: Client) {
+  public constructor(client: Client, data) {
     this.client = client;
+    this._set(data);
+  }
+
+  private _set(data) {
+    this.id = data;
   }
 
   public async get(guildID: string): Promise<void> {

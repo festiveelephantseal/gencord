@@ -33,7 +33,7 @@ export class Message {
     this.mention_everyone = data.mention_everyone;
     this.mention_roles = data.mention_roles ?? false;
     this.channel = new ChannelManager(this.channel_id, this.client);
-    this.guild = new GuildManager(this.client);
+    this.guild = new GuildManager(this.client, this.guild_id);
   }
 
   async _set() {

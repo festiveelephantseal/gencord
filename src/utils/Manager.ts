@@ -12,7 +12,7 @@ export class Manager {
 
   public async getMember(guildID: string, userID: string) {
     return await this.client.handler.fetch({
-      endpoint: `/guilds/${guildID}/members/${userID}`,
+      endpoint: `guilds/${guildID}/members/${userID}`,
       method: "GET",
     });
   }
