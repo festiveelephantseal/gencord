@@ -3,6 +3,7 @@
 </p>
 
 ## About
+[Support Server](https://discord.gg/Bh9cGjum)
 
 **A beginner friendly Discord API wrapper.**
 
