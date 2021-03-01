@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/gencordevensmaller.png" />
+  <img src="assets/logo.png" />
 </p>
 
 ## About
@@ -31,7 +31,7 @@ With yarn
 $ yarn add gencord
 ```
 
-Here's a quick example
+Here's a quick example of a ping pong bot
 
 ```ts
 const { Message, Client } = require("gencord");
@@ -46,11 +46,9 @@ client.on("READY", () => {
   console.log("Ready");
 });
 
-client.on("MESSAGE_CREATE", (messageData) => {
-  const message = new Message(messageData, client);
-
-  if (data.content === "!hello") {
-    message.reply(message.channel_id, "hello there!");
+client.on("message", (msg) => {
+  if (msg.content === "!ping") {
+    message.channel.send(`Pong! ${client.ws.ping()}ms`);
   }
 });
 ```
@@ -62,13 +60,11 @@ In Gencord, MessageEmbeds are easy to create, and send.
 ```ts
 const { MessageEmbed, colors } = require("gencord");
 
-client.on("MESSAGE_CREATE", (messageData) => {
-  const message = new Message(messageData, client);
-
-  if (message.content === "!embed") {
+client.on("MESSAGE_CREATE", (msg) => {
+  if (msg.content === "!embed") {
     const embed = new MessageEmbed(client);
 
-    embed.send(message.channel_id, {
+    embed.send(msg.channel.id, {
       title: "Title",
       description: "My description",
       footer: {
