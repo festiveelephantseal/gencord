@@ -2,7 +2,7 @@
   <img src="assets/logo.png" />
 </p>
 
-https://img.shields.io/npm/dt/gencord.svg?maxAge=3600
+<img src=https://img.shields.io/npm/dt/gencord.svg?maxAge=3600 />
 ## About
 [Support Server](https://discord.gg/Bh9cGjum)
 
