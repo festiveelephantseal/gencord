@@ -2,6 +2,7 @@
   <img src="assets/logo.png" />
 </p>
 
+https://img.shields.io/npm/dt/gencord.svg?maxAge=3600
 ## About
 [Support Server](https://discord.gg/Bh9cGjum)
 
@@ -61,7 +62,7 @@ In Gencord, MessageEmbeds are easy to create, and send.
 ```ts
 const { MessageEmbed, colors } = require("gencord");
 
-client.on("MESSAGE_CREATE", (msg) => {
+client.on("message", (msg) => {
   if (msg.content === "!embed") {
     const embed = new MessageEmbed(client);
 
