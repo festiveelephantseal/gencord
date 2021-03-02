@@ -25,7 +25,7 @@ For the full documentation, visit our website at [gencord.js.org](https://gencor
 With npm
 
 ```bash
-$ npm i gencord
+$ npm install gencord
 ```
 
 With yarn
@@ -49,9 +49,9 @@ client.on("READY", () => {
   console.log("Ready");
 });
 
-client.on("message", (msg) => {
-  if (msg.content === "!ping") {
-    message.channel.send(`Pong! ${client.ws.ping()}ms`);
+client.on("message", (message) => {
+  if (message.content === "!ping") {
+    message.channel.send(`Pong! ${client.ping()}ms`);
   }
 });
 ```
@@ -63,11 +63,11 @@ In Gencord, MessageEmbeds are easy to create, and send.
 ```ts
 const { MessageEmbed, colors } = require("gencord");
 
-client.on("message", (msg) => {
-  if (msg.content === "!embed") {
+client.on("message", (message) => {
+  if (message.content === "!embed") {
     const embed = new MessageEmbed(client);
 
-    embed.send(msg.channel.id, {
+    embed.send(message.channel.id, {
       title: "Title",
       description: "My description",
       footer: {
