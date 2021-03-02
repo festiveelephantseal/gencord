@@ -12,5 +12,5 @@ export { MessageEmbedOptions } from "./structures/MessageEmbed";
 export {
   ApplicationCommandOption,
   ApplicationCommandOptionType,
-} from "./structures/SlashCommandsManager";
+} from "./managers/SlashCommandsManager";
 export { GencordMap } from "./lib/GencordMap";
