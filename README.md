@@ -2,7 +2,8 @@
   <img src="assets/logo.png" />
 </p>
 
-<img src=https://img.shields.io/npm/dt/gencord.svg?maxAge=3600 />
+<a href="https://www.npmjs.com/package/gencord"><img src="https://img.shields.io/npm/dt/gencord.svg?maxAge=3600" alt="NPM downloads" /></a>
+
 ## About
 [Support Server](https://discord.gg/Bh9cGjum)
 
