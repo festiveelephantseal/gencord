@@ -3,3 +3,4 @@ package-lock.json
 yarn.lock
 dist/
 token.json
+src/.DS_Store
