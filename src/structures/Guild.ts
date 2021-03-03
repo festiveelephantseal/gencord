@@ -1,4 +1,6 @@
 import { Role } from "./Role";
+import { TextChannel } from "./TextChannel";
+import { GuildMember } from "./GuildMember";
 
 export class Guild {
   id: string;
@@ -10,4 +12,6 @@ export class Guild {
   owner?: boolean;
   owner_id: string;
   roles: Array<Role>;
+  channels: Map<string, TextChannel> = new Map();
+  members: Map<string, GuildMember> = new Map();
 }

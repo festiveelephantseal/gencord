@@ -71,7 +71,7 @@ export class MessageEmbed {
     this.url = url;
   }
 
-  addField(name: string, value: string, inline?: boolean) {
+  addField(name: string, value: string, inline: boolean) {
     this.fields.push({ name, value, inline });
   }
 
