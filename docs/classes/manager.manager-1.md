@@ -19,15 +19,15 @@
 
 ### constructor
 
-\+ **new Manager**(`client`: [*Client*](client.client-1.md)): [*Manager*](manager.manager-1.md)
+\+ **new Manager**(`client`: [_Client_](client.client-1.md)): [_Manager_](manager.manager-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](client.client-1.md) |
+| Name     | Type                           |
+| :------- | :----------------------------- |
+| `client` | [_Client_](client.client-1.md) |
 
-**Returns:** [*Manager*](manager.manager-1.md)
+**Returns:** [_Manager_](manager.manager-1.md)
 
 Defined in: [src/Manager.ts:3](https://github.com/Gencord/gencord/blob/a52c25b/src/Manager.ts#L3)
 
@@ -35,31 +35,31 @@ Defined in: [src/Manager.ts:3](https://github.com/Gencord/gencord/blob/a52c25b/s
 
 ### getMember
 
-▸ **getMember**(`guildID`: *string*, `userID`: *string*): *Promise*<void\>
+▸ **getMember**(`guildID`: _string_, `userID`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`guildID` | *string* |
-`userID` | *string* |
+| Name      | Type     |
+| :-------- | :------- |
+| `guildID` | _string_ |
+| `userID`  | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/Manager.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/Manager.ts#L13)
 
-___
+---
 
 ### getUser
 
-▸ **getUser**(`userID`: *string*): *Promise*<void\>
+▸ **getUser**(`userID`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`userID` | *string* |
+| Name     | Type     |
+| :------- | :------- |
+| `userID` | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/Manager.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/Manager.ts#L6)

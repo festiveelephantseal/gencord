@@ -1,5 +1,5 @@
 export const name: string = "guildinfo";
-import { Client, Message, MessageEmbed, colors } from "../../index";
+import { Client, Message, MessageEmbed, Colors } from "../../index";
 
 export const execute = (client: Client, message: Message, args: string[]) => {
   const guild = client.guilds.get(message.guild.id);
@@ -18,6 +18,6 @@ export const execute = (client: Client, message: Message, args: string[]) => {
   embed.setImage(
     `https://cdn.discordapp.com/icons/${message.guild.id}/${guild.icon}.png`
   );
-  embed.setColor(colors.AQUA);
+  embed.setColor(Colors.AQUA);
   message.channel.send(embed);
 };

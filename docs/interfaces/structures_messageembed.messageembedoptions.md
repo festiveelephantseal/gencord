@@ -19,46 +19,46 @@
 
 ### color
 
-• `Optional` **color**: [*colors*](../enums/constants_colors.colors.md)
+• `Optional` **color**: [_Colors_](../enums/constants_Colors.Colors.md)
 
 Defined in: [src/structures/MessageEmbed.ts:21](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L21)
 
-___
+---
 
 ### description
 
-• `Optional` **description**: *string*
+• `Optional` **description**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L19)
 
-___
+---
 
 ### footer
 
-• `Optional` **footer**: [*FooterOptions*](structures_messageembed.footeroptions.md)
+• `Optional` **footer**: [_FooterOptions_](structures_messageembed.footeroptions.md)
 
 Defined in: [src/structures/MessageEmbed.ts:23](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L23)
 
-___
+---
 
 ### image
 
-• `Optional` **image**: [*ImageOptions*](structures_messageembed.imageoptions.md)
+• `Optional` **image**: [_ImageOptions_](structures_messageembed.imageoptions.md)
 
 Defined in: [src/structures/MessageEmbed.ts:22](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L22)
 
-___
+---
 
 ### title
 
-• **title**: *string*
+• **title**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:18](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L18)
 
-___
+---
 
 ### url
 
-• `Optional` **url**: *string*
+• `Optional` **url**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L20)

@@ -14,6 +14,6 @@
 
 ### constructor
 
-\+ **new GuildManager**(): [*GuildManager*](structures_guildmanager.guildmanager.md)
+\+ **new GuildManager**(): [_GuildManager_](structures_guildmanager.guildmanager.md)
 
-**Returns:** [*GuildManager*](structures_guildmanager.guildmanager.md)
+**Returns:** [_GuildManager_](structures_guildmanager.guildmanager.md)

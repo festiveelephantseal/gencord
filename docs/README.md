@@ -44,7 +44,7 @@ const client = new Client({
   status: "online",
 });
 
-client.on("READY", () => {
+client.on("ready", () => {
   console.log("Ready");
 });
 
@@ -62,7 +62,7 @@ client.on("MESSAGE_CREATE", (messageData) => {
 In Gencord, MessageEmbeds are easy to create, and send.
 
 ```ts
-const { MessageEmbed, colors } = require("gencord");
+const { MessageEmbed, Colors } = require("gencord");
 
 client.on("MESSAGE_CREATE", (messageData) => {
   const message = new Message(messageData, client);
@@ -76,7 +76,7 @@ client.on("MESSAGE_CREATE", (messageData) => {
       footer: {
         text: "this is the footer",
       },
-      color: colors.BLUE,
+      color: Colors.BLUE,
       url: "https://google.com",
       image: {
         url:

@@ -16,7 +16,7 @@
 
 ### name
 
-• `Const` **name**: *string*= "ping"
+• `Const` **name**: _string_= "ping"
 
 Defined in: [src/test/commands/ping.ts:1](https://github.com/Gencord/gencord/blob/a52c25b/src/test/commands/ping.ts#L1)
 
@@ -24,16 +24,16 @@ Defined in: [src/test/commands/ping.ts:1](https://github.com/Gencord/gencord/blo
 
 ### execute
 
-▸ `Const`**execute**(`client`: [*Client*](../classes/client.client-1.md), `message`: [*Message*](../classes/structures_message.message.md), `args`: *string*[]): *void*
+▸ `Const`**execute**(`client`: [_Client_](../classes/client.client-1.md), `message`: [_Message_](../classes/structures_message.message.md), `args`: _string_[]): _void_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](../classes/client.client-1.md) |
-`message` | [*Message*](../classes/structures_message.message.md) |
-`args` | *string*[] |
+| Name      | Type                                                  |
+| :-------- | :---------------------------------------------------- |
+| `client`  | [_Client_](../classes/client.client-1.md)             |
+| `message` | [_Message_](../classes/structures_message.message.md) |
+| `args`    | _string_[]                                            |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/test/commands/ping.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/test/commands/ping.ts#L5)

@@ -1,4 +1,4 @@
-import { Message, MessageEmbed, Client, colors, ActivityTypes } from "../index";
+import { Message, MessageEmbed, Client, Colors, ActivityTypes } from "../index";
 import { token } from "../../token.json";
 import fs from "fs";
 import { join } from "path";
@@ -29,7 +29,7 @@ const loadCommands = async () => {
   }
 };
 
-client.on("READY", () => {
+client.on("ready", () => {
   console.log("Ready");
   loadCommands();
 });
@@ -41,7 +41,8 @@ client.on("GUILD_BAN_ADD", () => {
 client.on("INTERACTION_CREATE", () => {});
 
 client.on("message", (message: Message) => {
-  const args = message.content.slice("!".length).split(/ +/);
+  if (!message.content.toLowerCase().startsWith("!") || !message.guild) return;
+  const args = message.content.slice("!".length).split(/ +/g);
   const command = args.shift().toLowerCase();
 
   if (!commands.has(command)) return;
@@ -87,7 +88,7 @@ client.on("message", (message: Message) => {
       footer: {
         text: "this is the footer",
       },
-      color: colors.DARK_GREEN,
+      color: Colors.DARK_GREEN,
       url: "https://google.com",
       image: {
         url:

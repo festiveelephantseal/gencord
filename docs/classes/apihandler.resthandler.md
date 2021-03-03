@@ -18,15 +18,15 @@
 
 ### constructor
 
-\+ **new RestHandler**(`client`: [*Client*](client.client-1.md)): [*RestHandler*](apihandler.resthandler.md)
+\+ **new RestHandler**(`client`: [_Client_](client.client-1.md)): [_RestHandler_](apihandler.resthandler.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](client.client-1.md) |
+| Name     | Type                           |
+| :------- | :----------------------------- |
+| `client` | [_Client_](client.client-1.md) |
 
-**Returns:** [*RestHandler*](apihandler.resthandler.md)
+**Returns:** [_RestHandler_](apihandler.resthandler.md)
 
 Defined in: [src/APIHandler.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/APIHandler.ts#L10)
 
@@ -34,14 +34,14 @@ Defined in: [src/APIHandler.ts:10](https://github.com/Gencord/gencord/blob/a52c2
 
 ### fetch
 
-▸ **fetch**(`options`: APIOptions): *Promise*<void\>
+▸ **fetch**(`options`: APIOptions): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`options` | APIOptions |
+| Name      | Type       |
+| :-------- | :--------- |
+| `options` | APIOptions |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/APIHandler.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/APIHandler.ts#L13)

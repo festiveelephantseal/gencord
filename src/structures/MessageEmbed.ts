@@ -1,4 +1,4 @@
-import { colors } from "../constants/colors";
+import { Colors } from "../constants/Colors";
 
 export interface ImageOptions {
   url?: string;
@@ -14,12 +14,13 @@ export interface FooterOptions {
 }
 
 export interface MessageEmbedOptions {
-  title: string;
+  title?: string;
   description?: string;
   url?: string;
-  color?: colors;
+  color?: Colors;
   image?: ImageOptions;
   footer?: FooterOptions;
+  fields?: Array<FieldOptions>;
 }
 
 export interface FieldOptions {
@@ -29,76 +30,59 @@ export interface FieldOptions {
 }
 
 export class MessageEmbed {
-  private title?: string;
-  private description?: string;
-  private url?: string;
-  private color?: colors;
-  private image?: ImageOptions;
-  private footer?: FooterOptions;
-  private fields?: Array<FieldOptions>;
+  public title?: string;
+  public description?: string;
+  public url?: string;
+  public color?: string | Colors;
+  public image?: ImageOptions;
+  public footer?: FooterOptions;
+  public fields?: Array<FieldOptions>;
 
-  constructor(
-    title?: string,
-    description?: string,
-    url?: string,
-    color?: colors,
-    image?: ImageOptions,
-    footer?: FooterOptions,
-    fields: Array<FieldOptions> = []
-  ) {
+  constructor(options?: MessageEmbedOptions) {
+    this.title = options.title;
+    this.description = options.description;
+    this.url = options.url;
+    this.color = options.color;
+    this.image = options.image;
+    this.footer = options.footer;
+    this.fields = options.fields;
+  }
+
+  setColor(color: string | Colors): MessageEmbed {
+    this.color =
+      Colors[color] || color.toString().startsWith("#")
+        ? color.toString().slice(1)
+        : color.toString();
+    return this;
+  }
+
+  setTitle(title: string): MessageEmbed {
     this.title = title;
+    return this;
+  }
+
+  setDescription(description: string): MessageEmbed {
     this.description = description;
+    return this;
+  }
+
+  setURl(url: string): MessageEmbed {
     this.url = url;
-    this.color = color;
-    this.image = image;
-    this.footer = footer;
-    this.fields = fields;
+    return this;
   }
 
-  setColor(color: colors) {
-    this.color = color;
-  }
-
-  setTitle(title: string) {
-    this.title = title;
-  }
-
-  setDescription(description: string) {
-    this.description = description;
-  }
-
-  setURl(url: string) {
-    this.url = url;
-  }
-
-  addField(name: string, value: string, inline: boolean) {
+  addField(name: string, value: string, inline: boolean): MessageEmbed {
     this.fields.push({ name, value, inline });
+    return this;
   }
 
-  setImage(url?: string, proxy_url?: string, height?: number, width?: number) {
+  setImage(
+    url?: string,
+    proxy_url?: string,
+    height?: number,
+    width?: number
+  ): MessageEmbed {
     this.image = { url, proxy_url, height, width };
+    return this;
   }
 }
-
-/*public async send(channelID: string, embed: MessageEmbedOptions) {
-    return await this.client.handler.fetch({
-      endpoint: `channels/${channelID}/messages`,
-      method: "POST",
-      body: JSON.stringify({
-        tts: false,
-        embed: {
-          title: embed.title,
-          description: embed.description,
-          url: embed.url,
-          color: embed.color,
-          footer: embed.footer,
-          image: {
-            url: embed.image.url,
-            proxy_url: embed.image.proxy_url,
-            height: embed.image.height,
-            width: embed.image.width,
-          },
-        },
-      }),
-    });
-  }*/

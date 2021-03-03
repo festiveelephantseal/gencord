@@ -1,9 +1,9 @@
-[gencord](../README.md) / [Exports](../modules.md) / constants/colors
+[gencord](../README.md) / [Exports](../modules.md) / constants/Colors
 
-# Module: constants/colors
+# Module: constants/Colors
 
 ## Table of contents
 
 ### Enumerations
 
-- [colors](../enums/constants_colors.colors.md)
+- [Colors](../enums/constants_Colors.Colors.md)

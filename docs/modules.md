@@ -9,7 +9,7 @@
 - [APIHandler](modules/apihandler.md)
 - [Manager](modules/manager.md)
 - [client](modules/client.md)
-- [constants/colors](modules/constants_colors.md)
+- [constants/Colors](modules/constants_Colors.md)
 - [index](modules/index.md)
 - [structures/ChannelManager](modules/structures_channelmanager.md)
 - [structures/EmojiManager](modules/structures_emojimanager.md)

@@ -62,9 +62,13 @@ export class Client extends EventEmitter {
       } else if (payload.op === 0) {
         this.emit(payload.t, payload.d);
       }
-
-      if (payload.t === "MESSAGE_CREATE") {
-        this.emit("message", new Message(payload.d, this));
+      switch (payload.t) {
+        case "MESSAGE_CREATE":
+          this.emit("message", new Message(payload.d, this));
+          break;
+        case "READY":
+          this.emit("ready");
+          break;
       }
 
       if (payload.t === "GUILD_CREATE") {

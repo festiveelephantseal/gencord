@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-* *EventEmitter*
+- _EventEmitter_
 
   ↳ **Client**
 
@@ -58,15 +58,15 @@
 
 ### constructor
 
-\+ **new Client**(`options`: [*ClientOptions*](../interfaces/client.clientoptions.md)): [*Client*](client.client-1.md)
+\+ **new Client**(`options`: [_ClientOptions_](../interfaces/client.clientoptions.md)): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`options` | [*ClientOptions*](../interfaces/client.clientoptions.md) |
+| Name      | Type                                                     |
+| :-------- | :------------------------------------------------------- |
+| `options` | [_ClientOptions_](../interfaces/client.clientoptions.md) |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: [src/client.ts:30](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L30)
 
@@ -74,77 +74,77 @@ Defined in: [src/client.ts:30](https://github.com/Gencord/gencord/blob/a52c25b/s
 
 ### handler
 
-• **handler**: [*RestHandler*](apihandler.resthandler.md)
+• **handler**: [_RestHandler_](apihandler.resthandler.md)
 
 Defined in: [src/client.ts:28](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L28)
 
-___
+---
 
 ### manager
 
-• **manager**: [*Manager*](manager.manager-1.md)
+• **manager**: [_Manager_](manager.manager-1.md)
 
 Defined in: [src/client.ts:30](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L30)
 
-___
+---
 
 ### options
 
-• **options**: [*ClientOptions*](../interfaces/client.clientoptions.md)
+• **options**: [_ClientOptions_](../interfaces/client.clientoptions.md)
 
 **`param`** passed into the client
 
 Defined in: [src/client.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L20)
 
-___
+---
 
 ### socket
 
-• `Private` **socket**: *WebSocket*
+• `Private` **socket**: _WebSocket_
 
 Defined in: [src/client.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L14)
 
-___
+---
 
 ### token
 
-• **token**: *string*
+• **token**: _string_
 
 **`param`** bots token
 
 Defined in: [src/client.ts:26](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L26)
 
-___
+---
 
 ### captureRejectionSymbol
 
-▪ `Readonly` `Static` **captureRejectionSymbol**: *typeof* [*captureRejectionSymbol*](client.client-1.md#capturerejectionsymbol)
+▪ `Readonly` `Static` **captureRejectionSymbol**: _typeof_ [_captureRejectionSymbol_](client.client-1.md#capturerejectionsymbol)
 
 Defined in: node_modules/@types/node/events.d.ts:43
 
-___
+---
 
 ### captureRejections
 
-▪ `Static` **captureRejections**: *boolean*
+▪ `Static` **captureRejections**: _boolean_
 
 Sets or gets the default captureRejection value for all emitters.
 
 Defined in: node_modules/@types/node/events.d.ts:49
 
-___
+---
 
 ### defaultMaxListeners
 
-▪ `Static` **defaultMaxListeners**: *number*
+▪ `Static` **defaultMaxListeners**: _number_
 
 Defined in: node_modules/@types/node/events.d.ts:50
 
-___
+---
 
 ### errorMonitor
 
-▪ `Readonly` `Static` **errorMonitor**: *typeof* [*errorMonitor*](client.client-1.md#errormonitor)
+▪ `Readonly` `Static` **errorMonitor**: _typeof_ [_errorMonitor_](client.client-1.md#errormonitor)
 
 This symbol shall be used to install a listener for only monitoring `'error'`
 events. Listeners installed using this symbol are called before the regular
@@ -160,362 +160,362 @@ Defined in: node_modules/@types/node/events.d.ts:42
 
 ### addListener
 
-▸ **addListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **addListener**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:62
 
-___
+---
 
 ### destroy
 
-▸ **destroy**(`reason?`: *string*): *void*
+▸ **destroy**(`reason?`: _string_): _void_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`reason?` | *string* |
+| Name      | Type     |
+| :-------- | :------- |
+| `reason?` | _string_ |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/client.ts:77](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L77)
 
-___
+---
 
 ### emit
 
-▸ **emit**(`event`: *string* \| *symbol*, ...`args`: *any*[]): *boolean*
+▸ **emit**(`event`: _string_ \| _symbol_, ...`args`: _any_[]): _boolean_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`...args` | *any*[] |
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `event`   | _string_ \| _symbol_ |
+| `...args` | _any_[]              |
 
-**Returns:** *boolean*
+**Returns:** _boolean_
 
 Defined in: node_modules/@types/node/events.d.ts:72
 
-___
+---
 
 ### eventNames
 
-▸ **eventNames**(): (*string* \| *symbol*)[]
+▸ **eventNames**(): (_string_ \| _symbol_)[]
 
-**Returns:** (*string* \| *symbol*)[]
+**Returns:** (_string_ \| _symbol_)[]
 
 Defined in: node_modules/@types/node/events.d.ts:77
 
-___
+---
 
 ### getMaxListeners
 
-▸ **getMaxListeners**(): *number*
+▸ **getMaxListeners**(): _number_
 
-**Returns:** *number*
+**Returns:** _number_
 
 Defined in: node_modules/@types/node/events.d.ts:69
 
-___
+---
 
 ### heartbeat
 
-▸ `Private`**heartbeat**(`ms`: *number*): *void*
+▸ `Private`**heartbeat**(`ms`: _number_): _void_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`ms` | *number* |
+| Name | Type     |
+| :--- | :------- |
+| `ms` | _number_ |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/client.ts:71](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L71)
 
-___
+---
 
 ### identify
 
-▸ `Private`**identify**(): *void*
+▸ `Private`**identify**(): _void_
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/client.ts:94](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L94)
 
-___
+---
 
 ### listenerCount
 
-▸ **listenerCount**(`event`: *string* \| *symbol*): *number*
+▸ **listenerCount**(`event`: _string_ \| _symbol_): _number_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
+| Name    | Type                 |
+| :------ | :------------------- |
+| `event` | _string_ \| _symbol_ |
 
-**Returns:** *number*
+**Returns:** _number_
 
 Defined in: node_modules/@types/node/events.d.ts:73
 
-___
+---
 
 ### listeners
 
-▸ **listeners**(`event`: *string* \| *symbol*): Function[]
+▸ **listeners**(`event`: _string_ \| _symbol_): Function[]
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
+| Name    | Type                 |
+| :------ | :------------------- |
+| `event` | _string_ \| _symbol_ |
 
 **Returns:** Function[]
 
 Defined in: node_modules/@types/node/events.d.ts:70
 
-___
+---
 
 ### login
 
-▸ `Private`**login**(): *Promise*<void\>
+▸ `Private`**login**(): _Promise_<void\>
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/client.ts:39](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L39)
 
-___
+---
 
 ### off
 
-▸ **off**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **off**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:66
 
-___
+---
 
 ### on
 
-▸ **on**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **on**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:63
 
-___
+---
 
 ### once
 
-▸ **once**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **once**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:64
 
-___
+---
 
 ### ping
 
-▸ **ping**(): *Timeout*
+▸ **ping**(): _Timeout_
 
-**Returns:** *Timeout*
+**Returns:** _Timeout_
 
 Defined in: [src/client.ts:83](https://github.com/Gencord/gencord/blob/a52c25b/src/client.ts#L83)
 
-___
+---
 
 ### prependListener
 
-▸ **prependListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **prependListener**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:75
 
-___
+---
 
 ### prependOnceListener
 
-▸ **prependOnceListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **prependOnceListener**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:76
 
-___
+---
 
 ### rawListeners
 
-▸ **rawListeners**(`event`: *string* \| *symbol*): Function[]
+▸ **rawListeners**(`event`: _string_ \| _symbol_): Function[]
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
+| Name    | Type                 |
+| :------ | :------------------- |
+| `event` | _string_ \| _symbol_ |
 
 **Returns:** Function[]
 
 Defined in: node_modules/@types/node/events.d.ts:71
 
-___
+---
 
 ### removeAllListeners
 
-▸ **removeAllListeners**(`event?`: *string* \| *symbol*): [*Client*](client.client-1.md)
+▸ **removeAllListeners**(`event?`: _string_ \| _symbol_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event?` | *string* \| *symbol* |
+| Name     | Type                 |
+| :------- | :------------------- |
+| `event?` | _string_ \| _symbol_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:67
 
-___
+---
 
 ### removeListener
 
-▸ **removeListener**(`event`: *string* \| *symbol*, `listener`: (...`args`: *any*[]) => *void*): [*Client*](client.client-1.md)
+▸ **removeListener**(`event`: _string_ \| _symbol_, `listener`: (...`args`: _any_[]) => _void_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`event` | *string* \| *symbol* |
-`listener` | (...`args`: *any*[]) => *void* |
+| Name       | Type                           |
+| :--------- | :----------------------------- |
+| `event`    | _string_ \| _symbol_           |
+| `listener` | (...`args`: _any_[]) => _void_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:65
 
-___
+---
 
 ### setMaxListeners
 
-▸ **setMaxListeners**(`n`: *number*): [*Client*](client.client-1.md)
+▸ **setMaxListeners**(`n`: _number_): [_Client_](client.client-1.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`n` | *number* |
+| Name | Type     |
+| :--- | :------- |
+| `n`  | _number_ |
 
-**Returns:** [*Client*](client.client-1.md)
+**Returns:** [_Client_](client.client-1.md)
 
 Defined in: node_modules/@types/node/events.d.ts:68
 
-___
+---
 
 ### listenerCount
 
-▸ `Static`**listenerCount**(`emitter`: *EventEmitter*, `event`: *string* \| *symbol*): *number*
+▸ `Static`**listenerCount**(`emitter`: _EventEmitter_, `event`: _string_ \| _symbol_): _number_
 
 **`deprecated`** since v4.0.0
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`emitter` | *EventEmitter* |
-`event` | *string* \| *symbol* |
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `emitter` | _EventEmitter_       |
+| `event`   | _string_ \| _symbol_ |
 
-**Returns:** *number*
+**Returns:** _number_
 
 Defined in: node_modules/@types/node/events.d.ts:31
 
-___
+---
 
 ### on
 
-▸ `Static`**on**(`emitter`: *EventEmitter*, `event`: *string*): *AsyncIterableIterator*<any\>
+▸ `Static`**on**(`emitter`: _EventEmitter_, `event`: _string_): _AsyncIterableIterator_<any\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`emitter` | *EventEmitter* |
-`event` | *string* |
+| Name      | Type           |
+| :-------- | :------------- |
+| `emitter` | _EventEmitter_ |
+| `event`   | _string_       |
 
-**Returns:** *AsyncIterableIterator*<any\>
+**Returns:** _AsyncIterableIterator_<any\>
 
 Defined in: node_modules/@types/node/events.d.ts:28
 
-___
+---
 
 ### once
 
-▸ `Static`**once**(`emitter`: *NodeEventTarget*, `event`: *string* \| *symbol*): *Promise*<any[]\>
+▸ `Static`**once**(`emitter`: _NodeEventTarget_, `event`: _string_ \| _symbol_): _Promise_<any[]\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`emitter` | *NodeEventTarget* |
-`event` | *string* \| *symbol* |
+| Name      | Type                 |
+| :-------- | :------------------- |
+| `emitter` | _NodeEventTarget_    |
+| `event`   | _string_ \| _symbol_ |
 
-**Returns:** *Promise*<any[]\>
+**Returns:** _Promise_<any[]\>
 
 Defined in: node_modules/@types/node/events.d.ts:26
 
-▸ `Static`**once**(`emitter`: DOMEventTarget, `event`: *string*): *Promise*<any[]\>
+▸ `Static`**once**(`emitter`: DOMEventTarget, `event`: _string_): _Promise_<any[]\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`emitter` | DOMEventTarget |
-`event` | *string* |
+| Name      | Type           |
+| :-------- | :------------- |
+| `emitter` | DOMEventTarget |
+| `event`   | _string_       |
 
-**Returns:** *Promise*<any[]\>
+**Returns:** _Promise_<any[]\>
 
 Defined in: node_modules/@types/node/events.d.ts:27

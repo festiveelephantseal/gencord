@@ -14,16 +14,16 @@
 
 - [author](structures_message.message.md#author)
 - [channel](structures_message.message.md#channel)
-- [channel\_id](structures_message.message.md#channel_id)
+- [channel_id](structures_message.message.md#channel_id)
 - [client](structures_message.message.md#client)
 - [content](structures_message.message.md#content)
-- [edited\_timestamp](structures_message.message.md#edited_timestamp)
+- [edited_timestamp](structures_message.message.md#edited_timestamp)
 - [guild](structures_message.message.md#guild)
-- [guild\_id](structures_message.message.md#guild_id)
+- [guild_id](structures_message.message.md#guild_id)
 - [id](structures_message.message.md#id)
 - [member](structures_message.message.md#member)
-- [mention\_everyone](structures_message.message.md#mention_everyone)
-- [mention\_roles](structures_message.message.md#mention_roles)
+- [mention_everyone](structures_message.message.md#mention_everyone)
+- [mention_roles](structures_message.message.md#mention_roles)
 - [mentions](structures_message.message.md#mentions)
 - [timestamp](structures_message.message.md#timestamp)
 - [tts](structures_message.message.md#tts)
@@ -38,16 +38,16 @@
 
 ### constructor
 
-\+ **new Message**(`data`: *any*, `client`: *any*): [*Message*](structures_message.message.md)
+\+ **new Message**(`data`: _any_, `client`: _any_): [_Message_](structures_message.message.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *any* |
-`client` | *any* |
+| Name     | Type  |
+| :------- | :---- |
+| `data`   | _any_ |
+| `client` | _any_ |
 
-**Returns:** [*Message*](structures_message.message.md)
+**Returns:** [_Message_](structures_message.message.md)
 
 Defined in: [src/structures/Message.ts:21](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L21)
 
@@ -55,119 +55,119 @@ Defined in: [src/structures/Message.ts:21](https://github.com/Gencord/gencord/bl
 
 ### author
 
-• **author**: *any*
+• **author**: _any_
 
 Defined in: [src/structures/Message.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L13)
 
-___
+---
 
 ### channel
 
-• **channel**: [*ChannelManager*](structures_channelmanager.channelmanager.md)
+• **channel**: [_ChannelManager_](structures_channelmanager.channelmanager.md)
 
 Defined in: [src/structures/Message.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L12)
 
-___
+---
 
-### channel\_id
+### channel_id
 
-• **channel\_id**: *string*
+• **channel_id**: _string_
 
 Defined in: [src/structures/Message.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L9)
 
-___
+---
 
 ### client
 
-• `Private` **client**: [*Client*](client.client-1.md)
+• `Private` **client**: [_Client_](client.client-1.md)
 
 Defined in: [src/structures/Message.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L7)
 
-___
+---
 
 ### content
 
-• **content**: *string*
+• **content**: _string_
 
 Defined in: [src/structures/Message.ts:15](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L15)
 
-___
+---
 
-### edited\_timestamp
+### edited_timestamp
 
-• `Optional` **edited\_timestamp**: *number*
+• `Optional` **edited_timestamp**: _number_
 
 Defined in: [src/structures/Message.ts:17](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L17)
 
-___
+---
 
 ### guild
 
-• **guild**: [*GuildManager*](structures_guildmanager.guildmanager.md)
+• **guild**: [_GuildManager_](structures_guildmanager.guildmanager.md)
 
 Defined in: [src/structures/Message.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L11)
 
-___
+---
 
-### guild\_id
+### guild_id
 
-• `Optional` **guild\_id**: *string*
+• `Optional` **guild_id**: _string_
 
 Defined in: [src/structures/Message.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L10)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
 Defined in: [src/structures/Message.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L8)
 
-___
+---
 
 ### member
 
-• `Optional` **member**: *any*
+• `Optional` **member**: _any_
 
 Defined in: [src/structures/Message.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L14)
 
-___
+---
 
-### mention\_everyone
+### mention_everyone
 
-• **mention\_everyone**: *boolean*
+• **mention_everyone**: _boolean_
 
 Defined in: [src/structures/Message.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L19)
 
-___
+---
 
-### mention\_roles
+### mention_roles
 
-• **mention\_roles**: *string*[]
+• **mention_roles**: _string_[]
 
 Defined in: [src/structures/Message.ts:21](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L21)
 
-___
+---
 
 ### mentions
 
-• **mentions**: [*User*](structures_user.user.md)[]
+• **mentions**: [_User_](structures_user.user.md)[]
 
 Defined in: [src/structures/Message.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L20)
 
-___
+---
 
 ### timestamp
 
-• **timestamp**: *number*
+• **timestamp**: _number_
 
 Defined in: [src/structures/Message.ts:16](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L16)
 
-___
+---
 
 ### tts
 
-• **tts**: *boolean*
+• **tts**: _boolean_
 
 Defined in: [src/structures/Message.ts:18](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L18)
 
@@ -175,42 +175,42 @@ Defined in: [src/structures/Message.ts:18](https://github.com/Gencord/gencord/bl
 
 ### \_set
 
-▸ **_set**(): *Promise*<void\>
+▸ **\_set**(): _Promise_<void\>
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/Message.ts:38](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L38)
 
-___
+---
 
 ### delete
 
-▸ **delete**(`channelID`: *string*, `messageID`: *string*): *Promise*<void\>
+▸ **delete**(`channelID`: _string_, `messageID`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`channelID` | *string* |
-`messageID` | *string* |
+| Name        | Type     |
+| :---------- | :------- |
+| `channelID` | _string_ |
+| `messageID` | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/Message.ts:58](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L58)
 
-___
+---
 
 ### reply
 
-▸ **reply**(`channelID`: *string*, `content`: *string*): *Promise*<void\>
+▸ **reply**(`channelID`: _string_, `content`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`channelID` | *string* |
-`content` | *string* |
+| Name        | Type     |
+| :---------- | :------- |
+| `channelID` | _string_ |
+| `content`   | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/Message.ts:47](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/Message.ts#L47)

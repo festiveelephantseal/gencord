@@ -18,10 +18,10 @@
 - [name](structures_channelmanager.channelmanager.md#name)
 - [nsfw](structures_channelmanager.channelmanager.md#nsfw)
 - [position](structures_channelmanager.channelmanager.md#position)
-- [rate\_limit\_per\_user](structures_channelmanager.channelmanager.md#rate_limit_per_user)
+- [rate_limit_per_user](structures_channelmanager.channelmanager.md#rate_limit_per_user)
 - [topic](structures_channelmanager.channelmanager.md#topic)
 - [type](structures_channelmanager.channelmanager.md#type)
-- [user\_limit](structures_channelmanager.channelmanager.md#user_limit)
+- [user_limit](structures_channelmanager.channelmanager.md#user_limit)
 
 ### Methods
 
@@ -34,15 +34,15 @@
 
 ### constructor
 
-\+ **new ChannelManager**(`client`: [*Client*](client.client-1.md)): [*ChannelManager*](structures_channelmanager.channelmanager.md)
+\+ **new ChannelManager**(`client`: [_Client_](client.client-1.md)): [_ChannelManager_](structures_channelmanager.channelmanager.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](client.client-1.md) |
+| Name     | Type                           |
+| :------- | :----------------------------- |
+| `client` | [_Client_](client.client-1.md) |
 
-**Returns:** [*ChannelManager*](structures_channelmanager.channelmanager.md)
+**Returns:** [_ChannelManager_](structures_channelmanager.channelmanager.md)
 
 Defined in: [src/structures/ChannelManager.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L13)
 
@@ -50,79 +50,79 @@ Defined in: [src/structures/ChannelManager.ts:13](https://github.com/Gencord/gen
 
 ### bitrate
 
-• **bitrate**: *number*
+• **bitrate**: _number_
 
 Defined in: [src/structures/ChannelManager.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L12)
 
-___
+---
 
 ### client
 
-• `Private` **client**: [*Client*](client.client-1.md)
+• `Private` **client**: [_Client_](client.client-1.md)
 
 Defined in: [src/structures/ChannelManager.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L4)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
 Defined in: [src/structures/ChannelManager.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L5)
 
-___
+---
 
 ### name
 
-• **name**: *string*
+• **name**: _string_
 
 Defined in: [src/structures/ChannelManager.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L6)
 
-___
+---
 
 ### nsfw
 
-• **nsfw**: *boolean*
+• **nsfw**: _boolean_
 
 Defined in: [src/structures/ChannelManager.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L10)
 
-___
+---
 
 ### position
 
-• **position**: *number*
+• **position**: _number_
 
 Defined in: [src/structures/ChannelManager.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L8)
 
-___
+---
 
-### rate\_limit\_per\_user
+### rate_limit_per_user
 
-• **rate\_limit\_per\_user**: *number*
+• **rate_limit_per_user**: _number_
 
 Defined in: [src/structures/ChannelManager.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L11)
 
-___
+---
 
 ### topic
 
-• **topic**: *string*
+• **topic**: _string_
 
 Defined in: [src/structures/ChannelManager.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L9)
 
-___
+---
 
 ### type
 
-• **type**: *number*
+• **type**: _number_
 
 Defined in: [src/structures/ChannelManager.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L7)
 
-___
+---
 
-### user\_limit
+### user_limit
 
-• **user\_limit**: *number*
+• **user_limit**: _number_
 
 Defined in: [src/structures/ChannelManager.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L13)
 
@@ -130,51 +130,51 @@ Defined in: [src/structures/ChannelManager.ts:13](https://github.com/Gencord/gen
 
 ### delete
 
-▸ **delete**(`channelID`: *string*): *Promise*<void\>
+▸ **delete**(`channelID`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`channelID` | *string* |
+| Name        | Type     |
+| :---------- | :------- |
+| `channelID` | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/ChannelManager.ts:33](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L33)
 
-___
+---
 
 ### get
 
-▸ **get**(): *Promise*<void\>
+▸ **get**(): _Promise_<void\>
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/ChannelManager.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L19)
 
-___
+---
 
 ### send
 
-▸ **send**(`channelID`: *string*, `content`: *any*): *Promise*<void\>
+▸ **send**(`channelID`: _string_, `content`: _any_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`channelID` | *string* |
-`content` | *any* |
+| Name        | Type     |
+| :---------- | :------- |
+| `channelID` | _string_ |
+| `content`   | _any_    |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/ChannelManager.ts:40](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L40)
 
-___
+---
 
 ### update
 
-▸ **update**(): *Promise*<void\>
+▸ **update**(): _Promise_<void\>
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/ChannelManager.ts:26](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/ChannelManager.ts#L26)

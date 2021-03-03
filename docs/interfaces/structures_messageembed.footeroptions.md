@@ -8,30 +8,30 @@
 
 ### Properties
 
-- [icon\_url](structures_messageembed.footeroptions.md#icon_url)
-- [proxy\_icon\_url](structures_messageembed.footeroptions.md#proxy_icon_url)
+- [icon_url](structures_messageembed.footeroptions.md#icon_url)
+- [proxy_icon_url](structures_messageembed.footeroptions.md#proxy_icon_url)
 - [text](structures_messageembed.footeroptions.md#text)
 
 ## Properties
 
-### icon\_url
+### icon_url
 
-• `Optional` **icon\_url**: *string*
+• `Optional` **icon_url**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L13)
 
-___
+---
 
-### proxy\_icon\_url
+### proxy_icon_url
 
-• `Optional` **proxy\_icon\_url**: *string*
+• `Optional` **proxy_icon_url**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L14)
 
-___
+---
 
 ### text
 
-• **text**: *string*
+• **text**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L12)

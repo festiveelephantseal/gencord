@@ -13,8 +13,8 @@
 - [INTEGER](structures_slashcommands.applicationcommandoptiontype.md#integer)
 - [ROLE](structures_slashcommands.applicationcommandoptiontype.md#role)
 - [STRING](structures_slashcommands.applicationcommandoptiontype.md#string)
-- [SUB\_COMMAND](structures_slashcommands.applicationcommandoptiontype.md#sub_command)
-- [SUB\_COMMAND\_GROUP](structures_slashcommands.applicationcommandoptiontype.md#sub_command_group)
+- [SUB_COMMAND](structures_slashcommands.applicationcommandoptiontype.md#sub_command)
+- [SUB_COMMAND_GROUP](structures_slashcommands.applicationcommandoptiontype.md#sub_command_group)
 - [USER](structures_slashcommands.applicationcommandoptiontype.md#user)
 
 ## Enumeration members
@@ -25,7 +25,7 @@
 
 Defined in: [src/structures/SlashCommands.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L8)
 
-___
+---
 
 ### CHANNEL
 
@@ -33,7 +33,7 @@ ___
 
 Defined in: [src/structures/SlashCommands.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L10)
 
-___
+---
 
 ### INTEGER
 
@@ -41,7 +41,7 @@ ___
 
 Defined in: [src/structures/SlashCommands.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L7)
 
-___
+---
 
 ### ROLE
 
@@ -49,7 +49,7 @@ ___
 
 Defined in: [src/structures/SlashCommands.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L11)
 
-___
+---
 
 ### STRING
 
@@ -57,23 +57,23 @@ ___
 
 Defined in: [src/structures/SlashCommands.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L6)
 
-___
+---
 
-### SUB\_COMMAND
+### SUB_COMMAND
 
-• **SUB\_COMMAND**: = 1
+• **SUB_COMMAND**: = 1
 
 Defined in: [src/structures/SlashCommands.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L4)
 
-___
+---
 
-### SUB\_COMMAND\_GROUP
+### SUB_COMMAND_GROUP
 
-• **SUB\_COMMAND\_GROUP**: = 2
+• **SUB_COMMAND_GROUP**: = 2
 
 Defined in: [src/structures/SlashCommands.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L5)
 
-___
+---
 
 ### USER
 

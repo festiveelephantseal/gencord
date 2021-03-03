@@ -1,42 +1,42 @@
-[gencord](../README.md) / [Exports](../modules.md) / [constants/colors](../modules/constants_colors.md) / colors
+[gencord](../README.md) / [Exports](../modules.md) / [constants/Colors](../modules/constants_Colors.md) / Colors
 
-# Enumeration: colors
+# Enumeration: Colors
 
-[constants/colors](../modules/constants_colors.md).colors
+[constants/Colors](../modules/constants_Colors.md).Colors
 
 ## Table of contents
 
 ### Enumeration members
 
-- [AQUA](constants_colors.colors.md#aqua)
-- [BLUE](constants_colors.colors.md#blue)
-- [BLURPLE](constants_colors.colors.md#blurple)
-- [DARKER\_GREY](constants_colors.colors.md#darker_grey)
-- [DARK\_AQUA](constants_colors.colors.md#dark_aqua)
-- [DARK\_BLUE](constants_colors.colors.md#dark_blue)
-- [DARK\_BUT\_NOT\_BLACK](constants_colors.colors.md#dark_but_not_black)
-- [DARK\_GOLD](constants_colors.colors.md#dark_gold)
-- [DARK\_GREEN](constants_colors.colors.md#dark_green)
-- [DARK\_GREY](constants_colors.colors.md#dark_grey)
-- [DARK\_NAVY](constants_colors.colors.md#dark_navy)
-- [DARK\_ORANGE](constants_colors.colors.md#dark_orange)
-- [DARK\_PURPLE](constants_colors.colors.md#dark_purple)
-- [DARK\_RED](constants_colors.colors.md#dark_red)
-- [DARK\_VIVID\_PINK](constants_colors.colors.md#dark_vivid_pink)
-- [DEFAULT](constants_colors.colors.md#default)
-- [GOLD](constants_colors.colors.md#gold)
-- [GREEN](constants_colors.colors.md#green)
-- [GREY](constants_colors.colors.md#grey)
-- [GREYPLE](constants_colors.colors.md#greyple)
-- [LIGHT\_GREY](constants_colors.colors.md#light_grey)
-- [LUMINOUS\_VIVID\_PINK](constants_colors.colors.md#luminous_vivid_pink)
-- [NAVY](constants_colors.colors.md#navy)
-- [NOT\_QUITE\_BLACK](constants_colors.colors.md#not_quite_black)
-- [ORANGE](constants_colors.colors.md#orange)
-- [PURPLE](constants_colors.colors.md#purple)
-- [RED](constants_colors.colors.md#red)
-- [WHITE](constants_colors.colors.md#white)
-- [YELLOW](constants_colors.colors.md#yellow)
+- [AQUA](constants_Colors.Colors.md#aqua)
+- [BLUE](constants_Colors.Colors.md#blue)
+- [BLURPLE](constants_Colors.Colors.md#blurple)
+- [DARKER_GREY](constants_Colors.Colors.md#darker_grey)
+- [DARK_AQUA](constants_Colors.Colors.md#dark_aqua)
+- [DARK_BLUE](constants_Colors.Colors.md#dark_blue)
+- [DARK_BUT_NOT_BLACK](constants_Colors.Colors.md#dark_but_not_black)
+- [DARK_GOLD](constants_Colors.Colors.md#dark_gold)
+- [DARK_GREEN](constants_Colors.Colors.md#dark_green)
+- [DARK_GREY](constants_Colors.Colors.md#dark_grey)
+- [DARK_NAVY](constants_Colors.Colors.md#dark_navy)
+- [DARK_ORANGE](constants_Colors.Colors.md#dark_orange)
+- [DARK_PURPLE](constants_Colors.Colors.md#dark_purple)
+- [DARK_RED](constants_Colors.Colors.md#dark_red)
+- [DARK_VIVID_PINK](constants_Colors.Colors.md#dark_vivid_pink)
+- [DEFAULT](constants_Colors.Colors.md#default)
+- [GOLD](constants_Colors.Colors.md#gold)
+- [GREEN](constants_Colors.Colors.md#green)
+- [GREY](constants_Colors.Colors.md#grey)
+- [GREYPLE](constants_Colors.Colors.md#greyple)
+- [LIGHT_GREY](constants_Colors.Colors.md#light_grey)
+- [LUMINOUS_VIVID_PINK](constants_Colors.Colors.md#luminous_vivid_pink)
+- [NAVY](constants_Colors.Colors.md#navy)
+- [NOT_QUITE_BLACK](constants_Colors.Colors.md#not_quite_black)
+- [ORANGE](constants_Colors.Colors.md#orange)
+- [PURPLE](constants_Colors.Colors.md#purple)
+- [RED](constants_Colors.Colors.md#red)
+- [WHITE](constants_Colors.Colors.md#white)
+- [YELLOW](constants_Colors.Colors.md#yellow)
 
 ## Enumeration members
 
@@ -44,228 +44,228 @@
 
 • **AQUA**: = 1752220
 
-Defined in: [src/constants/colors.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L4)
+Defined in: [src/constants/Colors.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L4)
 
-___
+---
 
 ### BLUE
 
 • **BLUE**: = 3447003
 
-Defined in: [src/constants/colors.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L6)
+Defined in: [src/constants/Colors.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L6)
 
-___
+---
 
 ### BLURPLE
 
 • **BLURPLE**: = 7506394
 
-Defined in: [src/constants/colors.ts:27](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L27)
+Defined in: [src/constants/Colors.ts:27](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L27)
 
-___
+---
 
-### DARKER\_GREY
+### DARKER_GREY
 
-• **DARKER\_GREY**: = 8359053
+• **DARKER_GREY**: = 8359053
 
-Defined in: [src/constants/colors.ts:24](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L24)
+Defined in: [src/constants/Colors.ts:24](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L24)
 
-___
+---
 
-### DARK\_AQUA
+### DARK_AQUA
 
-• **DARK\_AQUA**: = 1146986
+• **DARK_AQUA**: = 1146986
 
-Defined in: [src/constants/colors.ts:15](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L15)
+Defined in: [src/constants/Colors.ts:15](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L15)
 
-___
+---
 
-### DARK\_BLUE
+### DARK_BLUE
 
-• **DARK\_BLUE**: = 2123412
+• **DARK_BLUE**: = 2123412
 
-Defined in: [src/constants/colors.ts:17](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L17)
+Defined in: [src/constants/Colors.ts:17](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L17)
 
-___
+---
 
-### DARK\_BUT\_NOT\_BLACK
+### DARK_BUT_NOT_BLACK
 
-• **DARK\_BUT\_NOT\_BLACK**: = 2895667
+• **DARK_BUT_NOT_BLACK**: = 2895667
 
-Defined in: [src/constants/colors.ts:29](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L29)
+Defined in: [src/constants/Colors.ts:29](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L29)
 
-___
+---
 
-### DARK\_GOLD
+### DARK_GOLD
 
-• **DARK\_GOLD**: = 12745742
+• **DARK_GOLD**: = 12745742
 
-Defined in: [src/constants/colors.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L20)
+Defined in: [src/constants/Colors.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L20)
 
-___
+---
 
-### DARK\_GREEN
+### DARK_GREEN
 
-• **DARK\_GREEN**: = 2067276
+• **DARK_GREEN**: = 2067276
 
-Defined in: [src/constants/colors.ts:16](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L16)
+Defined in: [src/constants/Colors.ts:16](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L16)
 
-___
+---
 
-### DARK\_GREY
+### DARK_GREY
 
-• **DARK\_GREY**: = 9936031
+• **DARK_GREY**: = 9936031
 
-Defined in: [src/constants/colors.ts:23](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L23)
+Defined in: [src/constants/Colors.ts:23](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L23)
 
-___
+---
 
-### DARK\_NAVY
+### DARK_NAVY
 
-• **DARK\_NAVY**: = 2899536
+• **DARK_NAVY**: = 2899536
 
-Defined in: [src/constants/colors.ts:26](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L26)
+Defined in: [src/constants/Colors.ts:26](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L26)
 
-___
+---
 
-### DARK\_ORANGE
+### DARK_ORANGE
 
-• **DARK\_ORANGE**: = 11027200
+• **DARK_ORANGE**: = 11027200
 
-Defined in: [src/constants/colors.ts:21](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L21)
+Defined in: [src/constants/Colors.ts:21](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L21)
 
-___
+---
 
-### DARK\_PURPLE
+### DARK_PURPLE
 
-• **DARK\_PURPLE**: = 7419530
+• **DARK_PURPLE**: = 7419530
 
-Defined in: [src/constants/colors.ts:18](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L18)
+Defined in: [src/constants/Colors.ts:18](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L18)
 
-___
+---
 
-### DARK\_RED
+### DARK_RED
 
-• **DARK\_RED**: = 10038562
+• **DARK_RED**: = 10038562
 
-Defined in: [src/constants/colors.ts:22](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L22)
+Defined in: [src/constants/Colors.ts:22](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L22)
 
-___
+---
 
-### DARK\_VIVID\_PINK
+### DARK_VIVID_PINK
 
-• **DARK\_VIVID\_PINK**: = 11342935
+• **DARK_VIVID_PINK**: = 11342935
 
-Defined in: [src/constants/colors.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L19)
+Defined in: [src/constants/Colors.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L19)
 
-___
+---
 
 ### DEFAULT
 
 • **DEFAULT**: = 0
 
-Defined in: [src/constants/colors.ts:2](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L2)
+Defined in: [src/constants/Colors.ts:2](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L2)
 
-___
+---
 
 ### GOLD
 
 • **GOLD**: = 15844367
 
-Defined in: [src/constants/colors.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L10)
+Defined in: [src/constants/Colors.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L10)
 
-___
+---
 
 ### GREEN
 
 • **GREEN**: = 3066993
 
-Defined in: [src/constants/colors.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L5)
+Defined in: [src/constants/Colors.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L5)
 
-___
+---
 
 ### GREY
 
 • **GREY**: = 9807270
 
-Defined in: [src/constants/colors.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L13)
+Defined in: [src/constants/Colors.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L13)
 
-___
+---
 
 ### GREYPLE
 
 • **GREYPLE**: = 10070709
 
-Defined in: [src/constants/colors.ts:28](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L28)
+Defined in: [src/constants/Colors.ts:28](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L28)
 
-___
+---
 
-### LIGHT\_GREY
+### LIGHT_GREY
 
-• **LIGHT\_GREY**: = 12370112
+• **LIGHT_GREY**: = 12370112
 
-Defined in: [src/constants/colors.ts:25](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L25)
+Defined in: [src/constants/Colors.ts:25](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L25)
 
-___
+---
 
-### LUMINOUS\_VIVID\_PINK
+### LUMINOUS_VIVID_PINK
 
-• **LUMINOUS\_VIVID\_PINK**: = 15277667
+• **LUMINOUS_VIVID_PINK**: = 15277667
 
-Defined in: [src/constants/colors.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L9)
+Defined in: [src/constants/Colors.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L9)
 
-___
+---
 
 ### NAVY
 
 • **NAVY**: = 3426654
 
-Defined in: [src/constants/colors.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L14)
+Defined in: [src/constants/Colors.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L14)
 
-___
+---
 
-### NOT\_QUITE\_BLACK
+### NOT_QUITE_BLACK
 
-• **NOT\_QUITE\_BLACK**: = 2303786
+• **NOT_QUITE_BLACK**: = 2303786
 
-Defined in: [src/constants/colors.ts:30](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L30)
+Defined in: [src/constants/Colors.ts:30](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L30)
 
-___
+---
 
 ### ORANGE
 
 • **ORANGE**: = 15105570
 
-Defined in: [src/constants/colors.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L11)
+Defined in: [src/constants/Colors.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L11)
 
-___
+---
 
 ### PURPLE
 
 • **PURPLE**: = 10181046
 
-Defined in: [src/constants/colors.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L8)
+Defined in: [src/constants/Colors.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L8)
 
-___
+---
 
 ### RED
 
 • **RED**: = 15158332
 
-Defined in: [src/constants/colors.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L12)
+Defined in: [src/constants/Colors.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L12)
 
-___
+---
 
 ### WHITE
 
 • **WHITE**: = 16777215
 
-Defined in: [src/constants/colors.ts:3](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L3)
+Defined in: [src/constants/Colors.ts:3](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L3)
 
-___
+---
 
 ### YELLOW
 
 • **YELLOW**: = 16776960
 
-Defined in: [src/constants/colors.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/colors.ts#L7)
+Defined in: [src/constants/Colors.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/constants/Colors.ts#L7)

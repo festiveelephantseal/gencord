@@ -19,9 +19,9 @@
 - [flags](structures_user.user.md#flags)
 - [id](structures_user.user.md#id)
 - [locale](structures_user.user.md#locale)
-- [mfa\_enabled](structures_user.user.md#mfa_enabled)
-- [premium\_type](structures_user.user.md#premium_type)
-- [public\_flags](structures_user.user.md#public_flags)
+- [mfa_enabled](structures_user.user.md#mfa_enabled)
+- [premium_type](structures_user.user.md#premium_type)
+- [public_flags](structures_user.user.md#public_flags)
 - [system](structures_user.user.md#system)
 - [username](structures_user.user.md#username)
 - [verified](structures_user.user.md#verified)
@@ -34,15 +34,15 @@
 
 ### constructor
 
-\+ **new User**(`data`: *any*): [*User*](structures_user.user.md)
+\+ **new User**(`data`: _any_): [_User_](structures_user.user.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *any* |
+| Name   | Type  |
+| :----- | :---- |
+| `data` | _any_ |
 
-**Returns:** [*User*](structures_user.user.md)
+**Returns:** [_User_](structures_user.user.md)
 
 Defined in: [src/structures/User.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L14)
 
@@ -50,103 +50,103 @@ Defined in: [src/structures/User.ts:14](https://github.com/Gencord/gencord/blob/
 
 ### avatar
 
-• `Optional` **avatar**: *string*
+• `Optional` **avatar**: _string_
 
 Defined in: [src/structures/User.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L5)
 
-___
+---
 
 ### bot
 
-• `Optional` **bot**: *boolean*
+• `Optional` **bot**: _boolean_
 
 Defined in: [src/structures/User.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L6)
 
-___
+---
 
 ### discriminator
 
-• **discriminator**: *string*
+• **discriminator**: _string_
 
 Defined in: [src/structures/User.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L4)
 
-___
+---
 
 ### email
 
-• `Optional` **email**: *string*
+• `Optional` **email**: _string_
 
 Defined in: [src/structures/User.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L11)
 
-___
+---
 
 ### flags
 
-• `Optional` **flags**: *number*
+• `Optional` **flags**: _number_
 
 Defined in: [src/structures/User.ts:12](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L12)
 
-___
+---
 
 ### id
 
-• **id**: *string*
+• **id**: _string_
 
 Defined in: [src/structures/User.ts:2](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L2)
 
-___
+---
 
 ### locale
 
-• `Optional` **locale**: *string*
+• `Optional` **locale**: _string_
 
 Defined in: [src/structures/User.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L9)
 
-___
+---
 
-### mfa\_enabled
+### mfa_enabled
 
-• `Optional` **mfa\_enabled**: *boolean*
+• `Optional` **mfa_enabled**: _boolean_
 
 Defined in: [src/structures/User.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L8)
 
-___
+---
 
-### premium\_type
+### premium_type
 
-• `Optional` **premium\_type**: *0* \| *1* \| *2*
+• `Optional` **premium_type**: _0_ \| _1_ \| _2_
 
 Defined in: [src/structures/User.ts:13](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L13)
 
-___
+---
 
-### public\_flags
+### public_flags
 
-• `Optional` **public\_flags**: *number*
+• `Optional` **public_flags**: _number_
 
 Defined in: [src/structures/User.ts:14](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L14)
 
-___
+---
 
 ### system
 
-• `Optional` **system**: *boolean*
+• `Optional` **system**: _boolean_
 
 Defined in: [src/structures/User.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L7)
 
-___
+---
 
 ### username
 
-• **username**: *string*
+• **username**: _string_
 
 Defined in: [src/structures/User.ts:3](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L3)
 
-___
+---
 
 ### verified
 
-• `Optional` **verified**: *string*
+• `Optional` **verified**: _string_
 
 Defined in: [src/structures/User.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L10)
 
@@ -154,14 +154,14 @@ Defined in: [src/structures/User.ts:10](https://github.com/Gencord/gencord/blob/
 
 ### \_set
 
-▸ **_set**(`data`: *any*): *void*
+▸ **\_set**(`data`: _any_): _void_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *any* |
+| Name   | Type  |
+| :----- | :---- |
+| `data` | _any_ |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/structures/User.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/User.ts#L20)

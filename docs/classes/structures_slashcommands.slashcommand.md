@@ -25,15 +25,15 @@
 
 ### constructor
 
-\+ **new SlashCommand**(`client`: [*Client*](client.client-1.md)): [*SlashCommand*](structures_slashcommands.slashcommand.md)
+\+ **new SlashCommand**(`client`: [_Client_](client.client-1.md)): [_SlashCommand_](structures_slashcommands.slashcommand.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](client.client-1.md) |
+| Name     | Type                           |
+| :------- | :----------------------------- |
+| `client` | [_Client_](client.client-1.md) |
 
-**Returns:** [*SlashCommand*](structures_slashcommands.slashcommand.md)
+**Returns:** [_SlashCommand_](structures_slashcommands.slashcommand.md)
 
 Defined in: [src/structures/SlashCommands.ts:23](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L23)
 
@@ -41,7 +41,7 @@ Defined in: [src/structures/SlashCommands.ts:23](https://github.com/Gencord/genc
 
 ### client
 
-• `Private` **client**: [*Client*](client.client-1.md)
+• `Private` **client**: [_Client_](client.client-1.md)
 
 Defined in: [src/structures/SlashCommands.ts:23](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L23)
 
@@ -49,63 +49,63 @@ Defined in: [src/structures/SlashCommands.ts:23](https://github.com/Gencord/genc
 
 ### delete
 
-▸ **delete**(`options?`: [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md)): *Promise*<void\>
+▸ **delete**(`options?`: [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md)): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`options?` | [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md) |
+| Name       | Type                                                                                             |
+| :--------- | :----------------------------------------------------------------------------------------------- |
+| `options?` | [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md) |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/SlashCommands.ts:53](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L53)
 
-___
+---
 
 ### edit
 
-▸ **edit**(`options?`: [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md)): *Promise*<void\>
+▸ **edit**(`options?`: [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md)): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`options?` | [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md) |
+| Name       | Type                                                                                             |
+| :--------- | :----------------------------------------------------------------------------------------------- |
+| `options?` | [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md) |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/SlashCommands.ts:52](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L52)
 
-___
+---
 
 ### get
 
-▸ **get**(`applicationID`: *string*): *Promise*<void\>
+▸ **get**(`applicationID`: _string_): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`applicationID` | *string* |
+| Name            | Type     |
+| :-------------- | :------- |
+| `applicationID` | _string_ |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/SlashCommands.ts:29](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L29)
 
-___
+---
 
 ### register
 
-▸ **register**(`applicationID`: *any*, `options`: [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md)): *Promise*<void\>
+▸ **register**(`applicationID`: _any_, `options`: [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md)): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`applicationID` | *any* |
-`options` | [*ApplicationCommandOption*](../interfaces/structures_slashcommands.applicationcommandoption.md) |
+| Name            | Type                                                                                             |
+| :-------------- | :----------------------------------------------------------------------------------------------- |
+| `applicationID` | _any_                                                                                            |
+| `options`       | [_ApplicationCommandOption_](../interfaces/structures_slashcommands.applicationcommandoption.md) |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/SlashCommands.ts:36](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L36)

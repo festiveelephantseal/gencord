@@ -1,27 +1,19 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES2018",
+    "lib": ["ESNext"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "ESNext",
     "outDir": "dist",
-    "lib": [
-      "ESNext",
-      "ESNext.Array",
-      "ESNext.AsyncIterable",
-      "ESNext.Intl",
-      "ESNext.Symbol",
-      "DOM"
-    ],
-    "sourceMap": false,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "incremental": true,
+    "sourceMap": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "resolveJsonModule": true,
-    "declaration": true
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules", "**/*.spec.ts", "src/test/**/*"]
 }

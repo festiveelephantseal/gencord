@@ -13,11 +13,11 @@
 ### Properties
 
 - [deaf](structures_guildmember.guildmember.md#deaf)
-- [joined\_at](structures_guildmember.guildmember.md#joined_at)
+- [joined_at](structures_guildmember.guildmember.md#joined_at)
 - [mute](structures_guildmember.guildmember.md#mute)
 - [nick](structures_guildmember.guildmember.md#nick)
 - [pending](structures_guildmember.guildmember.md#pending)
-- [premium\_since](structures_guildmember.guildmember.md#premium_since)
+- [premium_since](structures_guildmember.guildmember.md#premium_since)
 - [roles](structures_guildmember.guildmember.md#roles)
 - [user](structures_guildmember.guildmember.md#user)
 
@@ -29,15 +29,15 @@
 
 ### constructor
 
-\+ **new GuildMember**(`data`: *any*): [*GuildMember*](structures_guildmember.guildmember.md)
+\+ **new GuildMember**(`data`: _any_): [_GuildMember_](structures_guildmember.guildmember.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *any* |
+| Name   | Type  |
+| :----- | :---- |
+| `data` | _any_ |
 
-**Returns:** [*GuildMember*](structures_guildmember.guildmember.md)
+**Returns:** [_GuildMember_](structures_guildmember.guildmember.md)
 
 Defined in: [src/structures/GuildMember.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L11)
 
@@ -45,63 +45,63 @@ Defined in: [src/structures/GuildMember.ts:11](https://github.com/Gencord/gencor
 
 ### deaf
 
-• **deaf**: *boolean*
+• **deaf**: _boolean_
 
 Defined in: [src/structures/GuildMember.ts:9](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L9)
 
-___
+---
 
-### joined\_at
+### joined_at
 
-• **joined\_at**: *number*
+• **joined_at**: _number_
 
 Defined in: [src/structures/GuildMember.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L7)
 
-___
+---
 
 ### mute
 
-• **mute**: *boolean*
+• **mute**: _boolean_
 
 Defined in: [src/structures/GuildMember.ts:10](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L10)
 
-___
+---
 
 ### nick
 
-• `Optional` **nick**: *string*
+• `Optional` **nick**: _string_
 
 Defined in: [src/structures/GuildMember.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L5)
 
-___
+---
 
 ### pending
 
-• `Optional` **pending**: *boolean*
+• `Optional` **pending**: _boolean_
 
 Defined in: [src/structures/GuildMember.ts:11](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L11)
 
-___
+---
 
-### premium\_since
+### premium_since
 
-• `Optional` **premium\_since**: *number*
+• `Optional` **premium_since**: _number_
 
 Defined in: [src/structures/GuildMember.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L8)
 
-___
+---
 
 ### roles
 
-• **roles**: *string*[]
+• **roles**: _string_[]
 
 Defined in: [src/structures/GuildMember.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L6)
 
-___
+---
 
 ### user
 
-• `Optional` **user**: [*User*](structures_user.user.md)
+• `Optional` **user**: [_User_](structures_user.user.md)
 
 Defined in: [src/structures/GuildMember.ts:4](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L4)
 
@@ -109,14 +109,14 @@ Defined in: [src/structures/GuildMember.ts:4](https://github.com/Gencord/gencord
 
 ### \_set
 
-▸ **_set**(`data`: *any*): *void*
+▸ **\_set**(`data`: _any_): _void_
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`data` | *any* |
+| Name   | Type  |
+| :----- | :---- |
+| `data` | _any_ |
 
-**Returns:** *void*
+**Returns:** _void_
 
 Defined in: [src/structures/GuildMember.ts:17](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/GuildMember.ts#L17)

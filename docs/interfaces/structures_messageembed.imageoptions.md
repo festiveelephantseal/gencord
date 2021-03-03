@@ -9,7 +9,7 @@
 ### Properties
 
 - [height](structures_messageembed.imageoptions.md#height)
-- [proxy\_url](structures_messageembed.imageoptions.md#proxy_url)
+- [proxy_url](structures_messageembed.imageoptions.md#proxy_url)
 - [url](structures_messageembed.imageoptions.md#url)
 - [width](structures_messageembed.imageoptions.md#width)
 
@@ -17,30 +17,30 @@
 
 ### height
 
-• `Optional` **height**: *string*
+• `Optional` **height**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:7](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L7)
 
-___
+---
 
-### proxy\_url
+### proxy_url
 
-• `Optional` **proxy\_url**: *string*
+• `Optional` **proxy_url**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:6](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L6)
 
-___
+---
 
 ### url
 
-• `Optional` **url**: *string*
+• `Optional` **url**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:5](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L5)
 
-___
+---
 
 ### width
 
-• `Optional` **width**: *string*
+• `Optional` **width**: _string_
 
 Defined in: [src/structures/MessageEmbed.ts:8](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L8)

@@ -23,42 +23,42 @@
 
 Defined in: [src/structures/SlashCommands.ts:19](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L19)
 
-___
+---
 
 ### description
 
-• **description**: *string*
+• **description**: _string_
 
 Defined in: [src/structures/SlashCommands.ts:17](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L17)
 
-___
+---
 
 ### name
 
-• **name**: *string*
+• **name**: _string_
 
 Defined in: [src/structures/SlashCommands.ts:16](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L16)
 
-___
+---
 
 ### options
 
-• `Optional` **options**: [*ApplicationCommandOptionType*](../enums/structures_slashcommands.applicationcommandoptiontype.md)
+• `Optional` **options**: [_ApplicationCommandOptionType_](../enums/structures_slashcommands.applicationcommandoptiontype.md)
 
 Defined in: [src/structures/SlashCommands.ts:20](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L20)
 
-___
+---
 
 ### required
 
-• `Optional` **required**: *boolean*
+• `Optional` **required**: _boolean_
 
 Defined in: [src/structures/SlashCommands.ts:18](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L18)
 
-___
+---
 
 ### type
 
-• **type**: [*ApplicationCommandOptionType*](../enums/structures_slashcommands.applicationcommandoptiontype.md)
+• **type**: [_ApplicationCommandOptionType_](../enums/structures_slashcommands.applicationcommandoptiontype.md)
 
 Defined in: [src/structures/SlashCommands.ts:15](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/SlashCommands.ts#L15)

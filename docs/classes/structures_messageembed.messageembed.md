@@ -22,15 +22,15 @@
 
 ### constructor
 
-\+ **new MessageEmbed**(`client`: [*Client*](client.client-1.md)): [*MessageEmbed*](structures_messageembed.messageembed.md)
+\+ **new MessageEmbed**(`client`: [_Client_](client.client-1.md)): [_MessageEmbed_](structures_messageembed.messageembed.md)
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`client` | [*Client*](client.client-1.md) |
+| Name     | Type                           |
+| :------- | :----------------------------- |
+| `client` | [_Client_](client.client-1.md) |
 
-**Returns:** [*MessageEmbed*](structures_messageembed.messageembed.md)
+**Returns:** [_MessageEmbed_](structures_messageembed.messageembed.md)
 
 Defined in: [src/structures/MessageEmbed.ts:27](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L27)
 
@@ -38,7 +38,7 @@ Defined in: [src/structures/MessageEmbed.ts:27](https://github.com/Gencord/genco
 
 ### client
 
-• `Private` **client**: [*Client*](client.client-1.md)
+• `Private` **client**: [_Client_](client.client-1.md)
 
 Defined in: [src/structures/MessageEmbed.ts:27](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L27)
 
@@ -46,15 +46,15 @@ Defined in: [src/structures/MessageEmbed.ts:27](https://github.com/Gencord/genco
 
 ### send
 
-▸ **send**(`channelID`: *string*, `embed`: [*MessageEmbedOptions*](../interfaces/structures_messageembed.messageembedoptions.md)): *Promise*<void\>
+▸ **send**(`channelID`: _string_, `embed`: [_MessageEmbedOptions_](../interfaces/structures_messageembed.messageembedoptions.md)): _Promise_<void\>
 
 #### Parameters:
 
-Name | Type |
-:------ | :------ |
-`channelID` | *string* |
-`embed` | [*MessageEmbedOptions*](../interfaces/structures_messageembed.messageembedoptions.md) |
+| Name        | Type                                                                                  |
+| :---------- | :------------------------------------------------------------------------------------ |
+| `channelID` | _string_                                                                              |
+| `embed`     | [_MessageEmbedOptions_](../interfaces/structures_messageembed.messageembedoptions.md) |
 
-**Returns:** *Promise*<void\>
+**Returns:** _Promise_<void\>
 
 Defined in: [src/structures/MessageEmbed.ts:33](https://github.com/Gencord/gencord/blob/a52c25b/src/structures/MessageEmbed.ts#L33)
