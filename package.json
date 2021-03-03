@@ -2,7 +2,7 @@
   "name": "gencord",
   "version": "0.0.7",
   "description": "A simple, beginner friendly, and easy to use library for interacting with the Discord API, with minimal syntax",
-  "main": "dist/src/ndex.js",
+  "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
   "scripts": {
     "docs": "typedoc --out docs src",
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nerdthatnoonelikes/gencord.git"
+    "url": "git+https://github.com/Gencord/gencord.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nerdthatnoonelikes/gencord/issues"
+    "url": "https://github.com/Gencord/gencord/issues"
   },
-  "homepage": "https://github.com/nerdthatnoonelikes/gencord#readme",
+  "homepage": "https://github.com/Gencord/gencord#readme",
   "devDependencies": {
     "@types/node": "^14.14.20",
     "@types/node-fetch": "^2.5.7",
