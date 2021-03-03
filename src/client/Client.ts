@@ -69,10 +69,8 @@ export class Client extends EventEmitter {
         case "READY":
           this.emit("ready");
           break;
-      }
-
-      if (payload.t === "GUILD_CREATE") {
-        this.guilds.set(payload.d.id, payload.d);
+        case "GUILD_CREATE":
+          this.guilds.set(payload.d.id, payload.d);
       }
     });
 
