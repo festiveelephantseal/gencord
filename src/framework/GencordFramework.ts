@@ -1,3 +1,6 @@
 import { Client } from "../client/Client";
 
-export class GencordFramework extends Client {}
+export class GencordFramework extends Client {
+  public registerCommandsDir() {}
+  public registerEventsDir() {}
+}
