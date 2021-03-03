@@ -1,3 +1,3 @@
-import { Client, ClientOptions } from "../client/Client";
+import { Client } from "../client/Client";
 
 export class GencordFramework extends Client {}
