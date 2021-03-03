@@ -1,7 +1,7 @@
 import { User } from "./User";
 import { Client } from "../client/Client";
-import { GuildManager } from "./GuildManager";
-import { ChannelManager } from "./ChannelManager";
+import { GuildManager } from "../managers/GuildManager";
+import { ChannelManager } from "../managers/ChannelManager";
 
 export class Message {
   private client: Client;

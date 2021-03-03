@@ -1,11 +1,10 @@
-import { Client } from "../client/Client";
 import { colors } from "../constants/colors";
 
 export interface ImageOptions {
   url?: string;
   proxy_url?: string;
-  height?: string;
-  width?: string;
+  height?: number;
+  width?: number;
 }
 
 export interface FooterOptions {
@@ -23,14 +22,65 @@ export interface MessageEmbedOptions {
   footer?: FooterOptions;
 }
 
-export class MessageEmbed {
-  private client: Client;
+export interface FieldOptions {
+  name: string;
+  value: string;
+  inline?: boolean;
+}
 
-  public constructor(client: Client) {
-    this.client = client;
+export class MessageEmbed {
+  private title?: string;
+  private description?: string;
+  private url?: string;
+  private color?: colors;
+  private image?: ImageOptions;
+  private footer?: FooterOptions;
+  private fields?: Array<FieldOptions>;
+
+  constructor(
+    title?: string,
+    description?: string,
+    url?: string,
+    color?: colors,
+    image?: ImageOptions,
+    footer?: FooterOptions,
+    fields: Array<FieldOptions> = []
+  ) {
+    this.title = title;
+    this.description = description;
+    this.url = url;
+    this.color = color;
+    this.image = image;
+    this.footer = footer;
+    this.fields = fields;
   }
 
-  public async send(channelID: string, embed: MessageEmbedOptions) {
+  setColor(color: colors) {
+    this.color = color;
+  }
+
+  setTitle(title: string) {
+    this.title = title;
+  }
+
+  setDescription(description: string) {
+    this.description = description;
+  }
+
+  setURl(url: string) {
+    this.url = url;
+  }
+
+  addField(name: string, value: string, inline?: boolean) {
+    this.fields.push({ name, value, inline });
+  }
+
+  setImage(url?: string, proxy_url?: string, height?: number, width?: number) {
+    this.image = { url, proxy_url, height, width };
+  }
+}
+
+/*public async send(channelID: string, embed: MessageEmbedOptions) {
     return await this.client.handler.fetch({
       endpoint: `channels/${channelID}/messages`,
       method: "POST",
@@ -51,5 +101,4 @@ export class MessageEmbed {
         },
       }),
     });
-  }
-}
+  }*/

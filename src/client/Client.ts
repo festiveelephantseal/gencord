@@ -5,11 +5,10 @@ import { ActivityTypes } from "../constants/ActivityTypes";
 import { Manager } from "../utils/Manager";
 import { SlashCommandsManager } from "../managers/SlashCommandsManager";
 import { Message } from "../structures/Message";
-import { Intents } from "../constants/Intents";
 
 export interface ClientOptions {
   token: string;
-  intents?: Array<Intents>;
+  intents?: number;
   status?: "online" | "idle" | "dnd" | "invisible";
   activityName?: string;
   activityType: ActivityTypes;

@@ -1,4 +1,4 @@
-import { User } from "./User";
+import { User } from "../structures/User";
 
 export class EmojiManager {
   public id: string;

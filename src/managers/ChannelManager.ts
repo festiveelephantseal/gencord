@@ -1,4 +1,5 @@
 import { Client } from "../client/Client";
+import { MessageEmbed } from "../structures/MessageEmbed";
 
 export class ChannelManager {
   private client: Client;
@@ -42,14 +43,27 @@ export class ChannelManager {
     });
   }
 
-  public async send(content: string): Promise<void> {
-    return await this.client.handler.fetch({
-      endpoint: `channels/${this.id}/messages`,
-      method: "POST",
-      body: JSON.stringify({
-        content: `${content}`,
-        tts: false,
-      }),
-    });
+  public async send(content: string | MessageEmbed): Promise<void> {
+    if (typeof content === "string") {
+      return await this.client.handler.fetch({
+        endpoint: `channels/${this.id}/messages`,
+        method: "POST",
+        body: JSON.stringify({
+          content: `${content}`,
+          tts: false,
+        }),
+      });
+    }
+
+    if (content instanceof MessageEmbed) {
+      return await this.client.handler.fetch({
+        endpoint: `channels/${this.id}/messages`,
+        method: "POST",
+        body: JSON.stringify({
+          tts: false,
+          embed: content,
+        }),
+      });
+    }
   }
 }

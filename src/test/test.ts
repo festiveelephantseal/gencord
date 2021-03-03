@@ -1,18 +1,11 @@
-import {
-  Message,
-  MessageEmbed,
-  Client,
-  colors,
-  Intents,
-  ActivityTypes,
-} from "../index";
+import { Message, MessageEmbed, Client, colors, ActivityTypes } from "../index";
 import { token } from "../../token.json";
 import fs from "fs";
 import { join } from "path";
 
 export const client: Client = new Client({
   token: token,
-  intents: [Intents.GUILDS, Intents.GUILD_MESSAGES],
+  intents: 513,
   status: "dnd",
   activityName: "gencord!",
   activityType: ActivityTypes.Playing,
@@ -51,7 +44,20 @@ client.on("message", (message: Message) => {
   const args = message.content.slice("!".length).split(/ +/);
   const command = args.shift().toLowerCase();
 
-  if (!commands.has(command)) return;
+  // if (!commands.has(command)) return;
+
+  if (command === "embed") {
+    const embed = new MessageEmbed();
+    embed.setTitle("Very Cool Embed");
+    embed.setDescription("Very Cool Description");
+    embed.setColor(colors.NAVY);
+    embed.addField("Very Cool Field Name", "Very Cool Field Value");
+    embed.setImage(
+      "https://c.files.bbci.co.uk/12A9B/production/_111434467_gettyimages-1143489763.jpg"
+    );
+
+    message.channel.send(embed);
+  }
 
   try {
     commands.get(command).execute(client, message, args);

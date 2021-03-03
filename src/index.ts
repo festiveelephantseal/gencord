@@ -5,7 +5,6 @@ export { User } from "./structures/User";
 export { colors } from "./constants/colors";
 export { ActivityTypes } from "./constants/ActivityTypes";
 export { Client } from "./client/Client";
-export { Intents } from "./constants/Intents";
 
 //Option Interfaces
 export { MessageEmbedOptions } from "./structures/MessageEmbed";

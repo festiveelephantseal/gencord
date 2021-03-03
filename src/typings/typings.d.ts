@@ -16,10 +16,10 @@ declare module "gencord" {
 
     public constructor(options: ClientOptions);
 
-    public login(): Promise<void>;
-    public heartbeat(ms: number);
-    public destroy(reason?: string);
-    public identify();
+    private login(): Promise<void>;
+    private heartbeat(ms: number);
+    private destroy(reason?: string);
+    private identify();
   }
 
   //Structures
