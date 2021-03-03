@@ -12,4 +12,4 @@ export * from "./framework/GencordFramework";
 //Option Interfaces
 export * from "./structures/MessageEmbed";
 export * from "./managers/SlashCommandsManager";
-export *  from "./lib/GencordMap";
+export * from "./lib/GencordMap";
