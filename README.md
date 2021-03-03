@@ -5,6 +5,7 @@
 <a href="https://www.npmjs.com/package/gencord"><img src="https://img.shields.io/npm/dt/gencord.svg?maxAge=3600" alt="NPM downloads" /></a>
 
 ## About
+
 [Support Server](https://discord.gg/Bh9cGjum)
 
 **A beginner friendly Discord API wrapper.**
@@ -65,21 +66,11 @@ const { MessageEmbed, colors } = require("gencord");
 
 client.on("message", (message) => {
   if (message.content === "!embed") {
-    const embed = new MessageEmbed(client);
+    const embed = new MessageEmbed();
+    embed.setColor(colors.BLUE);
+    embed.setTitle("My Title");
 
-    embed.send(message.channel.id, {
-      title: "Title",
-      description: "My description",
-      footer: {
-        text: "this is the footer",
-      },
-      color: colors.BLUE,
-      url: "https://google.com",
-      image: {
-        url:
-          "https://static.toiimg.com/photo/msid-67586673/67586673.jpg?3918697",
-      },
-    });
+    message.channel.send(embed);
   }
 });
 ```
