@@ -1,17 +1,15 @@
-export { Message } from "./structures/Message";
-export { MessageEmbed } from "./structures/MessageEmbed";
-export { GuildMember } from "./structures/GuildMember";
-export { User } from "./structures/User";
-export { Colors } from "./constants/Colors";
-export { ActivityTypes } from "./constants/ActivityTypes";
-export { Client } from "./client/Client";
-export { TextChannel } from "./structures/TextChannel";
-export { Guild } from "./structures/Guild";
+export * from "./structures/Message";
+export * from "./structures/MessageEmbed";
+export * from "./structures/GuildMember";
+export * from "./structures/User";
+export * from "./constants/Colors";
+export * from "./constants/ActivityTypes";
+export * from "./client/Client";
+export * from "./structures/TextChannel";
+export * from "./structures/Guild";
+export * from "./framework/GencordFramework";
 
 //Option Interfaces
-export { MessageEmbedOptions } from "./structures/MessageEmbed";
-export {
-  ApplicationCommandOption,
-  ApplicationCommandOptionType,
-} from "./managers/SlashCommandsManager";
-export { GencordMap } from "./lib/GencordMap";
+export * from "./structures/MessageEmbed";
+export * from "./managers/SlashCommandsManager";
+export *  from "./lib/GencordMap";

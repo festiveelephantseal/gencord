@@ -12,33 +12,18 @@ export interface ClientOptions {
   intents?: number;
   status?: "online" | "idle" | "dnd" | "invisible";
   activityName?: string;
-  activityType: ActivityTypes;
+  activityType?: ActivityTypes;
 }
 
 export class Client extends EventEmitter {
   private socket: ws;
-
-  /**
-   * @param {ClientOptions} options passed into the client
-   */
-
   public options: ClientOptions;
-
-  /**
-   * @param {string} the bots token
-   */
-
   public token: string;
-
   public handler: RestHandler = new RestHandler(this);
-
   public manager: Manager = new Manager(this);
-
   public slashCommands: SlashCommandsManager = new SlashCommandsManager(this);
-
   public guilds: Map<string, Guild> = new Map();
-
-  public constructor(options: ClientOptions) {
+  public constructor(options?: ClientOptions) {
     super();
     this.options = options;
     this.token = options.token;
