@@ -8,18 +8,16 @@ export interface Directories {
 export interface Options extends ClientOptions {
     directories: Directories;
 }
-export class Framework {
-    public client: Client;
+export class Framework extends Client {
     public directories: Directories;
     public options: Options;
 
     public constructor(options: Options) {
+        super({
+            token: options.token,
+            intents: options.intents || 513
+        });
         this.options = options;
         this.directories = options.directories;
-        this.client = new Client({
-            token: options.token,
-            intents: options.intents || 513,
-            
-        })
     };
 }
