@@ -9,7 +9,8 @@
     "test": "tsc && node dist/src/test/test",
     "test:dev": "ts-node-dev --respawn --transpile-only --poll ./src/test/test.ts",
     "test-respawn": "ts-node-dev --respawn --transpile-only src/test/test.ts",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "build": "tsc --diagnostics"
   },
   "repository": {
     "type": "git",
