@@ -5,6 +5,7 @@ import { ActivityTypes } from "../constants/ActivityTypes";
 import { Manager } from "../utils/Manager";
 import { SlashCommandsManager } from "../managers/SlashCommandsManager";
 import { Message } from "../structures/Message";
+import { Guild } from "../structures/Guild";
 
 export interface ClientOptions {
   token: string;
@@ -35,6 +36,8 @@ export class Client extends EventEmitter {
 
   public slashCommands: SlashCommandsManager = new SlashCommandsManager(this);
 
+  public guilds: Map<string, Guild> = new Map();
+
   public constructor(options: ClientOptions) {
     super();
     this.options = options;
@@ -62,6 +65,10 @@ export class Client extends EventEmitter {
 
       if (payload.t === "MESSAGE_CREATE") {
         this.emit("message", new Message(payload.d, this));
+      }
+
+      if (payload.t === "GUILD_CREATE") {
+        this.guilds.set(payload.d.id, payload.d);
       }
     });
 
