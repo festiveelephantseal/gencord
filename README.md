@@ -18,6 +18,7 @@ Why **Gencord?**
 - Beginner friendly
 - Slash Commands + Inline Replies support
 - JavaScript + TypeScript Support
+- Built in framework
 
 For the full documentation, visit our website at [gencord.js.org](https://gencord.js.org)
 
