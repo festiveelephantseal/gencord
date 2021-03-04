@@ -14,7 +14,7 @@
 
 Why **Gencord?**
 
-- Extremely fast, and efficient (2 dependencies)
+- Extremely fast, and efficient (3 dependencies)
 - Beginner friendly
 - Slash Commands + Inline Replies support
 - JavaScript + TypeScript Support
