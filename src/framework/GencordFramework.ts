@@ -33,7 +33,7 @@ export class Framework extends Client {
     const packageJson = await import(join(dir, 'package.json'));
     const command = fs.existsSync(join(dir, 'yarn.lock')) ? 'yarn add' : fs.existsSync(join(dir, 'package-lock.json')) ? 'npm install' : fs.existsSync(join(dir, 'pnpm-lock.yaml')) ? 'pnpm add' : 'ERR';
     const typescript = fs.existsSync(join(dir, 'tsconfig.json'));
-    if(!packageJson["dependencies"]["glob"]) {
+    if(!packageJson["dependencies"]?.["glob"]) {
         if(command == 'ERR') return console.log('Could not determine which package manager to use to install "glob".');
         console.log('Can not find "glob" in local package.json dependencies. Installing..');
         exec(`${command} glob`, () => {
@@ -41,7 +41,7 @@ export class Framework extends Client {
         })
     }
     if(typescript == true) {
-        if(!packageJson["dependencies"]["@types/glob"] && !packageJson["dependencies"]["@types/glob"]) {
+        if(!packageJson["dependencies"]?.["@types/glob"] && !packageJson["devDependencies"]?.["@types/glob"]) {
             console.log("This project is using typescript yet no typings for module \"glob\" can be found. Installing as a dev dependency.");
             exec(`${command} @types/glob -D`, () => {
                 console.log('Package "@types/glob" installed as a dev dependency.')
