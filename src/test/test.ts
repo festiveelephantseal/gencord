@@ -17,7 +17,7 @@ interface Command {
   execute(client: Client, message: Message, args: Array<string>);
 }
 
-const commands = new Map();
+export const commands = new Map();
 
 const loadCommands = async () => {
   const filePath = join(__dirname, "commands");

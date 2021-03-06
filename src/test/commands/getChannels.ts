@@ -6,6 +6,7 @@ import { MessageEmbed } from "../../structures/MessageEmbed";
 export const execute = (client: Client, message: Message, args: string[]) => {
   const guild = client.guilds.get(message.guild.id);
   const embed = new MessageEmbed();
+
   guild.channels.forEach((channel) =>
     embed.addField(
       `Channel name: ${channel.name}`,
