@@ -14,4 +14,3 @@ export {
   ApplicationCommandOption,
   ApplicationCommandOptionType,
 } from "./managers/SlashCommandsManager";
-export { GencordMap } from "./lib/GencordMap";
