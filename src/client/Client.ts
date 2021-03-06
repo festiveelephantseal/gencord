@@ -16,23 +16,11 @@ export interface ClientOptions {
 
 export class Client extends EventEmitter {
   private socket: ws;
-
-  /**
-   * @param {ClientOptions} options passed into the client
-   */
-
   public options: ClientOptions;
-
-  /**
-   * @param {string} the bots token
-   */
-
   public token: string;
-
   public handler: RestHandler = new RestHandler(this);
 
   public slashCommands: SlashCommandsManager = new SlashCommandsManager(this);
-
   public guilds: Map<string, Guild> = new Map();
 
   public constructor(options: ClientOptions) {
