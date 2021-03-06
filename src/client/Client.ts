@@ -70,12 +70,6 @@ export class Client extends EventEmitter {
     });
   }
 
-  private heartbeat(ms: number) {
-    setInterval(() => {
-      this.socket.send(JSON.stringify({ op: 1, d: null }));
-    }, ms);
-  }
-
   public destroy(reason?: string) {
     this.socket.close();
     console.log(`The socket was closed, ${reason || "No reason provided"}`);
@@ -117,5 +111,11 @@ export class Client extends EventEmitter {
         },
       })
     );
+  }
+
+  private heartbeat(ms: number) {
+    setInterval(() => {
+      this.socket.send(JSON.stringify({ op: 1, d: null }));
+    }, ms);
   }
 }
