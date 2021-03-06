@@ -2,6 +2,7 @@ import { User } from "./User";
 import { Client } from "../client/Client";
 import { GuildManager } from "../managers/GuildManager";
 import { ChannelManager } from "../managers/ChannelManager";
+import { ReactionsManager } from "../managers/ReactionsManager";
 
 export class Message {
   private client: Client;
@@ -10,6 +11,7 @@ export class Message {
   public guild_id?: string;
   public guild: GuildManager;
   public channel: ChannelManager;
+  public reactions: ReactionsManager;
   public author;
   public member?;
   public content: string;
