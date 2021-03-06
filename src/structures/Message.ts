@@ -37,12 +37,23 @@ export class Message {
   }
 
   async _set() {
-    this.member = await this.client.manager.getMember(
-      this.guild_id,
-      this.author.id
-    );
+    this.member = await this.getMember(this.guild_id, this.author.id);
 
-    this.author = await this.client.manager.getUser(this.author.id);
+    this.author = await this.getUser(this.author.id);
+  }
+
+  private async getUser(userID: string) {
+    return await this.client.handler.fetch({
+      endpoint: `users/${userID}`,
+      method: "GET",
+    });
+  }
+
+  private async getMember(guildID: string, userID: string) {
+    return await this.client.handler.fetch({
+      endpoint: `guilds/${guildID}/members/${userID}`,
+      method: "GET",
+    });
   }
 
   public async reply(content: string): Promise<void> {
