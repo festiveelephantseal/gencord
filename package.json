@@ -1,6 +1,6 @@
 {
   "name": "gencord",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "A simple, beginner friendly, and easy to use library for interacting with the Discord API, with minimal syntax",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",

@@ -63,8 +63,12 @@ export class Message {
       endpoint: `channels/${this.channel_id}/messages`,
       method: "POST",
       body: JSON.stringify({
-        content: `<@${this.author.id}> ${content}`,
+        content: content,
         tts: false,
+        message_reference: {
+          message_id: this.id,
+          channel_id: this.channel.id,
+        },
       }),
     });
   }

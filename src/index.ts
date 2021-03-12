@@ -2,7 +2,7 @@ export { Message } from "./structures/Message";
 export { MessageEmbed } from "./structures/MessageEmbed";
 export { GuildMember } from "./structures/GuildMember";
 export { User } from "./structures/User";
-export { Colors } from "./constants/Colors";
+export { Colors } from "./constants/colors";
 export { ActivityTypes } from "./constants/ActivityTypes";
 export { Client } from "./client/Client";
 export { TextChannel } from "./structures/TextChannel";

@@ -1,4 +1,4 @@
-import { Colors } from "../constants/Colors";
+import { Colors } from "../constants/colors";
 
 export interface ImageOptions {
   url?: string;
