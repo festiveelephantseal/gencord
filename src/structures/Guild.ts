@@ -11,7 +11,7 @@ export class Guild {
   discovery_splash?: string;
   owner?: boolean;
   owner_id: string;
-  roles: Array<Role>;
+  roles: Map<string, Role> = new Map();
   channels: Map<string, TextChannel> = new Map();
   members: Map<string, GuildMember> = new Map();
 }

@@ -1,28 +1,20 @@
-type Channel = "dm" | "text" | "voice" | "category" | "news" | "unknown"
-interface OverWrites {
-  id: string;
-  type: number;
-  allow: string;
-  deny: string;
-}
+import {Client} from "../client/Client"
+import {Guild} from "./Guild"
+import { GuildMember } from "./GuildMember";
+import { Message } from "./Message";
+
 
 export class TextChannel {
-  id: string;
-  /*  
-    GUILD_TEXT	0	a text channel within a server
-    DM	        1	a direct message between users
-    GUILD_VOICE	2	a voice channel within a server
-    GROUP_DM	3	a direct message between multiple users
-    GUILD_CATEGORY	4	an organizational category that contains up to 50 channels
-    GUILD_NEWS	5	a channel that users can follow and crosspost into their own server
-    GUILD_STORE	6	a
-    */
-  type: Channel;
-  guild_id: string;
-  position: number;
-  permission_overwrites: Array<OverWrites>;
-  name?: string;
-  topic?: string;
-  nsfw?: boolean;
-  last_message_id?: string;
+public lastMessage?: Message;
+public lastMessageID?: string;
+public lastPinAt?: Date
+public lastPinTimestamp?: number;
+public messages: Map<string, Message> = new Map();
+public nsfw?: boolean;
+public rate_limit_per_user: number;
+public topic?: string;
+readonly typing?: boolean;
+readonly typingCount?: number;
 }
+
+//no methods
