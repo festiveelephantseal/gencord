@@ -1,6 +1,7 @@
+import { Base } from "./Base";
 import { User } from "./User";
 
-export class GuildMember {
+export class GuildMember extends Base {
   public user?: User;
   public nick?: string;
   public roles: string[];
@@ -11,6 +12,7 @@ export class GuildMember {
   public pending?: boolean;
 
   public constructor(data) {
+    super();
     this._set(data);
   }
 

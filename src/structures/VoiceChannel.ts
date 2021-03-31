@@ -1,26 +1,13 @@
-type Channel = "dm" | "text" | "voice" | "category" | "news" | "unknown"
-interface OverWrites {
-    id: string;
-    allow: string;
-    deny: string;
-    type: number;
-}
+import {Client} from "../client/Client"
+import {Guild} from "./Guild"
+import {GuildChannel} from "./GuildChannel"
 
-
-export class VoiceChannel {
-   public id: string;
-   public type: Channel;
-   public position: number;
-   public rawPosition: number;
-   public permission_overwrites: Array<OverWrites>;
-   public name?: string;
-   public bitrate?: number;
-   public deletable?: boolean;
-   public deleted?: boolean;
-   public viewable?: boolean;
-   public maxUsers?: number;
-   public manageable?: boolean;
-   public editable?: boolean;
-   public joinable?: boolean;
-   public speakable?: boolean;
+export class VoiceChannel extends GuildChannel{
+    public bitrate: number;
+    public maxUsers: number
+    readonly editable?: boolean;
+    readonly isFull?: boolean;
+    readonly joinable?: boolean;
+    readonly speakable?: boolean;
 }
+// no methods added yet. 

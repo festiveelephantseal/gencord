@@ -3,9 +3,14 @@ import { Client } from "../client/Client";
 import { GuildManager } from "../managers/GuildManager";
 import { ChannelManager } from "../managers/ChannelManager";
 import { ReactionsManager } from "../managers/ReactionsManager";
+import { Base } from "./Base";
 
-export class Message {
-  private client: Client;
+interface MessageActivity {
+  partyID?: string;
+  type?: number;
+}
+
+export class Message extends Base {
   public id: string;
   public channel_id: string;
   public guild_id?: string;
@@ -23,7 +28,7 @@ export class Message {
   public mention_roles: Array<string>;
 
   public constructor(data, client) {
-    this.client = client;
+    super();
     this.id = data.id;
     this.channel_id = data.channel_id;
     this.guild_id = data.guild_id;
