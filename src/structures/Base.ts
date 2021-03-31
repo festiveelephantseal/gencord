@@ -1,5 +1,5 @@
 import {Client} from "../client/Client"
 
-export class Base {
+export abstract class Base {
 readonly client: Client;
 }

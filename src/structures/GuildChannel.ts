@@ -15,7 +15,7 @@ export class GuildChannel extends Channel{
     public name: string;
     public parent_id?: string;
     public rawPosition: number;
-    public permission_overwrites: Map<string, OverWrites> = new Map();
+    public permission_overwrites= new Map<string, OverWrites>();
     readonly members: Map<string, GuildManager> = new Map();
     readonly position: number;
     readonly permissions_locked?: boolean;

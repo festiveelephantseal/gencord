@@ -1,8 +1,9 @@
 import { Role } from "./Role";
 import { TextChannel } from "./TextChannel";
 import { GuildMember } from "./GuildMember";
+import { Base } from "./Base";
 
-export class Guild {
+export class Guild extends Base{
   id: string;
   name: string;
   icon?: string;
@@ -12,6 +13,6 @@ export class Guild {
   owner?: boolean;
   owner_id: string;
   roles: Map<string, Role> = new Map();
-  channels: Map<string, TextChannel> = new Map();
-  members: Map<string, GuildMember> = new Map();
+  channels = new Map<string, TextChannel>();
+  members = new Map<string, GuildMember> ();
 }

@@ -1,7 +1,22 @@
-export class User {
+import { Base } from "./Base";
+import {DMChannel} from "./DMChannel"
+import { Message } from "./Message";
+
+export class User extends Base {
+  readonly createdAt: Date;
+  readonly createdTimestamp: number;
+  readonly defaultAvatar: string;
+  readonly dmChannel?: DMChannel;
+  readonly lastMessage?: Message;
+  readonly partial: boolean;
+  readonly tag?: string;
+  //add this later once presence is complete
+  //readonly presence
+  public lastMessageChannelID?: string;
+  public lastMessageID?: string;
   public id: string;
-  public username: string;
-  public discriminator: string;
+  public username?: string;
+  public discriminator?: string;
   public avatar?: string;
   public bot?: boolean;
   public system?: boolean;
@@ -14,6 +29,7 @@ export class User {
   public public_flags?: number;
 
   public constructor(data) {
+    super();
     this._set(data);
   }
 
