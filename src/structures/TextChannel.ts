@@ -1,3 +1,4 @@
+type Channel = "dm" | "text" | "voice" | "category" | "news" | "unknown"
 interface OverWrites {
   id: string;
   type: number;
@@ -16,7 +17,7 @@ export class TextChannel {
     GUILD_NEWS	5	a channel that users can follow and crosspost into their own server
     GUILD_STORE	6	a
     */
-  type: number = 0;
+  type: Channel;
   guild_id: string;
   position: number;
   permission_overwrites: Array<OverWrites>;
