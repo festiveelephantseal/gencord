@@ -12,7 +12,7 @@ export class Guild extends Base{
   discovery_splash?: string;
   owner?: boolean;
   owner_id: string;
-  roles: Map<string, Role> = new Map();
+  roles= new Map<string, Role>();
   channels = new Map<string, TextChannel>();
   members = new Map<string, GuildMember> ();
 }
