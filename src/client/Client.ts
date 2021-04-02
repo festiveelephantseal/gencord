@@ -1,7 +1,7 @@
 import { EventEmitter } from "events";
 import ws from "ws";
 import { APIHandler } from "../utils/APIHandler";
-import { ActivityTypes } from "../constants/ActivityTypes";
+import { ActivityTypes } from "../typings/ActivityTypes";
 import { SlashCommandsManager } from "../managers/SlashCommandsManager";
 import { Message } from "../structures/Message";
 import { Guild } from "../structures/Guild";
