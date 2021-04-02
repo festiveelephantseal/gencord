@@ -1,4 +1,5 @@
 import { GuildManager } from "../managers/GuildManager";
+import { ReactionsManager } from "../managers/ReactionsManager";
 import { CategoryChannel } from "./CategoryChannel";
 import { Channel } from "./Channel";
 import { Guild } from "./Guild";
@@ -26,13 +27,3 @@ export class GuildChannel extends Channel {
 }
 
 //no methods
-
-const ParentComponent = () => {
-  const [state, updateState] = useState(0);
-
-  return (
-    <div className="parentComponent">
-      <ChildComponent theState={state} />{" "}
-    </div>
-  );
-};

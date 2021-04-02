@@ -29,7 +29,7 @@ export class User extends Base {
   public premium_type?: 0 | 1 | 2;
   public public_flags?: number;
 
-  public constructor(data) {
+  public constructor(data: UserTypes) {
     super();
     this._set(data);
   }

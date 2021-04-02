@@ -5,12 +5,13 @@ import { Base } from "./Base";
 import { VoiceChannel } from "./VoiceChannel";
 import { GuildTypes } from "../constants/GuildTypes";
 import { Client } from "../client/Client";
+import {
+  VerificationLevel,
+  DefaultMessageNotifications,
+  ExplicitContentFilterLevel,
+  PremiumTier,
+} from "../constants/GuildTypes";
 
-type DefaultMessageNotifications = "ALL" | "MENTIONS";
-type ExplicitContentFilterLevel =
-  | "DISABLED"
-  | "MEMBER_WITHOUT_ROLES"
-  | "ALL_MEMBERS";
 type Features =
   | "ANIMATED_ICON"
   | "BANNER"
@@ -26,16 +27,8 @@ type Features =
   | "VERIFIED"
   | "VIP_REGIONS"
   | "WELCOME_SCREEN_ENABLED"
-  | "Types";
-
-enum PremiumTier {
-  NONE = 0,
-  TIER_1 = 1,
-  TIER_2 = 2,
-  TIER_3 = 3,
-}
-
-type VerificationLevel = "NONE" | "LOW" | "MEDIUM" | "HIGH" | "VERY_HIGH";
+  | "MEMBER_VERIFICATION_GATE_ENABLED"
+  | "PREVIEW_ENABLED";
 
 export class Guild extends Base {
   readonly afkChannel?: VoiceChannel;
@@ -99,5 +92,45 @@ export class Guild extends Base {
 
   public constructor(data: GuildTypes, client: Client) {
     super();
+    this._set(data);
+  }
+  _set(data: GuildTypes) {
+    this.id = data.id;
+    this.name = data.name;
+    this.icon = data.icon;
+    this.splash = data.splash;
+    this.discoverySplash = data.discovery_splash;
+    this.ownerId = data.owner_id;
+    this.region = data.region;
+    this.afkChannelId = data.afk_channel_id;
+    this.afkTimeout = data.afk_timeout;
+    this.widgetEnabled = data.widget_enbaled;
+    this.widgetChannelId = data.widget_channel_id;
+    this.verificationLevel = data.verifcation_level;
+    this.defaultMessageNotifications = data.default_message_notifications;
+    this.explicitContentFilter = data.explicit_content_filter;
+    //roles
+    //emojis
+    this.features = data.features;
+    this.mfaLevel = data.mfa_level;
+    this.applicationId = data.application_id;
+    this.systemChannelId = data.system_channel_id;
+    this.rulesChannelId = data.rules_channel_id;
+    this.large = data.large;
+    this.memberCount = data.member_count;
+    //states
+    //members
+    //channels
+    //presences
+    this.maxPresences = data.max_presences;
+    this.maxMembers = data.max_members;
+    this.vanityUrlCode = data.vanity_url_code;
+    this.description = data.description;
+    this.banner = data.banner;
+    this.premiumTier = data.premium_tier;
+    this.premiumSubscriptionCount = data.premium_subscription_count;
+    this.preferredLocale = data.preferred_locale;
+    this.approxMembers = data.approximate_member_count;
+    this.approxPresences = data.approximate_presence_count;
   }
 }
