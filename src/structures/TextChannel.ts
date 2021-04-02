@@ -1,9 +1,27 @@
-import { Client } from "../client/Client";
 import { Guild } from "./Guild";
 import { GuildChannel } from "./GuildChannel";
 import { GuildMember } from "./GuildMember";
+import { User } from './User'
 import { Message } from "./Message";
 
+interface InviteObject {
+  code: string,
+  channel: GuildChannel,
+  guild?: Guild,
+  inviter?: User,
+  target_user?: User,
+  target_user_type?: number,
+  approximate_presence_count?: number,
+  approximate_member_count?: number
+}
+
+interface InviteMetaData {
+  uses: number,
+  max_uses: number,
+  max_age: number,
+  temporary: boolean,
+  createdAt: Date 
+}
 export class TextChannel extends GuildChannel {
   public lastMessage?: Message;
   public lastMessageID?: string;
@@ -15,6 +33,31 @@ export class TextChannel extends GuildChannel {
   public topic?: string;
   readonly typing?: boolean;
   readonly typingCount?: number;
+
+  public async getInvites() {
+    return await this.client.handler.fetch({
+      method: "GET",
+      endpoint: `/channels/${this.id}/invites`
+    })
+  }
+
+  public async getInvite(code: string) {
+    return await this.client.handler.fetch({
+      method: "GET",
+      endpoint: `/invites/${code}`
+    })
+  }
+
+  public async deleteInvite(code: string) {
+    return await this.client.handler.fetch({
+      method: "DELETE",
+      endpoint: `/invites/${code}`
+    })
+  }
+
+  public async createInvite(params: InviteObject) {
+
+  }
 }
 
 //no methods
