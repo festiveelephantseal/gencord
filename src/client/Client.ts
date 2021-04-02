@@ -1,6 +1,6 @@
 import { EventEmitter } from "events";
 import ws from "ws";
-import { RestHandler } from "../utils/APIHandler";
+import { APIHandler } from "../utils/APIHandler";
 import { ActivityTypes } from "../constants/ActivityTypes";
 import { SlashCommandsManager } from "../managers/SlashCommandsManager";
 import { Message } from "../structures/Message";
@@ -18,7 +18,7 @@ export class Client extends EventEmitter {
   private socket: ws;
   public options: ClientOptions;
   public token: string;
-  public handler: RestHandler = new RestHandler(this);
+  public handler: APIHandler = new APIHandler(this);
 
   public slashCommands: SlashCommandsManager = new SlashCommandsManager(this);
   public guilds: Map<string, Guild> = new Map();
