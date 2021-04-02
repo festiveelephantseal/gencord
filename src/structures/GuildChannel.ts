@@ -26,3 +26,13 @@ export class GuildChannel extends Channel {
 }
 
 //no methods
+
+const ParentComponent = () => {
+  const [state, updateState] = useState(0);
+
+  return (
+    <div className="parentComponent">
+      <ChildComponent theState={state} />{" "}
+    </div>
+  );
+};
