@@ -1,6 +1,4 @@
-import {GuildChannel} from "./GuildChannel"
+import { GuildChannel } from "./GuildChannel";
 
-export class StoreChannel extends GuildChannel {
-
-}
+export class StoreChannel extends GuildChannel {}
 //no methods

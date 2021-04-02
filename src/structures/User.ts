@@ -1,5 +1,5 @@
 import { Base } from "./Base";
-import {DMChannel} from "./DMChannel"
+import { DMChannel } from "./DMChannel";
 import { Message } from "./Message";
 
 export class User extends Base {
