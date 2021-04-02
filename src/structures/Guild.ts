@@ -3,14 +3,14 @@ import { TextChannel } from "./TextChannel";
 import { GuildMember } from "./GuildMember";
 import { Base } from "./Base";
 import { VoiceChannel } from "./VoiceChannel";
-import { GuildTypes } from "../constants/GuildTypes";
+import { GuildTypes } from "../typings/GuildTypes";
 import { Client } from "../client/Client";
 import {
   VerificationLevel,
   DefaultMessageNotifications,
   ExplicitContentFilterLevel,
   PremiumTier,
-} from "../constants/GuildTypes";
+} from "../typings/GuildTypes";
 
 type Features =
   | "ANIMATED_ICON"

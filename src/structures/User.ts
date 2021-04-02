@@ -1,7 +1,7 @@
 import { Base } from "./Base";
 import { DMChannel } from "./DMChannel";
 import { Message } from "./Message";
-import { UserTypes } from "../constants/UserTypes";
+import { UserTypes } from "../typings/UserTypes";
 
 export class User extends Base {
   readonly createdAt: Date;

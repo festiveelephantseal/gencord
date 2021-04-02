@@ -7,7 +7,7 @@ interface APIOptions {
   body?: any;
 }
 
-export class RestHandler {
+export class APIHandler {
   public constructor(private client: Client) {}
 
   public async fetch(options: APIOptions) {
