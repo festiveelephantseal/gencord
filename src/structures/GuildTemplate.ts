@@ -7,11 +7,11 @@ export class GuildTemplate extends Base {
   public name: string;
   public description: string;
   public usage_count: number;
-  //public creator_id: Snowflake
+  public creator_id: string;
   public creator: User;
   public created_at: Date;
   public updated_at: Date;
-  //public source_guild_id: Snowflake
+  public source_guild_id: string;
   public serialized_source_guild: Guild;
   public is_dirty: boolean;
 }
