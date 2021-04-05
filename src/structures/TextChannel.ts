@@ -1,8 +1,7 @@
-import { Client } from "../client/Client";
-import { Guild } from "./Guild";
 import { GuildChannel } from "./GuildChannel";
-import { GuildMember } from "./GuildMember";
+import { InvitesManager } from '../managers/InvitesManager'
 import { Message } from "./Message";
+
 
 export class TextChannel extends GuildChannel {
   public lastMessage?: Message;
@@ -15,6 +14,8 @@ export class TextChannel extends GuildChannel {
   public topic?: string;
   readonly typing?: boolean;
   readonly typingCount?: number;
+
+  public invites: InvitesManager;
 }
 
 //no methods
