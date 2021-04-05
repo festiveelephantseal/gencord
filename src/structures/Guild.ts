@@ -10,25 +10,15 @@ import {
   DefaultMessageNotifications,
   ExplicitContentFilterLevel,
   PremiumTier,
+  Features,
 } from "../typings/GuildTypes";
-
-type Features =
-  | "ANIMATED_ICON"
-  | "BANNER"
-  | "COMMERCE"
-  | "COMMUNITY"
-  | "DISCOVERABLE"
-  | "FEATURABLE"
-  | "INVITE_SPLASH"
-  | "NEWS"
-  | "PARTNERED"
-  | "RELAY_ENABLED"
-  | "VANITY_URL"
-  | "VERIFIED"
-  | "VIP_REGIONS"
-  | "WELCOME_SCREEN_ENABLED"
-  | "MEMBER_VERIFICATION_GATE_ENABLED"
-  | "PREVIEW_ENABLED";
+import { Channel } from "./Channel";
+import { Emoji } from "./Emoji";
+import { WebSocketShard } from "./WebSocketShard";
+import { VoiceStates } from "../typings/VoiceTypes";
+import { SystemChannelFlags } from "./SystemChannelFlags";
+import { VoiceState } from "./VoiceState";
+import { Presence } from "./Presence";
 
 export class Guild extends Base {
   readonly afkChannel?: VoiceChannel;
@@ -42,10 +32,10 @@ export class Guild extends Base {
   readonly publicUpdatesChannel?: TextChannel;
   readonly publicUpdatesChannelId?: string;
   readonly rulesChannel?: TextChannel;
-  //readonly shard: WebSocketShard
+  readonly shard: WebSocketShard;
   readonly systemChannel?: TextChannel;
   readonly verified: boolean;
-  //readonly voice: VoiceState;
+  readonly voice: VoiceState;
   readonly widgetChannel?: TextChannel;
   public afkChannelId: string;
   public afkTimeout?: number;
@@ -54,12 +44,12 @@ export class Guild extends Base {
   public approxPresences?: number;
   public available: boolean;
   public banner?: string;
-  //public channels
+  public channels = new Map<string, Channel>();
   public defaultMessageNotifications: DefaultMessageNotifications;
   public deleted: boolean;
   public description?: string;
   public discoverySplash?: string;
-  //public emojis
+  public emojis = new Map<string, Emoji>();
   public explicitContentFilter: ExplicitContentFilterLevel;
   public features: Features[];
   public icon?: string;
@@ -69,24 +59,24 @@ export class Guild extends Base {
   public maxMembers?: number;
   public maxPresences?: number;
   public memberCount: number;
-  //public members
+  public members = new Map<string, GuildMember>();
   public mfaLevel: number;
   public name: string;
   public ownerId: string;
   public preferredLocale: string;
   public premiumSubscriptionCount?: number;
   public premiumTier: PremiumTier;
-  //public presences
+  public presences = new Map<string, Presence>();
   public region: string;
-  //public roles;
+  public roles = new Map<string, Role>();
   public rulesChannelId: string;
   public splash?: string;
-  //public systemChannelFlags;
+  public systemChannelFlags: Readonly<SystemChannelFlags>;
   public systemChannelId?: string;
   public vanityUrlCode?: string;
   public vanityURLUses?: number;
   public verificationLevel: VerificationLevel;
-  //public voiceStates;
+  public voiceStates = new Map<string, VoiceStates>();
   public widgetChannelId?: string;
   public widgetEnabled?: boolean;
 
@@ -107,8 +97,6 @@ export class Guild extends Base {
     this.widgetEnabled = data.widget_enbaled;
     this.widgetChannelId = data.widget_channel_id;
     this.verificationLevel = data.verifcation_level;
-    this.defaultMessageNotifications = data.default_message_notifications;
-    this.explicitContentFilter = data.explicit_content_filter;
     //roles
     //emojis
     this.features = data.features;

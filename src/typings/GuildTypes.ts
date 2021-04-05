@@ -5,7 +5,20 @@ import { GuildMember } from "./GuildMember";
 import { ChannelTypes } from "./ChannelTypes";
 import { PresenceTypes } from "./PresenceTypes";
 
-type Features =
+export type DefaultMessageNotifications = "ALL" | "MENTIONS";
+export type ExplicitContentFilterLevel =
+  | "DISABLED"
+  | "MEMBER_WITHOUT_ROLES"
+  | "ALL_MEMBERS";
+
+export enum PremiumTier {
+  NONE = 0,
+  TIER_1 = 1,
+  TIER_2 = 2,
+  TIER_3 = 3,
+}
+
+export type Features =
   | "ANIMATED_ICON"
   | "BANNER"
   | "COMMERCE"
@@ -36,11 +49,11 @@ export interface WelcomeScreen {
 }
 
 export enum VerificationLevel {
-  "NONE" = 0,
-  "LOW" = 1,
-  "MEDIUM" = 2,
-  "HIGH" = 3,
-  "VERY_HIGH",
+  NONE = 0,
+  LOW = 1,
+  MEDIUM = 2,
+  HIGH = 3,
+  VERY_HIGH,
 }
 export interface GuildTypes {
   id: string;
