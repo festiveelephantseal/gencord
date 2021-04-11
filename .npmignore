@@ -1,9 +1,0 @@
-src/
-node_modules/
-docs/
-assets/
-dist/test/
-tsconfig.json
-token.json
-dist/token.json
-.github
