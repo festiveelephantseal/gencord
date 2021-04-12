@@ -42,10 +42,16 @@ export class Message extends Base {
   public async delete(options: MessageDeleteOptions): Promise<Message> {
     return new Promise((resolve, reject) => {
       setTimeout(async () => {
-        await this.client.api.request({
-          method: "DELETE",
-          endpoint: `channels/channelID/messages/${this.id}`,
-        });
+        await this.client.api
+          .request({
+            method: "DELETE",
+            endpoint: `channels/channelID/messages/${this.id}`,
+          })
+          .catch((err) => {
+            err ? reject(this) : false;
+            throw new Error(err);
+          });
+
         resolve(this);
       }, options.timeout);
     });
@@ -53,11 +59,16 @@ export class Message extends Base {
 
   public async pin(options: MessagePinOptions): Promise<Message> {
     return new Promise((resolve, reject) => {
-      this.client.api.request({
-        method: "PUT",
-        endpoint: `/channels/channelID}/pins/${this.id}`,
-        body: options,
-      });
+      this.client.api
+        .request({
+          method: "PUT",
+          endpoint: `/channels/channelID}/pins/${this.id}`,
+          body: options,
+        })
+        .catch((err) => {
+          err ? reject(this) : false;
+          throw new Error(err);
+        });
 
       resolve(this);
     });
