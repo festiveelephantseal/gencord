@@ -1,9 +1,11 @@
-import { WebSocketManager } from "../ws/WebSocketManager";
+import { WebSocketManager } from "../gateway/WebSocketManager";
 import { ClientOptions } from "../typings/ClientOptions";
+import { API } from "../gateway/API";
 
 export class Client extends WebSocketManager {
   public options: ClientOptions;
   public token: string;
+  public api: API;
 
   public constructor(options: ClientOptions) {
     super();
