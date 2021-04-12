@@ -19,10 +19,10 @@ Support server can be found [here.](https://discord.gg/YJgUkRA6be)
 > ❗ A: Great question! We know that for beginners, using Discord.JS can be a challenge. Gencord tries to solve this problem by using minimal syntax to make the challenge a lot easier.
 
 ```sh
-❓ Q: How can I contribute to this bot?
+❓ Q: How can I contribute to this project?
 ```
 
-> ❗ A: If you would like to contribute to this bot, more information will be down below, and you can also check out CONTRIBUTING.md in the root directory of this project!
+> ❗ A: If you would like to contribute, more information will be down below, and you can also check out CONTRIBUTING.md in the root directory of this project!
 
 ## Contributions 📜
 
