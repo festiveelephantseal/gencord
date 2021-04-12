@@ -1,14 +1,5 @@
 import { Base } from "./Base";
-
-type ChannelTypes =
-  | "dm"
-  | "text"
-  | "voice"
-  | "category"
-  | "news"
-  | "store"
-  | "unknown";
-
+import { ChannelTypes } from "../typings/ChannelOptions";
 export abstract class BaseChannel extends Base {
   private id: string;
   private readonly createdAt: Date;
