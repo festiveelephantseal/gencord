@@ -1,6 +1,6 @@
+import { Client } from "../client/Client";
 import EventEmitter from "events";
 import WebSocket from "ws";
-import { Client } from "../client/Client";
 
 export class WebSocketManager extends EventEmitter {
   public socket: WebSocket;
