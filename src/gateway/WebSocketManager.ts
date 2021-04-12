@@ -1,17 +1,18 @@
 import { Client } from "../client/Client";
 import EventEmitter from "events";
 import WebSocket from "ws";
+import { BaseConstants } from "../typings/Constants";
 
 export class WebSocketManager extends EventEmitter {
   public socket: WebSocket;
   private readonly client: Client;
 
-  public constructor() {
+  public constructor(client: Client) {
     super();
   }
 
-  protected connect() {
-    this.socket = new WebSocket("wss://gateway.discord.gg/?v=8&encoding=json");
+  public connect(token: string) {
+    this.socket = new WebSocket(BaseConstants.GATEWAY);
 
     this.socket.on("open", () => {
       this.client.identify();
@@ -40,8 +41,6 @@ export class WebSocketManager extends EventEmitter {
 
     this.socket.on("close", (error: any) => {
       if (error === 4004) throw new Error("Invalid token");
-
-      this.connect();
     });
   }
 
@@ -57,7 +56,7 @@ export class WebSocketManager extends EventEmitter {
     process.exit();
   }
 
-  public ping() {
+  public async ping() {
     try {
       this.socket.ping();
       return setTimeout(() => {

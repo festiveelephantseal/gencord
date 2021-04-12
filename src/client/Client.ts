@@ -1,22 +1,42 @@
 import { WebSocketManager } from "../gateway/WebSocketManager";
 import { ClientOptions } from "../typings/ClientOptions";
 import { API } from "../gateway/API";
+import EventEmitter from "node:events";
+import { ClientEvents } from "src/typings/ClientTypes";
+import ClientUser from "./ClientUser";
 
-export class Client extends WebSocketManager {
-  public options: ClientOptions;
-  public token: string;
-  public api: API;
+export declare interface Client {
+  on<Event extends keyof ClientEvents>(
+    event: Event,
+    listener: ClientEvents[Event]
+  ): this;
+  login(token: string): Promise<void>;
+  token: string;
+  api: API;
+  options: ClientOptions;
+  socket: WebSocketManager;
+  user: ClientUser
+}
 
+export class Client extends EventEmitter {
   public constructor(options: ClientOptions) {
     super();
-
+    this.socket = new WebSocketManager(this);
     this.options = options;
     this.token = options.token;
-    this.connect();
+  }
+
+  public async login(token: string): Promise<void> {
+    try {
+      this.token = token;
+      this.socket.connect(token);
+    } catch (e) {
+      e ? console.log(e) : false;
+    }
   }
 
   public identify() {
-    this.socket.send(
+    this.socket.socket.send(
       JSON.stringify({
         op: 2,
         d: {
