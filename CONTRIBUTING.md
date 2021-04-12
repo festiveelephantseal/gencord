@@ -22,6 +22,14 @@ Before you make any changes, please make sure that you are up to date with the l
 git pull
 ```
 
+After making changes, please run: 
+
+```js
+yarn run lint
+```
+
+To format the code. This is MANDATORY, so we do not have any formatting issues, and that code looks concise and clean.
+
 Any changes that you want to make are all welcomed and will be reviewed. However, it is MANDATORY that you use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#summary). All commit messages be written within conventional commit standards:
 
 ```
