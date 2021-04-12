@@ -1,19 +1,21 @@
+import { Client } from "../client/Client";
 import EventEmitter from "events";
 import WebSocket from "ws";
 
 export class WebSocketManager extends EventEmitter {
-  private socket: WebSocket;
+  public socket: WebSocket;
+  private readonly client: Client;
 
-  public constructor(token: string) {
+  public constructor() {
     super();
   }
 
-  public connect() {
+  protected connect() {
     this.socket = new WebSocket("wss://gateway.discord.gg/?v=8&encoding=json");
 
-    // this.socket.on("open", () => {
-    //   this.identify();
-    // });
+    this.socket.on("open", () => {
+      this.client.identify();
+    });
 
     this.socket.on("message", async (message) => {
       const payload = JSON.parse(message.toString());
@@ -43,9 +45,26 @@ export class WebSocketManager extends EventEmitter {
     });
   }
 
-  private heartbeat(ms: number) {
+  protected heartbeat(ms: number) {
     setInterval(() => {
       this.socket.send(JSON.stringify({ op: 1, d: null }));
     }, ms);
+  }
+
+  public destroy(reason?: string) {
+    this.socket.close();
+    console.log(`The socket was closed, ${reason || "No reason provided"}`);
+    process.exit();
+  }
+
+  public ping() {
+    try {
+      this.socket.ping();
+      return setTimeout(() => {
+        this.ping();
+      }, 60000);
+    } catch (err) {
+      this.emit("error", err);
+    }
   }
 }

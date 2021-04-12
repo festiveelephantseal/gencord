@@ -21,7 +21,7 @@ Welcome to Gencord. A simple, beginner-friendly, and easy-to-use library for int
 Support server can be found [here.](https://discord.gg/YJgUkRA6be)
 
 ```sh
-❓ Q: Why should I use this API?
+❓ Q: Why should I use this Library?
 ```
 
 > ❗ A: Great question! We know that for beginners, using Discord.JS can be a challenge. Gencord tries to solve this problem by using minimal syntax to make the challenge a lot easier.
