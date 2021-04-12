@@ -1,3 +1,5 @@
+<div align="center"><img src="https://avatars.githubusercontent.com/u/79424136?s=200&v=4"/></div>
+
 [![Top language](https://img.shields.io/github/languages/top/Gencord/gencord)](https://github.com/Gencord/gencord) [![Last commit](https://img.shields.io/github/last-commit/Gencord/gencord)](https://github.com/Gencord/gencord) [![Code size](https://img.shields.io/github/languages/code-size/Gencord/gencord)](https://github.com/Gencord/gencord)
 
 [![](https://tokei.rs/b1/github/Gencord/gencord?category=lines)](https://github.com/Gencord/gencord) [![](https://tokei.rs/b1/github/Gencord/gencord?category=code)](https://github.com/Gencord/gencord) [![](https://tokei.rs/b1/github/Gencord/gencord?category=comments)](https://github.com/Gencord/gencord) [![](https://tokei.rs/b1/github/Gencord/gencord?category=blanks)](https://github.com/Gencord/gencord) [![](https://tokei.rs/b1/github/Gencord/gencord?category=files)](https://github.com/Gencord/gencord)
@@ -9,8 +11,6 @@
 Welcome to Gencord. A simple, beginner-friendly, and easy-to-use library for interacting with the Discord API, with minimal syntax.
 
 Support server can be found [here.](https://discord.gg/YJgUkRA6be)
-
-<div align="center"><img src="https://avatars.githubusercontent.com/u/79424136?s=200&v=4"/></div>
 
 ```sh
 ❓ Q: Why should I use this API?
