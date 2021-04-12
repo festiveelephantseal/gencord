@@ -1,10 +1,11 @@
 import { Client } from "../client/Client";
 import { Base } from "./Base";
-import { TextChannel } from "./TextChannel";
+import { MessageTypes } from "../typings/MessageOptions";
 import {
   MessageDeleteOptions,
   MessagePinOptions,
 } from "../typings/MessageOptions";
+import { TextChannel } from "./TextChannel";
 import { DMChannel } from "./DMChannel";
 import { NewsChannel } from "./NewsChannel";
 import { GuildMember } from "./GuildMember";
@@ -12,7 +13,7 @@ import { GuildMember } from "./GuildMember";
 export class Message extends Base {
   public constructor(
     private id: string,
-    //private type
+    private type: MessageTypes,
     private channel: TextChannel | DMChannel | NewsChannel,
     private tts: boolean,
     private member: GuildMember,
@@ -62,6 +63,10 @@ export class Message extends Base {
 
   public get _channel(): TextChannel | DMChannel | NewsChannel {
     return this.channel;
+  }
+
+  public get _type(): MessageTypes {
+    return this.type;
   }
 
   public async delete(options: MessageDeleteOptions): Promise<Message> {
