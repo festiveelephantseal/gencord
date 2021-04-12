@@ -76,12 +76,16 @@ export class Message extends Base {
 
   public async unpin(options: MessagePinOptions): Promise<Message> {
     return new Promise((resolve, reject) => {
-      this.client.api.request({
-        method: "DELETE",
-        endpoint: `/channels/channelID}/pins/${this.id}`,
-        body: options,
-      });
-
+      this.client.api
+        .request({
+          method: "DELETE",
+          endpoint: `/channels/channelID}/pins/${this.id}`,
+          body: options,
+        })
+        .catch((err) => {
+          err ? reject(this) : false;
+          throw new Error(err);
+        });
       resolve(this);
     });
   }
