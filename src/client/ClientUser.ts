@@ -1,4 +1,4 @@
-export default class ClientUser {
+export class ClientUser {
   constructor(
     private username: string,
     private discriminator: string,
