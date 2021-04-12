@@ -1,0 +1,15 @@
+* text=auto
+*.json     text
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.tif      binary
+*.tiff     binary
+*.ico      binary
+*.vim text eol=lf
+.vimrc text eol=lf
+.gvimrc text eol=lf
+.gitattributes export-ignore
+.gitignore     export-ignore
+.gitkeep       export-ignore
