@@ -1,4 +1,5 @@
-<div align="center"><img src="https://avatars.githubusercontent.com/u/79424136?s=200&v=4"/>
+<div align="center">
+<img src="https://avatars.githubusercontent.com/u/79424136?s=200&v=4"/> <br><br>
 <img src="https://img.shields.io/github/languages/top/Gencord/gencord" />
 <img src="https://img.shields.io/github/last-commit/Gencord/gencord" />
 <img src="https://img.shields.io/github/languages/code-size/Gencord/gencord" />
