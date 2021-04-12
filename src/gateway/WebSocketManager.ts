@@ -56,7 +56,7 @@ export class WebSocketManager extends EventEmitter {
     process.exit();
   }
 
-  public async ping() {
+  public async ping(): Promise<any> {
     try {
       this.socket.ping();
       return setTimeout(() => {
