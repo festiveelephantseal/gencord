@@ -1,6 +1,9 @@
 import { BaseChannel } from "./BaseChannel";
 import { ChannelTypes } from "../typings/ChannelOptions";
+import { Collection } from "./Collection";
 import { Client } from "../client/Client";
+import { Guild } from "./Guild";
+import { GuildMember } from "./GuildMember";
 
 export abstract class GuildChannel extends BaseChannel {
   private lastMessageID: string;
@@ -8,8 +11,8 @@ export abstract class GuildChannel extends BaseChannel {
   private position: number;
   private parentID: string;
   private topic: string;
-  //private members: Collection<string, GuildMember>
-  //private guild: Guild
+  private members: Collection<string, GuildMember>;
+  private guild: Guild;
   //private permissions: Collection<string, Permissions>
   private nsfw: boolean;
   private rateLimit: number;
@@ -23,6 +26,8 @@ export abstract class GuildChannel extends BaseChannel {
     position: number,
     parentID: string | null,
     topic: string,
+    guild: Guild,
+    members: Collection<string, GuildMember>,
     //permissions: Collection<string, Permissions>
     nsfw: boolean,
     rateLimit: number
@@ -32,7 +37,8 @@ export abstract class GuildChannel extends BaseChannel {
     this.lastPinAt = lastPinAt;
     this.position = position;
     this.topic = topic;
-    //this.guild = guild,
+    this.guild = guild;
+    this.members = members;
     //this.permissions = permissions,
     this.nsfw = nsfw;
     this.rateLimit = rateLimit;
@@ -55,6 +61,14 @@ export abstract class GuildChannel extends BaseChannel {
 
   public get _topic(): string {
     return this.topic;
+  }
+
+  public get _guild(): Guild {
+    return this.guild;
+  }
+
+  public get _members(): Collection<string, GuildMember> {
+    return this.members;
   }
 
   public get _rateLimit(): number {
