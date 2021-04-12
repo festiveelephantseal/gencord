@@ -62,7 +62,7 @@ export class Message extends Base {
       this.client.api
         .request({
           method: "PUT",
-          endpoint: `/channels/channelID}/pins/${this.id}`,
+          endpoint: `/channels/channelID/pins/${this.id}`,
           body: options,
         })
         .catch((err) => {
