@@ -9,7 +9,7 @@ export declare interface Client {
   on<Event extends keyof ClientEvents>(
     event: Event,
     listener: ClientEvents[Event]
-  ): this;
+  ): Function;
   login(token: string): Promise<void>;
   token: string;
   api: API;
