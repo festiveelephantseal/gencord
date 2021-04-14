@@ -1,11 +1,23 @@
 import { Base } from "./Base";
 import { ChannelTypes } from "../typings/ChannelOptions";
 export abstract class BaseChannel extends Base {
-  private id: string;
+  id: string;
   private readonly createdAt: Date;
   private readonly createdTimestamp: number;
   private deleted: boolean;
   private type: ChannelTypes;
+
+  public get _id(): string {
+    return this.id;
+  }
+
+  public get _type(): ChannelTypes {
+    return this.type;
+  }
+
+  public get _deleted(): boolean {
+    return this.deleted;
+  }
 
   public async delete(): Promise<BaseChannel> {
     return new Promise((resolve, reject) => {

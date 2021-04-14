@@ -3,11 +3,10 @@ import EventEmitter from "events";
 import WebSocket from "ws";
 import { BaseConstants } from "../typings/Constants";
 
-export class WebSocketManager extends EventEmitter {
+export default class WebSocketManager extends EventEmitter {
   public socket: WebSocket;
-  private readonly client: Client;
 
-  public constructor(client: Client) {
+  public constructor(private client: Client) {
     super();
   }
 

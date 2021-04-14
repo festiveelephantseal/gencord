@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "ts-node tests/testing.ts",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
