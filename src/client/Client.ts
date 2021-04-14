@@ -1,26 +1,25 @@
 import { WebSocketManager } from "../gateway/WebSocketManager";
 import { ClientOptions } from "../typings/ClientOptions";
 import { API } from "../gateway/API";
-import EventEmitter from "node:events";
-import { ClientEvents } from "src/typings/ClientTypes";
-import ClientUser from "./ClientUser";
+import { EventEmitter } from "node:events";
+import { ClientEvents } from "src/typings/ClientEvents";
+import { ClientUser } from "./ClientUser";
 
 export declare interface Client {
   on<Event extends keyof ClientEvents>(
     event: Event,
     listener: ClientEvents[Event]
-  ): this;
+  ): Function;
   login(token: string): Promise<void>;
   token: string;
   api: API;
   options: ClientOptions;
   socket: WebSocketManager;
-  user: ClientUser
+  user: ClientUser;
 }
 
-export class Client extends EventEmitter {
+export class Client {
   public constructor(options: ClientOptions) {
-    super();
     this.socket = new WebSocketManager(this);
     this.options = options;
     this.token = options.token;

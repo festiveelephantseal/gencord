@@ -1,4 +1,4 @@
-export default class ClientUser {
+export class ClientUser {
   constructor(
     private username: string,
     private discriminator: string,
@@ -9,28 +9,28 @@ export default class ClientUser {
     private bot: boolean,
     private avatar: string
   ) {}
-  get _username(): string {
+  public get _username(): string {
     return this.username;
   }
-  get _discriminator(): string {
+  public get _discriminator(): string {
     return this.discriminator;
   }
-  get _verified(): boolean {
+  public get _verified(): boolean {
     return this.verified;
   }
-  get _id(): string {
+  public get _id(): string {
     return this.id;
   }
-  get _flags(): number {
+  public get _flags(): number {
     return this.flags;
   }
-  get _email(): string | null {
+  public get _email(): string | null {
     return this.email;
   }
-  get _bot(): boolean {
+  public get _bot(): boolean {
     return this.bot;
   }
-  get _avatar(): string {
+  public get _avatar(): string {
     return this.avatar;
   }
 }

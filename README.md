@@ -1,9 +1,10 @@
 <div align="center">
 <img src="https://avatars.githubusercontent.com/u/79424136?s=200&v=4"/> <br><br><br>
+<a href="https://www.npmjs.com/package/gencord"><img src="https://img.shields.io/npm/dt/gencord.svg?maxAge=3600" alt="NPM downloads" /></a>
 <img src="https://img.shields.io/github/languages/top/Gencord/gencord" />
 <img src="https://img.shields.io/github/last-commit/Gencord/gencord" />
 <img src="https://img.shields.io/github/languages/code-size/Gencord/gencord" />
-<img src="https://tokei.rs/b1/github/Gencord/gencord?category=lines)](https://github.com/Gencord/gencord" />
+<img src="https://tokei.rs/b1/github/Gencord/gencord?category=lines">
 <img src="https://tokei.rs/b1/github/Gencord/gencord?category=code" />
 <img src="https://tokei.rs/b1/github/Gencord/gencord?category=comments" />
 <img src="https://tokei.rs/b1/github/Gencord/gencord?category=blanks" />
