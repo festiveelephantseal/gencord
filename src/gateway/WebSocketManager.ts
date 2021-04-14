@@ -1,47 +1,17 @@
 import { Client } from "../client/Client";
 import EventEmitter from "events";
+import ws from "ws";
 import WebSocket from "ws";
 import { BaseConstants } from "../typings/Constants";
 
 export default class WebSocketManager extends EventEmitter {
-  public socket: WebSocket;
+  public socket: ws;
 
   public constructor(private client: Client) {
     super();
   }
 
-  public connect(token: string) {
-    this.socket = new WebSocket(BaseConstants.GATEWAY);
-
-    this.socket.on("open", () => {
-      this.client.identify();
-    });
-
-    this.socket.on("message", async (message) => {
-      const payload = JSON.parse(message.toString());
-      const { t, s, op, d } = payload;
-
-      if (payload.op === 10) {
-        const { heartbeat_interval } = d;
-        this.heartbeat(heartbeat_interval);
-      } else if (payload.op === 0) {
-        this.emit(payload.t, payload.d);
-      }
-      switch (payload.t) {
-        case "READY":
-          this.emit("ready");
-          break;
-      }
-    });
-
-    this.socket.on("error", (error: string) => {
-      console.log("Error", error);
-    });
-
-    this.socket.on("close", (error: any) => {
-      if (error === 4004) throw new Error("Invalid token");
-    });
-  }
+  public connect(token: string) {}
 
   protected heartbeat(ms: number) {
     setInterval(() => {

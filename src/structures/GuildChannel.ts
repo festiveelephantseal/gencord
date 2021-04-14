@@ -14,7 +14,7 @@ export abstract class GuildChannel extends BaseChannel {
   private topic: string;
   private members: Collection<string, GuildMember>;
   private guild: Guild;
-  private permissions: Collection<string, Permissions>;
+  private permissins: Collection<string, Permissions>;
   private nsfw: boolean;
   private rateLimit: number;
   public constructor(
@@ -40,7 +40,6 @@ export abstract class GuildChannel extends BaseChannel {
     this.topic = topic;
     this.guild = guild;
     this.members = members;
-    (this.permissions = permissions), (this.nsfw = nsfw);
     this.rateLimit = rateLimit;
   }
   public get _lastMessageID(): string {
@@ -75,11 +74,24 @@ export abstract class GuildChannel extends BaseChannel {
     return this.rateLimit;
   }
 
-  public get _permissions(): Collection<string, Permissions> {
-    return this.permissions;
-  }
-
   public get _nsfw(): boolean {
     return this.nsfw;
+  }
+
+  public async send(content: string) {
+    console.log("asd");
+    return new Promise(async (resolve, reject) => {
+      await this.client
+        .request({
+          method: "POST",
+          endpoint: `channels/829821374440669250/messages`,
+          body: JSON.stringify(content),
+        })
+        .catch((err) => {
+          err ? reject(this) : false;
+          throw new Error(err);
+        });
+      resolve(this);
+    });
   }
 }
