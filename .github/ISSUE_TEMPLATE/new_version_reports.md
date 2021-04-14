@@ -3,7 +3,6 @@ name: Bug Report For New Gencord Version
 about: Create a report to help us improve
 title: "New Version Bug: "
 labels: new-version-bug
-assignees: ""
 ---
 
 **Describe the bug**
