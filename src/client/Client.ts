@@ -1,28 +1,27 @@
-import { WebSocketManager } from "../gateway/WebSocketManager";
+import WebSocketManager from "../gateway/WebSocketManager";
 import { ClientOptions } from "../typings/ClientOptions";
 import { API } from "../gateway/API";
-import { EventEmitter } from "node:events";
+import EventEmitter from "events";
 import { ClientEvents } from "src/typings/ClientEvents";
 import { ClientUser } from "./ClientUser";
 
 export declare interface Client {
-  on<Event extends keyof ClientEvents>(
-    event: Event,
-    listener: ClientEvents[Event]
-  ): Function;
   login(token: string): Promise<void>;
   token: string;
   api: API;
   options: ClientOptions;
   socket: WebSocketManager;
   user: ClientUser;
+  on<E extends keyof ClientEvents>(event: E, listener: ClientEvents[E]): this;
 }
 
-export class Client {
+export class Client extends EventEmitter {
   public constructor(options: ClientOptions) {
+    super();
     this.socket = new WebSocketManager(this);
     this.options = options;
     this.token = options.token;
+    this.on = this.on;
   }
 
   public async login(token: string): Promise<void> {
@@ -60,3 +59,5 @@ export class Client {
     );
   }
 }
+
+export default Client;

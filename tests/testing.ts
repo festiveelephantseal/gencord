@@ -1,12 +1,16 @@
-import { Client } from "../src/client/Client";
+import { Client } from "../src/index";
 
 const client = new Client({
-  token: "ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.N03TbKDogNFN02Pdb6zoGFNrxKc",
+  token: "ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.xBiB3MnO_3H8gtY8dIqgFOkeCyQ",
   intents: 513,
 });
 
 client.on("ready", () => {
-  console.log("ready");
+  console.log("asd");
 });
 
-client.login("ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.N03TbKDogNFN02Pdb6zoGFNrxKc");
+client.on("message", (msg) => {
+  console.log(msg._content);
+});
+
+client.login("ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.xBiB3MnO_3H8gtY8dIqgFOkeCyQ");
