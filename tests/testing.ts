@@ -1,16 +1,7 @@
-import { Client } from "../src/index";
+import { Message } from "src";
+import { Client } from "../src/client/Client";
 
 const client = new Client({
-  token: "ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.xBiB3MnO_3H8gtY8dIqgFOkeCyQ",
+  token: "",
   intents: 513,
 });
-
-client.on("ready", () => {
-  console.log("asd");
-});
-
-client.on("message", (msg) => {
-  console.log(msg._content);
-});
-
-client.login("ODI5ODIxNTczMzEzNDYyMjcy.YG9tkA.xBiB3MnO_3H8gtY8dIqgFOkeCyQ");
