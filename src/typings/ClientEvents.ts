@@ -1,4 +1,4 @@
-import { Message } from "../structures/Message";
+import { Message } from "../structures/message/Message";
 
 export interface ClientEvents {
   ready: () => void;

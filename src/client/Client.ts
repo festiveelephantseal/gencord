@@ -6,7 +6,7 @@ import { ClientUser } from "./ClientUser";
 import ws from "ws";
 import fetch from "node-fetch";
 import { BaseConstants } from "../typings/Constants";
-import { Message } from "../structures/Message";
+import { Message } from "../structures/message/Message";
 import { APIOptions } from "../typings/APIOptions";
 
 export declare interface Client {
@@ -14,6 +14,7 @@ export declare interface Client {
   token: string;
   options: ClientOptions;
   user: ClientUser;
+  on<E extends keyof ClientEvents>(event: E, listener: ClientEvents[E]): this;
 }
 
 export class Client extends EventEmitter {
@@ -47,10 +48,8 @@ export class Client extends EventEmitter {
     }
   }
 
-  public async login(token: string): Promise<void> {
+  public async login(): Promise<void> {
     try {
-      this.token = token;
-
       this.socket = new ws(BaseConstants.GATEWAY);
 
       this.socket.on("open", () => {
@@ -82,7 +81,10 @@ export class Client extends EventEmitter {
       });
 
       this.socket.on("close", (error: any) => {
-        if (error === 4004) throw new Error("Invalid token");
+        if (error === 4004) throw new Error("Invalid token.");
+        if (error === 4000) throw new Error("Unknown Error.");
+        if (error === 4008) throw new Error("Ratelimited.");
+        if (error === 4009) throw new Error("Session Timed Out.");
         this;
       });
     } catch (e) {
