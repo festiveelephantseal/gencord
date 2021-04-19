@@ -1,7 +1,6 @@
 import { ActivityOptions } from "./ActivityOptions";
 export interface ClientOptions {
-  token: string;
-  intents?: number;
+  intents?: number | string;
   status?: "online" | "idle" | "dnd" | "invisible";
   activityName?: string;
   activityType?: ActivityOptions;

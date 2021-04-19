@@ -18,10 +18,17 @@ export declare interface Client {
 }
 
 export class Client extends EventEmitter {
-  public constructor(options: ClientOptions) {
+  /**
+   * Represents the Gencord Client.
+   * @extends EventEmitter
+   * @arg {String} token The token for the bot to use.
+   * @arg {Object} [options] Options for the client.
+   * @arg {Number | String} [options.intents] The intents for the client.
+   */
+  public constructor(token: string, options: ClientOptions) {
     super();
     this.options = options;
-    this.token = options.token;
+    this.token = token;
   }
   private socket: ws;
 
@@ -47,6 +54,11 @@ export class Client extends EventEmitter {
       );
     }
   }
+
+  /**
+   * Logs on to Discords API.
+   * @returns {Promise<void>} Resolves when it has logged on.
+   */
 
   public async login(): Promise<void> {
     try {
@@ -108,7 +120,7 @@ export class Client extends EventEmitter {
       JSON.stringify({
         op: 2,
         d: {
-          token: this.options.token,
+          token: this.token,
           intents: this.options.intents,
           properties: {
             $os: "linux",
