@@ -6,7 +6,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "moduleResolution": "node",
-    "removeComments": true,
+    "removeComments": false, //set to false because of documentation of code.
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
