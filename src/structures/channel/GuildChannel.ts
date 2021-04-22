@@ -1,10 +1,10 @@
 import { BaseChannel } from "./BaseChannel";
-import { ChannelTypes } from "../typings/ChannelOptions";
-import { Collection } from "./Collection";
-import { Permissions } from "./Permissions";
-import { Client } from "../client/Client";
-import { Guild } from "./Guild";
-import { GuildMember } from "./GuildMember";
+import { ChannelTypes } from "../../typings/ChannelOptions";
+import { GenCollection } from "../GenCollection";
+import { Permissions } from "../Permissions";
+import { Client } from "../../client/Client";
+import { Guild } from "../Guild";
+import { GuildMember } from "../GuildMember";
 
 export abstract class GuildChannel extends BaseChannel {
   private _lastMessageID: string;
@@ -12,7 +12,7 @@ export abstract class GuildChannel extends BaseChannel {
   private _position: number;
   private _parentID: string;
   private _topic: string;
-  private _members = new Collection<string, GuildMember>();
+  private _members = new GenCollection<string, GuildMember>();
   private _guild: Guild;
   private _nsfw: boolean;
   private _rateLimit: number;
@@ -50,7 +50,7 @@ export abstract class GuildChannel extends BaseChannel {
     return this._guild;
   }
 
-  public get members(): Collection<string, GuildMember> {
+  public get members(): GenCollection<string, GuildMember> {
     return this._members;
   }
 

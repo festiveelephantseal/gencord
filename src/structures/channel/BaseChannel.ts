@@ -1,5 +1,5 @@
-import { Base } from "./Base";
-import { ChannelTypes } from "../typings/ChannelOptions";
+import { Base } from "../Base";
+import { ChannelTypes } from "../../typings/ChannelOptions";
 export abstract class BaseChannel extends Base {
   private _id: string;
   private readonly _createdAt: Date;
@@ -10,7 +10,6 @@ export abstract class BaseChannel extends Base {
   public constructor(data: any) {
     super();
     this._id = data.id;
-    this._client = data.client;
     this._type = data.type;
   }
 

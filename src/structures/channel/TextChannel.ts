@@ -1,10 +1,10 @@
 import { GuildChannel } from "./GuildChannel";
-import { GuildMember } from "./GuildMember";
-import { Collection } from "./Collection";
-import { Message } from "./message/Message";
+import { GuildMember } from "../GuildMember";
+import { GenCollection } from "../GenCollection";
+import { Message } from "../message/Message";
 
-/*export class TextChannel extends GuildChannel {
-  private _messages = new Collection<string, GuildMember>();
+export class TextChannel extends GuildChannel {
+/*  private _messages = new Collection<string, GuildMember>();
   public constructor(){
     super(data, this.client);
   }
@@ -21,5 +21,5 @@ import { Message } from "./message/Message";
           throw new Error(err);
         });
     });
-  }
-}*/
+  }*/
+}

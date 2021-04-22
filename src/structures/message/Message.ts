@@ -6,20 +6,19 @@ import {
   MessagePinOptions,
 } from "../../typings/MessageOptions";
 //import { TextChannel } from "../TextChannel";
-import { DMChannel } from "../DMChannel";
-import { NewsChannel } from "../NewsChannel";
+import { DMChannel } from "../channel/DMChannel";
+import { NewsChannel } from "../channel/NewsChannel";
+import {TextChannel } from "../channel/TextChannel"
 import { GuildMember } from "../GuildMember";
-import { GuildChannel } from "../GuildChannel";
+import { GuildChannel } from "../channel/GuildChannel";
 import { ChannelTypes } from "src/typings/ChannelOptions";
-import { StoreChannel } from "../StoreChannel";
+import { StoreChannel } from "../channel/StoreChannel";
 import { User } from "../User";
 
 export class Message {
   private client: Client;
   private id: string;
-  private channel_id: string;
   private type: ChannelTypes;
-  //private _channel: TextChannel | NewsChannel | StoreChannel;
   private tts: boolean;
   private member: GuildMember;
   private author: User;
@@ -28,13 +27,20 @@ export class Message {
   private editedAt: Date;
   private mentionedEveryone: boolean;
   private nonce: string | number;
+  private channel: TextChannel | StoreChannel | NewsChannel;
   public constructor(data: any, client: Client) {
     this.client = client;
     this.id = data.id;
     this.type = data.type;
     //this.channel = data.channel;
     this.tts = data.tts;
-    this.channel_id = data.channel_id;
+    (this.client.request({
+      method: "GET",
+      endpoint: `/channels/${data.channel_id}`
+    }))
+    .then((c: any) => {
+      return this.channel = c;
+    })
     this.content = data.content;
     this.timestamp = data.timestamp;
     this.editedAt = data.editedAt;
@@ -60,8 +66,8 @@ export class Message {
     return this.timestamp;
   }
 
-  public get _channel_id(): string {
-    return this.channel_id;
+  public get _channel(): TextChannel | NewsChannel | StoreChannel {
+    return this.channel
   }
 
   public get _nonce(): string | number {
@@ -98,7 +104,7 @@ export class Message {
         await this.client
           .request({
             method: "DELETE",
-            endpoint: `channels/${this.channel_id}/messages/${this.id}`,
+            endpoint: `channels/${this.channel.id}/messages/${this.id}`,
           })
           .catch((err) => {
             err ? reject(this) : false;
@@ -115,7 +121,7 @@ export class Message {
       this.client
         .request({
           method: "PUT",
-          endpoint: `/channels/${this.channel_id}/pins/${this.id}`,
+          endpoint: `/channels/${this.channel.id}/pins/${this.id}`,
           body: options,
         })
         .catch((err) => {
@@ -133,13 +139,13 @@ export class Message {
       await this.client
         .request({
           method: "POST",
-          endpoint: `channels/${this.channel_id}/messages`,
+          endpoint: `channels/${this.channel.id}/messages`,
           body: JSON.stringify({
             content: content,
             tts: false,
             message_reference: {
               message_id: this.id,
-              channel_id: this.channel_id,
+              channel_id: this.channel.id,
             },
           }),
         })
